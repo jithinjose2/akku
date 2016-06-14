@@ -155,6 +155,13 @@ return [
         Akku\Providers\AuthServiceProvider::class,
         Akku\Providers\EventServiceProvider::class,
         Akku\Providers\RouteServiceProvider::class,
+        
+        /*
+         * Third party service providers
+         */
+        Barryvdh\Debugbar\ServiceProvider::class,
+        JithinJose2\WebSocket\ServiceProvider::class,
+        
 
     ],
 

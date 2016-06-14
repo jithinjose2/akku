@@ -6,21 +6,24 @@
     "type": "project",
     "require": {
         "php": ">=5.5.9",
-        "laravel/framework": "5.2.*"
+        "laravel/framework": "5.2.*",
+        "jithinjose2/websocket" : "*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
         "phpunit/phpunit": "~4.0",
         "symfony/css-selector": "2.8.*|3.0.*",
-        "symfony/dom-crawler": "2.8.*|3.0.*"
+        "symfony/dom-crawler": "2.8.*|3.0.*",
+        "barryvdh/laravel-debugbar" : "*"
     },
     "autoload": {
         "classmap": [
             "database"
         ],
         "psr-4": {
-            "Akku\\": "app/"
+            "Akku\\": "app/",
+            "JithinJose2\\WebSocket\\": "vendor/jithinjose2/websocket/src/"
         }
     },
     "autoload-dev": {
@@ -46,5 +49,17 @@
     },
     "config": {
         "preferred-install": "dist"
-    }
+    },
+    "repositories": [{
+        "type": "package",
+        "package": {
+            "name": "jithinjose2/websocket",
+            "version": "1.1",
+            "source": {
+                "url": "https://github.com/jithinjose2/websocket.git",
+                "type": "git",
+                "reference": "master"
+            }
+        }
+    }]
 }

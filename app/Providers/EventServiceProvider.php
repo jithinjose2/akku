@@ -13,9 +13,6 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'Akku\Events\SomeEvent' => [
-            'Akku\Listeners\EventListener',
-        ],
     ];
 
     /**

@@ -1,6 +1,6 @@
 <?php
 
-namespace Akku;
+namespace Akku\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
