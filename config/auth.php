@@ -67,7 +67,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => Akku\User::class,
+            'model' => Akku\Models\User::class,
         ],
 
         // 'users' => [

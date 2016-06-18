@@ -23,4 +23,9 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public  function modules()
+    {
+        return $this->hasMany('Akku\Models\Module', 'user_id');
+    }
 }

@@ -209,6 +209,12 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        // Model aliases
+        'User'      => Akku\Models\User::class,
+        'Module'    => Akku\Models\Module::class,
+        'Thing'     => Akku\Models\Thing::class,
+        'Value'     => Akku\Models\Value::class,
+
     ],
 
 ];

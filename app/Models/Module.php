@@ -6,5 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Module extends Model
 {
-    //
+    public function user()
+    {
+        return $this->belongsTo('Akku\Models\User', 'user_id');
+    }
+
+    public  function things()
+    {
+        return $this->hasMany('Akku\Models\Thing', 'module_id');
+    }
 }
