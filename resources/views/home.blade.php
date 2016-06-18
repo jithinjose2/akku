@@ -116,7 +116,7 @@
                 $('#chat_button').removeAttr('disabled');
                 $('#text_message').removeAttr('disabled');
                 $('#chkbox').bootstrapSwitch('disabled', false);
-                $('#chkbox').bootstrapSwitch('state', true, true);
+                $('#chkbox').bootstrapSwitch('state', res.motor_switch_status == 1 ? true : false, true);
 
             } else if(res.action == 'water_level_update') {
                 var series = $('#containerhc').highcharts().series[0];

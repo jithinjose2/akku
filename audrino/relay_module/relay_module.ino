@@ -20,19 +20,29 @@ WebSocketsClient webSocket;
 
 
 // Required constants
-#define MODULE_KEY "MODULE01"
-#define SENSOR_KEY "WATERLEVEL01"
+#define MODULE_KEY "MODULE02"
+#define SWITCH_KEY "MOTOR01"
+#define METER_KEY "LEDBAR01"
 #define WIFI_NAME "HOMENET"
 #define WIFI_PASS "myhome02"
 #define WEBSOCKET_IP "192.168.1.103"
 #define WEBSOCKET_PORT 8001
 #define ULTRASONIC_TRIGGER_PIN 14
 #define ULTRASONIC_ECHO_PIN    12
-#define ULTRASONIC_MIN_DISTANCE 10
-#define ULTRASONIC_MAX_DISTANCE 4000
+
+#define SWITCH_PIN D8
+
+#define BLED1 D0
+#define BLED2 D1
+#define BLED3 D2
+#define BLED4 D3
+#define BLED5 D4
+#define BLED6 D5
+#define BLED7 D6
+#define BLED8 D7
 
 
-
+int percent = 0, max_motor_active_time = 120, max_level = 200, min_level = 1400, trigger_percent=10, cutoff_percent = 90, motor_active = 0, motor_time_left = 0;
 
 
 
@@ -42,6 +52,97 @@ int socket_status = 0, loop_count = 0;
 char buffer[256];
 StaticJsonBuffer<2000> jsonBuffer;
 JsonObject& root = jsonBuffer.createObject();
+
+
+
+//////////////////////////////////// LEDBAR SECTION////////////////////////////////////////////////
+
+void sendMotorStatus(int status)
+{
+    root["action"] = "update_data";
+    root["thing_key"] = SWITCH_KEY;
+    root["value"] = status;
+    root.printTo(buffer, sizeof(buffer));
+    Serial.printf(buffer);
+    webSocket.sendTXT(buffer);
+}
+
+void motorActivate()
+{
+    sendMotorStatus(1);
+    digitalWrite(SWITCH_PIN, HIGH);
+    motor_active = 1;
+    motor_time_left = (100 - percent) * max_motor_active_time / 100;
+}
+
+void motorDeActivate()
+{
+    sendMotorStatus(0);
+    digitalWrite(SWITCH_PIN, LOW);
+    motor_active = 0;
+    motor_time_left = 0;
+}
+
+
+
+void setValue(int distance)
+{
+    percent = (distance - max_level) * 100 / (min_level - max_level);
+
+    digitalWrite(BLED1, LOW);
+    digitalWrite(BLED2, LOW);
+    digitalWrite(BLED3, LOW);
+    digitalWrite(BLED4, LOW);
+    digitalWrite(BLED5, LOW);
+    digitalWrite(BLED6, LOW);
+    digitalWrite(BLED7, LOW);
+    digitalWrite(BLED8, LOW);
+
+    if(percent > 10){
+        digitalWrite(BLED1, HIGH);
+    }
+
+    if(percent > 20){
+        digitalWrite(BLED2, HIGH);
+    }
+
+    if(percent > 35){
+        digitalWrite(BLED3, HIGH);
+    }
+
+    if(percent > 45){
+        digitalWrite(BLED4, HIGH);
+    }
+
+    if(percent > 55){
+        digitalWrite(BLED5, HIGH);
+    }
+
+    if(percent > 67){
+        digitalWrite(BLED6, HIGH);
+    }
+
+    if(percent > 80){
+        digitalWrite(BLED7, HIGH);
+    }
+
+    if(percent > 90){
+        digitalWrite(BLED8, HIGH);
+    }
+    
+    Serial.printf("Process: %d- %d - %d - %d \n", percent, distance, trigger_percent, motor_active);
+    
+    // If level is within trigger level execute motor
+    if(percent < trigger_percent && motor_active == 0) {
+        motorActivate();
+    }
+    if(percent > cutoff_percent && motor_active == 1) {
+        motorDeActivate();
+    }
+    
+}
+
+
 
 
 //////////////////////////////////// COMM SECTION////////////////////////////////////////////////
@@ -56,6 +157,9 @@ void registerModule()
   webSocket.sendTXT(buffer);
 }
 
+
+
+/*
 void sendDistance(int value)
 {
   root["action"] = "update_data";
@@ -65,7 +169,7 @@ void sendDistance(int value)
   root.printTo(buffer, sizeof(buffer));
   Serial.printf(buffer);
   webSocket.sendTXT(buffer);
-}
+}*/
 
 void processResponse(char* response) 
 {
@@ -73,10 +177,25 @@ void processResponse(char* response)
     JsonObject& root1 = jsonBuffer.parseObject(response);
     if (root1.success()) {
         const char* sensor = root1["action"];
-        
+
+        // Set configuration
         if(strcmp(sensor,"registred") == 0) {
+            max_motor_active_time = root1["max_motor_active_time"];
+            max_level = root1["max_level"];
+            min_level = root1["min_level"];
+            trigger_percent = root1["trigger_percent"];
+            cutoff_percent = root1["cutoff_percent"];
             socket_status = 1;
+        } else if(strcmp(sensor,"water_level_update") == 0) {
+            setValue(root1["value"]);
+        } else if(strcmp(sensor,"update_switch_status") == 0) {
+            if(root1["value"] == 1) {
+                motorActivate();
+            } else {
+                motorDeActivate();
+            }
         }
+        
     }
     return;
 }
@@ -107,68 +226,6 @@ void webSocketEvent(WStype_t type, uint8_t * payload, size_t lenght) {
 
 }
 
-//////////////////////////////////// ULTRASONIC SECTION////////////////////////////////////////////////
-
-/**
- *  take single distance mesurement and return the value
- */
-int mesureSingleDistance()
-{
-    long duration, distance;
-    
-    digitalWrite(ULTRASONIC_TRIGGER_PIN, LOW);  
-    delayMicroseconds(2); 
-    digitalWrite(ULTRASONIC_TRIGGER_PIN, HIGH);
-    delayMicroseconds(10); 
-    digitalWrite(ULTRASONIC_TRIGGER_PIN, LOW);
-    duration = pulseIn(ULTRASONIC_ECHO_PIN, HIGH);
-    distance = (duration/2) / 2.91;
-    return distance;
-}
-
-/**
- * mresure distnce average delay 10ms
- */
-int mesureDistance()
-{
-    int i, total_count = 0, total_distance =0,distance, values[10], average, temp, new_count = 0;
-    
-    for(i=0; i<5; i++){
-        distance = mesureSingleDistance();
-        if(distance > ULTRASONIC_MIN_DISTANCE && distance < ULTRASONIC_MAX_DISTANCE) {
-            total_distance += distance;
-            values[total_count++]=distance;
-            Serial.printf("Value %d...\n", distance);
-        }
-    }
-    
-    if(total_count > 0) {
-      
-        average = total_distance / total_count;
-        total_distance = 0;
-        Serial.printf("Average %d...\n", average);
-        
-        for(i=0; i<total_count; i++){
-            temp = (average - values[i])*100/average;
-            Serial.printf("Analyze %d....%d...\n", values[i],temp);
-            if(temp < 10 && temp > -10){
-                total_distance += values[i];
-                new_count++;
-            }
-        }
-
-        if(new_count > 0) {
-            return total_distance / new_count;
-        }
-    }
-    return 0;
-}
-
-
-
-
-
-
 
 
 //////////////////////////////////// INTI SECTION ////////////////////////////////////////////////
@@ -176,8 +233,18 @@ int mesureDistance()
 void setup() {
 
     // Configure PINS
-    pinMode(ULTRASONIC_TRIGGER_PIN, OUTPUT);
-    pinMode(ULTRASONIC_ECHO_PIN, INPUT);
+    pinMode(BLED1, OUTPUT);
+    pinMode(BLED2, OUTPUT);
+    pinMode(BLED3, OUTPUT);
+    pinMode(BLED4, OUTPUT);
+    pinMode(BLED5, OUTPUT);
+    pinMode(BLED6, OUTPUT);
+    pinMode(BLED7, OUTPUT);
+    pinMode(BLED8, OUTPUT);
+    pinMode(BLED8, OUTPUT);
+    pinMode(SWITCH_PIN, OUTPUT);
+
+    
   
     Serial.begin(115200);
     Serial.setDebugOutput(true);
@@ -201,6 +268,17 @@ void setup() {
     webSocket.begin(WEBSOCKET_IP, WEBSOCKET_PORT);
     webSocket.onEvent(webSocketEvent);
 
+    // Set initial status
+    digitalWrite(BLED1, LOW);
+    digitalWrite(BLED2, LOW);
+    digitalWrite(BLED3, LOW);
+    digitalWrite(BLED4, LOW);
+    digitalWrite(BLED5, LOW);
+    digitalWrite(BLED6, LOW);
+    digitalWrite(BLED7, LOW);
+    digitalWrite(BLED8, LOW); 
+    digitalWrite(SWITCH_PIN, LOW);
+
 }
 
 
@@ -214,16 +292,17 @@ void loop() {
     // Call websocket loop
     webSocket.loop();
     
-    if(socket_status == 1 && loop_count>5) {
-        distance = mesureDistance();
-        Serial.printf("Distance %d..\n", distance);
-        if(distance > 0 ) {
-            sendDistance(distance);
-        }
-        loop_count = 0;
+    if(socket_status == 1) {
+        setValue(800);
     }
 
-    loop_count++;
+    if(motor_active == 1) {
+        motor_time_left -= 1;
+        if(motor_time_left < 1) {
+            motorDeActivate();
+        }
+    }
+
     delay(1000);
     
 }

@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33515f90-5dcc-46d1-9499-64e7793e7239" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/audrino/sensor_module/relay_module.ino" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Handles/WebSocketHandle.php" afterPath="$PROJECT_DIR$/app/Handles/WebSocketHandle.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Value.php" afterPath="$PROJECT_DIR$/app/Models/Value.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Repositories/ModuleRepository.php" afterPath="$PROJECT_DIR$/app/Repositories/ModuleRepository.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Repositories/SensorRepository.php" afterPath="$PROJECT_DIR$/app/Repositories/SensorRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/audrino/relay_module/relay_module.ino" afterPath="$PROJECT_DIR$/audrino/relay_module/relay_module.ino" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/app.php" afterPath="$PROJECT_DIR$/config/app.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/home.blade.php" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
     </list>
     <ignored path="code.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,11 +30,97 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="graph.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="graph.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/graph.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.076794654">
-              <caret line="2" column="49" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
+            <state vertical-scroll-proportion="50.384617">
+              <caret line="3" column="46" selection-start-line="3" selection-start-column="46" selection-end-line="3" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.653846">
+              <caret line="158" column="54" selection-start-line="158" selection-start-column="34" selection-end-line="158" selection-end-column="54" />
+              <folding>
+                <marker date="1466269787581" expanded="true" signature="4171:4309" placeholder="..." />
+                <marker date="1466269787581" expanded="true" signature="4352:4787" placeholder="..." />
+                <marker date="1466269787581" expanded="true" signature="4463:4622" placeholder="..." />
+                <marker date="1466269787581" expanded="true" signature="4474:4595" placeholder="..." />
+                <marker date="1466269787581" expanded="true" signature="4648:4751" placeholder="..." />
+                <marker date="1466269787581" expanded="true" signature="4659:4723" placeholder="..." />
+                <marker date="1466269787581" expanded="true" signature="4824:5860" placeholder="..." />
+                <marker date="1466269787581" expanded="true" signature="4866:5257" placeholder="..." />
+                <marker date="1466269787581" expanded="true" signature="5304:5688" placeholder="..." />
+                <marker date="1466269787581" expanded="true" signature="5896:6074" placeholder="..." />
+                <marker date="1466269787581" expanded="true" signature="6087:6356" placeholder="..." />
+                <marker date="1466269787581" expanded="true" signature="6495:6933" placeholder="..." />
+                <marker date="1466269787581" expanded="true" signature="6551:6932" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WebSocketHandle.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Handles/WebSocketHandle.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.0740743">
+              <caret line="64" column="44" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
+              <folding>
+                <element signature="e#32#50#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ModuleRepository.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Repositories/ModuleRepository.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.4615383">
+              <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/app.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.192307">
+              <caret line="216" column="20" selection-start-line="216" selection-start-column="20" selection-end-line="216" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Setting.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/Setting.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.3076925">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="System.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/System.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SensorRepository.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Repositories/SensorRepository.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6928214">
+              <caret line="35" column="82" selection-start-line="35" selection-start-column="82" selection-end-line="35" selection-end-column="82" />
               <folding />
             </state>
           </provider>
@@ -56,7 +143,6 @@
         <option value="$PROJECT_DIR$/config/auth.php" />
         <option value="$PROJECT_DIR$/app/Models/User.php" />
         <option value="$PROJECT_DIR$/app/Models/Module.php" />
-        <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ModuleController.php" />
         <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
@@ -66,12 +152,14 @@
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/vendor/jithinjose2/websocket/src/Server.php" />
         <option value="$PROJECT_DIR$/vendor/jithinjose2/websocket/src/WebSocket.php" />
-        <option value="$PROJECT_DIR$/app/Handles/WebSocketHandle.php" />
         <option value="$PROJECT_DIR$/app/Models/Value.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/SensorRepository.php" />
-        <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/ModuleRepository.php" />
         <option value="$PROJECT_DIR$/resources/views/graph.blade.php" />
+        <option value="$PROJECT_DIR$/app/Models/Setting.php" />
+        <option value="$PROJECT_DIR$/config/app.php" />
+        <option value="$PROJECT_DIR$/app/Handles/WebSocketHandle.php" />
+        <option value="$PROJECT_DIR$/app/Repositories/ModuleRepository.php" />
+        <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
+        <option value="$PROJECT_DIR$/app/Repositories/SensorRepository.php" />
       </list>
     </option>
   </component>
@@ -314,6 +402,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -542,13 +644,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/System.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/jithinjose2/websocket/src/Console/Commands/StartServer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-24.76923">
@@ -618,13 +713,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.307693">
           <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.307693">
-          <caret line="215" column="48" selection-start-line="215" selection-start-column="48" selection-end-line="215" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -737,28 +826,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Handles/WebSocketHandle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.6538463">
-          <caret line="53" column="36" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
-          <folding>
-            <element signature="e#32#50#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Value.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.615385">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/SensorRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.6153846">
-          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
           <folding />
         </state>
       </provider>
@@ -771,40 +842,82 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/System.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Setting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.3076925">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.192307">
+          <caret line="216" column="20" selection-start-line="216" selection-start-column="20" selection-end-line="216" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/graph.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="50.384617">
+          <caret line="3" column="46" selection-start-line="3" selection-start-column="46" selection-end-line="3" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Repositories/ModuleRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.423077">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        <state vertical-scroll-proportion="-4.4615383">
+          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="43.944443">
-          <caret line="44" column="133" selection-start-line="44" selection-start-column="133" selection-end-line="44" selection-end-column="133" />
+        <state vertical-scroll-proportion="-11.653846">
+          <caret line="158" column="54" selection-start-line="158" selection-start-column="34" selection-end-line="158" selection-end-column="54" />
           <folding>
-            <marker date="1466233206542" expanded="true" signature="4171:4309" placeholder="..." />
-            <marker date="1466233206542" expanded="true" signature="4352:4787" placeholder="..." />
-            <marker date="1466233206542" expanded="true" signature="4463:4622" placeholder="..." />
-            <marker date="1466233206542" expanded="true" signature="4474:4595" placeholder="..." />
-            <marker date="1466233206542" expanded="true" signature="4648:4751" placeholder="..." />
-            <marker date="1466233206542" expanded="true" signature="4659:4723" placeholder="..." />
-            <marker date="1466233206542" expanded="true" signature="4824:5821" placeholder="..." />
-            <marker date="1466233206542" expanded="true" signature="4866:5218" placeholder="..." />
-            <marker date="1466233206542" expanded="true" signature="5265:5649" placeholder="..." />
-            <marker date="1466233206542" expanded="true" signature="5857:6035" placeholder="..." />
-            <marker date="1466233206542" expanded="true" signature="6048:6317" placeholder="..." />
-            <marker date="1466233206542" expanded="true" signature="6456:6894" placeholder="..." />
-            <marker date="1466233206542" expanded="true" signature="6512:6893" placeholder="..." />
+            <marker date="1466269787581" expanded="true" signature="4171:4309" placeholder="..." />
+            <marker date="1466269787581" expanded="true" signature="4352:4787" placeholder="..." />
+            <marker date="1466269787581" expanded="true" signature="4463:4622" placeholder="..." />
+            <marker date="1466269787581" expanded="true" signature="4474:4595" placeholder="..." />
+            <marker date="1466269787581" expanded="true" signature="4648:4751" placeholder="..." />
+            <marker date="1466269787581" expanded="true" signature="4659:4723" placeholder="..." />
+            <marker date="1466269787581" expanded="true" signature="4824:5860" placeholder="..." />
+            <marker date="1466269787581" expanded="true" signature="4866:5257" placeholder="..." />
+            <marker date="1466269787581" expanded="true" signature="5304:5688" placeholder="..." />
+            <marker date="1466269787581" expanded="true" signature="5896:6074" placeholder="..." />
+            <marker date="1466269787581" expanded="true" signature="6087:6356" placeholder="..." />
+            <marker date="1466269787581" expanded="true" signature="6495:6933" placeholder="..." />
+            <marker date="1466269787581" expanded="true" signature="6551:6932" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/graph.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Handles/WebSocketHandle.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.076794654">
-          <caret line="2" column="49" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
+        <state vertical-scroll-proportion="-6.0740743">
+          <caret line="64" column="44" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
+          <folding>
+            <element signature="e#32#50#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repositories/SensorRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6928214">
+          <caret line="35" column="82" selection-start-line="35" selection-start-column="82" selection-end-line="35" selection-end-column="82" />
           <folding />
         </state>
       </provider>

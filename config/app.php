@@ -214,6 +214,7 @@ return [
         'Module'    => Akku\Models\Module::class,
         'Thing'     => Akku\Models\Thing::class,
         'Value'     => Akku\Models\Value::class,
+        'Setting'   => Akku\Models\Setting::class,
 
     ],
 

@@ -33,7 +33,7 @@ class SensorRepository
 
     static function changeSwitchStatus($switch, $value, $server)
     {
+        // Change switch status request received, just frwd it to the Relay module
         $server->sendData('MODULE02', 'update_switch_status', ['value' => $value, 'msg' => 'Manual override']);
-        $server->sendData('MODULE05', 'water_level_update', ['value' => rand(1,100)]);
     }
 }

@@ -18,7 +18,7 @@ class WebSocketHandle
             if($module) {
                 $module->status = 1;
                 $module->save();
-                $data = ModuleRepository::getInitialData($module);
+                $data = ModuleRepository::getInitialData($module, $this->server);
                 $data['key'] = $module->key;
                 return $data;
             }
