@@ -12,10 +12,10 @@ class SensorRepository
 {
     static function addNewValue($thing, $value, $server)
     {
-        $value = new Value();
-        $value->value = $value;
-        $value->thing()->associate($thing);
-        $value->save();
+        $value_d = new Value();
+        $value_d->value = $value;
+        $value_d->thing()->associate($thing);
+        $value_d->save();
 
         // send value to the listening websockets
         if($thing->key == 'WATERLEVEL01')  {
@@ -31,8 +31,9 @@ class SensorRepository
 
     }
 
-    static  function  changeSwitchStatus($switch, $value, $server)
+    static function changeSwitchStatus($switch, $value, $server)
     {
         $server->sendData('MODULE02', 'update_switch_status', ['value' => $value, 'msg' => 'Manual override']);
+        $server->sendData('MODULE05', 'water_level_update', ['value' => rand(1,100)]);
     }
 }

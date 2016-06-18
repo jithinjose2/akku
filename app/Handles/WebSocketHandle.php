@@ -2,8 +2,9 @@
 
 namespace Akku\Handles;
 
-use Akku\Models\Module;
+use Module, Thing;
 use Akku\Repositories\SensorRepository;
+use Akku\Repositories\ModuleRepository;
 
 class WebSocketHandle
 {
@@ -17,7 +18,9 @@ class WebSocketHandle
             if($module) {
                 $module->status = 1;
                 $module->save();
-                return $module->key;
+                $data = ModuleRepository::getInitialData($module);
+                $data['key'] = $module->key;
+                return $data;
             }
         }
         return false;
@@ -48,7 +51,7 @@ class WebSocketHandle
         if(!empty($data['thing_key'])) {
             $thing = Thing::where('key', $data['thing_key'])->first();
             if($thing) {
-                SensorRepository::addNewValue($id, $thing, $this->server);
+                SensorRepository::addNewValue($thing, $data['value'], $this->server);
             }
         }
     }
@@ -59,7 +62,7 @@ class WebSocketHandle
         {
             $switch = Thing::where('key', $data['switch_key'])->first();
             if($switch) {
-                SensorRepository::changeSwitchStatus($switch, $data['switch_status'], $this->server);
+                SensorRepository::changeSwitchStatus($switch, $data['value'], $this->server);
             }
         }
     }

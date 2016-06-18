@@ -10,4 +10,9 @@ class Value extends Model
     {
         return $this->belongsTo('Akku\Models\Thing', 'thing_id');
     }
+
+    public function __toString()
+    {
+        return '';
+    }
 }
