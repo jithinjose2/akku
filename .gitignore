@@ -1,4 +1,5 @@
 /vendor
+/mirror/vendor
 /node_modules
 /public/storage
 Homestead.yaml
