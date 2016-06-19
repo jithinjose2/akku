@@ -35,7 +35,7 @@ $client->on("message", function($message) use ($client, $logger){
 });
 
 
-$loop->addPeriodicTimer(1, function(){
+$loop->addPeriodicTimer(0.25, function(){
     echo "Timer : " . shell_exec('gpio read 29');
 });
 

@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="33515f90-5dcc-46d1-9499-64e7793e7239" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/gabrielbull/websocket-client" afterPath="$PROJECT_DIR$/mirror/vendor/gabrielbull/websocket-client" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/client.php" afterPath="$PROJECT_DIR$/mirror/client.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/composer.json" afterPath="$PROJECT_DIR$/mirror/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/composer.lock" afterPath="$PROJECT_DIR$/mirror/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/composer/autoload_namespaces.php" afterPath="$PROJECT_DIR$/mirror/vendor/composer/autoload_namespaces.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/composer/autoload_psr4.php" afterPath="$PROJECT_DIR$/mirror/vendor/composer/autoload_psr4.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/composer/autoload_real.php" afterPath="$PROJECT_DIR$/mirror/vendor/composer/autoload_real.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/mirror/vendor/composer/installed.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/client2.php" afterPath="$PROJECT_DIR$/mirror/client2.php" />
     </list>
     <ignored path="code.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,7 +29,7 @@
         <entry file="file://$PROJECT_DIR$/mirror/client2.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.5407654">
-              <caret line="37" column="38" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
+              <caret line="37" column="28" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
               <folding>
                 <element signature="e#6#91#0#PHP" expanded="true" />
               </folding>
@@ -654,7 +647,7 @@
     <entry file="file://$PROJECT_DIR$/mirror/client2.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5407654">
-          <caret line="37" column="38" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
+          <caret line="37" column="28" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
           <folding>
             <element signature="e#6#91#0#PHP" expanded="true" />
           </folding>
