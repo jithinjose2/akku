@@ -8,6 +8,9 @@
 
 include "vendor/autoload.php";
 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 use WebSocketClient\WebSocketClient;
 use WebSocketClient\WebSocketClientInterface;
 
@@ -17,10 +20,12 @@ class Client implements WebSocketClientInterface
 
     public function onWelcome(array $data)
     {
+        echo "on welcome";
     }
 
     public function onEvent($topic, $message)
     {
+        echo "on event";
     }
 
     public function subscribe($topic)
@@ -46,6 +51,7 @@ class Client implements WebSocketClientInterface
     public function setClient(WebSocketClient $client)
     {
         $this->client = $client;
+        //$client->sendData(['action' => 'register', 'key' => 'MODULE03']);
     }
 }
 

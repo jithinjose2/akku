@@ -8,6 +8,13 @@
         }
     ],
     "require": {
-        "gabrielbull/websocket-client": "dev-master"
-    }
+        "gabrielbull/websocket-client": "dev-master",
+        "devristo/phpws": "dev-master"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/Devristo/phpws"
+        }
+    ]
 }
