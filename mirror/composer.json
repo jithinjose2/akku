@@ -1,0 +1,13 @@
+{
+    "name": "jithinjose2/mirror_server",
+    "description": "Mirror server",
+    "authors": [
+        {
+            "name": "jithin Jose",
+            "email": "jithinjose2@gmail.com"
+        }
+    ],
+    "require": {
+        "gabrielbull/websocket-client": "dev-master"
+    }
+}
