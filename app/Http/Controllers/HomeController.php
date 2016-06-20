@@ -4,7 +4,7 @@ namespace Akku\Http\Controllers;
 
 use Akku\Http\Requests;
 use Illuminate\Http\Request;
-use Thing;
+use Thing, Setting;
 
 class HomeController extends Controller
 {
@@ -33,6 +33,13 @@ class HomeController extends Controller
         $led_switch     = Thing::where('key', 'SWITCHLED01')->first();
         $lcd_switch     = Thing::where('key', 'SWITCHLCD02')->first();
         $light_switch   = Thing::where('key', 'SWITCHLIGHT01')->first();
+
+        $settings = Setting::all();
+        $sets = [];
+        foreach($settings as $setting){
+            $sets[$setting->key] = $setting->value;
+        }
+
         return view('home', [
             'water_level_thing'     => $water_level_thing,
             'motor_switch_thing'    => $motor_switch_thing,
@@ -41,7 +48,8 @@ class HomeController extends Controller
             'led_thing'             => $led_thing,
             'led_switch'            => $led_switch,
             'lcd_switch'            => $lcd_switch,
-            'light_switch'          => $light_switch
+            'light_switch'          => $light_switch,
+            'settings'              => $sets
         ]);
     }
 }

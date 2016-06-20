@@ -61,23 +61,39 @@
                 _light_color.colorpicker('setValue', res.led_color)
 
             } else if(res.action == 'water_level_update') {
-                var series = $('#containerhc').highcharts().series[0];
+                var series = $('#graph_water').highcharts().series[0];
                 var x = (new Date()).getTime(), // current time
-                        y = res.value;
+                        y = res.value - settings.max_level;
                 series.addPoint([x, y], true, true);
-                $(".water_level").html(res.value);
+                $("#panel-water .xvalue").html(res.value);
+            } else if(res.action == 'temperature_update') {
+                var series = $('#graph_temp').highcharts().series[0];
+                var x = (new Date()).getTime(), // current time
+                        y = res.value - settings.max_level;
+                series.addPoint([x, y], true, true);
+                $("#panel-temp .xvalue").html(res.value);
+            } else if(res.action == 'humidity_update') {
+                var series = $('#graph_hum').highcharts().series[0];
+                var x = (new Date()).getTime(), // current time
+                        y = res.value - settings.max_level;
+                series.addPoint([x, y], true, true);
+                $("#panel-hum .xvalue").html(res.value);
             } else if(res.action == 'motor_switch_status') {
                 _motor_switch.bootstrapSwitch('disabled', false);
                 _motor_switch.bootstrapSwitch('state', res.value == 1 ? true : false, true);
+                _motor_switch.parents(".panel").first().find(".huge").html(res.value == 1 ? 'ON' : 'OFF');
             } else if(res.action == 'switch_led_update') {
                 _led_switch.bootstrapSwitch('disabled', false);
                 _led_switch.bootstrapSwitch('state', res.value == 1 ? true : false, true);
+                _led_switch.parents(".panel").first().find(".huge").html(res.value == 1 ? 'ON' : 'OFF');
             } else if(res.action == 'switch_lcd_update') {
                 _lcd_switch.bootstrapSwitch('disabled', false);
                 _lcd_switch.bootstrapSwitch('state', res.value == 1 ? true : false, true);
+                _lcd_switch.parents(".panel").first().find(".huge").html(res.value == 1 ? 'ON' : 'OFF');
             } else if(res.action == 'switch_light_update') {
                 _light_switch.bootstrapSwitch('disabled', false);
                 _light_switch.bootstrapSwitch('state', res.value == 1 ? true : false, true);
+                _light_switch.parents(".panel").first().find(".huge").html(res.value == 1 ? 'ON' : 'OFF');
             } else if(res.action == 'led_color_update') {
                 _light_color.colorpicker('enable');
                 _light_color.setColor(res.value);
