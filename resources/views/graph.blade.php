@@ -1,4 +1,4 @@
-<div class="panel panel-info">
+<div class="panel panel-primary">
     <div class="panel-heading">
         <span id="chat-head">MotorControll</span>
         <span id="status" style="float:right">
@@ -6,14 +6,10 @@
         </span>
     </div>
     <div class="panel-body" style="min-height:250px">
-        <div id="containerhc" style="min-width: 310px; height: 250px; margin: 0 auto"></div>
+        <div id="containerhc" style="min-width: 310px; height: 310px; margin: 0 auto"></div>
     </div>
     <div class="panel-footer">
-        <div class="input-group">
-            Light Switch
-            <input type="checkbox" name="my-checkbox" id="chkbox" data-size="large">
-            <span id="wait" style="display: none;color:grey">&nbsp;&nbsp;Please wait.....&nbsp;</span>
-        </div>
+        Live Data
     </div>
 </div>
 <script>
@@ -33,11 +29,9 @@
                     marginRight: 10,
                     events: {
                         load: function () {
-
                             // set up the updating of the chart each second
                             /*var series = this.series[0];
                              setInterval(function () {
-
                              }, 1000);*/
                         }
                     }

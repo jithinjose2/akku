@@ -17,8 +17,11 @@ class ModuleRepository
     {
         $data = [];
         if($module->key == 'MODULE05') {
-            $motor_switch_thing = Thing::where('key', 'MOTOR01')->first();
-            $data['motor_switch_status'] = $motor_switch_thing->latestValue ? $motor_switch_thing->latestValue->value : 0;
+            $data['motor_switch_status'] = Thing::where('key', 'MOTOR01')->first()->latestValue->value ? 1 : 0;
+            $data['led_switch_status'] = Thing::where('key', 'SWITCHLED01')->first()->latestValue->value ? 1 : 0;
+            $data['lcd_switch_status'] = Thing::where('key', 'SWITCHLCD02')->first()->latestValue->value ? 1 : 0;
+            $data['light_switch_status'] = Thing::where('key', 'SWITCHLIGHT01')->first()->latestValue->value ? 1 : 0;
+            $data['led_color'] = Thing::where('key', 'LED01')->first()->latestValue->value_str;
         } elseif ($module->key == 'MODULE02') {
             // attach settings
             $data['max_motor_active_time'] = Setting::where('key', 'max_motor_active_time')->first()->value;

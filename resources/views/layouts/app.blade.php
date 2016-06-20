@@ -26,6 +26,9 @@
     <script src="/js/bootstrap-switch.js"></script>
     <script src="/js/highcharts.js"></script>
 
+    <link href="css/bootstrap-colorpicker.css" rel="stylesheet">
+    <script src="js/bootstrap-colorpicker.js"></script>
+
 <style>
     .bg-gray{
         color: lightgray;
