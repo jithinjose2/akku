@@ -109,7 +109,7 @@ $loop->addPeriodicTimer(0.25, function() use($client, $last_ir_value, $config){
 $loop->addPeriodicTimer(5, function() use($client, $config){
     // $config['TEMP_HUMID_SESNOR_PIN'];
     $temperature = rand(5,10);//shell_exec('gpio read 29');
-    $client->send(json_encode(['action' => 'update_data', 'thing_key' => $config['TEMP01'], 'value' => $temperature]));
+    $client->send(json_encode(['action' => 'update_data', 'thing_key' => $config['TEMPSENSOR_KEY'], 'value' => $temperature]));
     $humidity = rand(5,10);//shell_exec('gpio read 29');
     $client->send(json_encode(['action' => 'update_data', 'thing_key' => $config['HUMIDSESNSOR_KEY'], 'value' => $humidity]));
 });
