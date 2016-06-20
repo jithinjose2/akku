@@ -66,5 +66,17 @@ class WebSocketHandle
             }
         }
     }
+
+    public function action_change_led_color($id, $data)
+    {
+        if(!empty($data['led_key']))
+        {
+            $led = Thing::where('key', $data['led_key'])->first();
+            if($led) {
+                SensorRepository::changeLedColor($led, $data['value'], $this->server);
+            }
+        }
+    }
+
     
 }

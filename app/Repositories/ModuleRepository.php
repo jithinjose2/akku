@@ -30,6 +30,9 @@ class ModuleRepository
             // motor will be disabled when relay module starts
             $thing = Thing::where('key', 'MOTOR01')->first();
             SensorRepository::addNewValue($thing, 0, $server);
+        } elseif ($module->key == 'MODULE03') {
+            $led_color = Thing::where('key', 'MOTOR01')->first();
+            $data['led_color'] = $led_color ? $led_color->value_str : 'FFF';
         }
         return $data;
     }
