@@ -15,7 +15,6 @@
             <span class="pull-left">
                 {{ $water_level_thing->module->status ? 'Online' : 'Offline' }}
             </span>
-            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
             <div class="clearfix"></div>
         </div>
     </a>
@@ -38,7 +37,6 @@
             <span class="pull-left">
                 {{ $temprature_thing->module->status ? 'Online' : 'Offline' }}
             </span>
-            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
             <div class="clearfix"></div>
         </div>
     </a>
@@ -61,7 +59,6 @@
             <span class="pull-left">
                 {{ $humidity_thing->module->status ? 'Online' : 'Offline' }}
             </span>
-            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
             <div class="clearfix"></div>
         </div>
     </a>
