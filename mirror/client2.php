@@ -8,6 +8,8 @@
 
 require_once("vendor/autoload.php");                // Composer autoloader
 
+error_reporting(E_ERROR);
+
 $config = [
     'WS_HOST' => '192.168.1.103',
     'WS_PORT' => 8001,
@@ -21,9 +23,9 @@ $config = [
     'TEMP_HUMID_SESNOR_PIN' => 28,
 
     'LED_KEY'       => 'LED01',
-    'LED_RED_PIN'   => 17,
-    'LED_GREEN_PIN' => 27,
-    'LED_BLUE_PIN'  => 22,
+    'LED_RED_PIN'   => 17,      // PGPIO pins
+    'LED_GREEN_PIN' => 27,      // PGPIO pins
+    'LED_BLUE_PIN'  => 22,      // PGPIO pins
 
     'SWITCH_LED_KEY'    => 'SWITCHLED01',
     'SWITCH_LIGHT_KEY'  => 'SWITCHLIGHT01',
@@ -88,7 +90,7 @@ $client->on("message", function($message) use ($client, $logger){
 
 
 // Registered action
-function action_registered($data)
+function action_registred($data)
 {
     if(!empty($data['led_color'])) {
         action_update_led_color(['value' => $data['led_color']]);
