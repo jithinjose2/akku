@@ -112,6 +112,8 @@ $loop->addPeriodicTimer(5, function() use($client, $config){
     // $config['TEMP_HUMID_SESNOR_PIN'];
     $temperature = rand(5,10);//shell_exec('gpio read 29');
     $client->send(json_encode(['action' => 'update_data', 'thing_key' => $config['TEMPSENSOR_KEY'], 'value' => $temperature]));
+});
+$loop->addPeriodicTimer(6, function() use($client, $config){
     $humidity = rand(5,10);//shell_exec('gpio read 29');
     $client->send(json_encode(['action' => 'update_data', 'thing_key' => $config['HUMIDSESNSOR_KEY'], 'value' => $humidity]));
 });
@@ -122,7 +124,7 @@ function action_update_led_color($data)
     global $config, $client;
     if(!empty($data['value'])) {
         if(($rgb = hex2RGB($data['value'])) !== false ) {
-            echo "\n\n ".$data['value']." : ". json_encode($rgb).'\n\n';
+            echo "\n Updating color : " . $data['value']." : ". json_encode($rgb);
             gpio_pwm_write($config['LED_RED_PIN'], $rgb['r']);
             gpio_pwm_write($config['LED_GREEN_PIN'], $rgb['g']);
             gpio_pwm_write($config['LED_BLUE_PIN'], $rgb['b']);

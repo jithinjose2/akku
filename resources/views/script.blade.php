@@ -7,6 +7,7 @@
         _lcd_switch     = $("[name='lcd-switch']");
         _light_switch   = $("[name='light-switch']");
         _light_color    = $("[name='led-color']").parent();
+        _color_panel     = $(".clr-pick-panel");
 
         serverUrl = 'ws://{{ config('websocket.host') .':'. config('websocket.port') }}/demo';
         if (window.MozWebSocket) {
@@ -69,13 +70,13 @@
             } else if(res.action == 'temperature_update') {
                 var series = $('#graph_temp').highcharts().series[0];
                 var x = (new Date()).getTime(), // current time
-                        y = res.value - settings.max_level;
+                        y = res.value;
                 series.addPoint([x, y], true, true);
                 $("#panel-temp .xvalue").html(res.value);
             } else if(res.action == 'humidity_update') {
                 var series = $('#graph_hum').highcharts().series[0];
                 var x = (new Date()).getTime(), // current time
-                        y = res.value - settings.max_level;
+                        y = res.value;
                 series.addPoint([x, y], true, true);
                 $("#panel-hum .xvalue").html(res.value);
             } else if(res.action == 'motor_switch_status') {
@@ -96,7 +97,9 @@
                 _light_switch.parents(".panel").first().find(".huge").html(res.value == 1 ? 'ON' : 'OFF');
             } else if(res.action == 'led_color_update') {
                 _light_color.colorpicker('enable');
-                _light_color.setColor(res.value);
+                //_light_color.colorpicker().setColor(res.value);
+                _color_panel.css('background-color', '#' + res.value);
+                _color_panel.css('border-color', '#' + res.value);
             }
 
         }

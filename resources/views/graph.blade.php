@@ -39,9 +39,7 @@
                 value: 0,
                 width: 1,
                 color: '#808080'
-            }],
-            min : 0,
-            max : settings.min_level - settings.max_level
+            }]
         },
         tooltip: {
             formatter: function () {
@@ -105,6 +103,9 @@
                     text: 'Motor cutoff'
                 }
             }];
+
+            water_graph_info.yAxis.min = 0;
+            water_graph_info.yAxis.max = settings.min_level - settings.max_level;
             $('#graph_water').highcharts(water_graph_info);
 
             temp_graph_template.title.text = "Temperature";

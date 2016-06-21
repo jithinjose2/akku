@@ -27,7 +27,7 @@
 
 
 <div class="col-lg-3 col-md-6">
-    <div class="panel" style="border-color:#{{ $led_thing->latestValue->value_str }};background-color:#{{ $led_thing->latestValue->value_str }};color:white">
+    <div class="panel clr-pick-panel" style="border-color:#{{ $led_thing->latestValue->value_str }};background-color:#{{ $led_thing->latestValue->value_str }};color:white">
         <div class="panel-heading">
             <div class="row">
                 <div class="col-xs-3">
