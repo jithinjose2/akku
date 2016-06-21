@@ -120,6 +120,7 @@ function action_update_led_color($data)
     global $config, $client;
     if(!empty($data['value'])) {
         if(($rgb = hex2RGB($data['value'])) !== false ) {
+            echo "\n\n ".$data['value']." : ". json_encode($rgb).'\n\n';
             gpio_pwm_write($config['LED_RED_PIN'], $rgb['r']);
             gpio_pwm_write($config['LED_GREEN_PIN'], $rgb['g']);
             gpio_pwm_write($config['LED_BLUE_PIN'], $rgb['b']);
