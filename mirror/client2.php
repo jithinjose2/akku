@@ -21,9 +21,9 @@ $config = [
     'TEMP_HUMID_SESNOR_PIN' => 28,
 
     'LED_KEY'       => 'LED01',
-    'LED_RED_PIN'   => 0,
-    'LED_GREEN_PIN' => 2,
-    'LED_BLUE_PIN'  => 3,
+    'LED_RED_PIN'   => 17,
+    'LED_GREEN_PIN' => 27,
+    'LED_BLUE_PIN'  => 22,
 
     'SWITCH_LED_KEY'    => 'SWITCHLED01',
     'SWITCH_LIGHT_KEY'  => 'SWITCHLIGHT01',
@@ -39,9 +39,9 @@ $led_color = "";
 // Set pin modes & initial status
 shell_exec('gpio mode '.$config['IRSENSOR_PIN'].' in');
 shell_exec('gpio mode '.$config['TEMP_HUMID_SESNOR_PIN'].' in');
-shell_exec('gpio mode '.$config['LED_RED_PIN'].' pwm');
-shell_exec('gpio mode '.$config['LED_GREEN_PIN'].' pwm');
-shell_exec('gpio mode '.$config['LED_BLUE_PIN'].' pwm');
+//shell_exec('gpio mode '.$config['LED_RED_PIN'].' pwm');
+//shell_exec('gpio mode '.$config['LED_GREEN_PIN'].' pwm');
+//shell_exec('gpio mode '.$config['LED_BLUE_PIN'].' pwm');
 
 shell_exec('gpio write '.$config['SWITCH_LED_PIN'].' 1');
 shell_exec('gpio write '.$config['SWITCH_LIGHT_PIN'].' 1');
@@ -187,6 +187,5 @@ function hex2RGB($hexStr, $returnAsString = false, $seperator = ',') {
 }
 
 function gpio_pwm_write($pin, $value){
-    $value = ($value * 4 ) + 3;
-    shell_exec('gpio write ' . $pin . ' ' . $value);
+    shell_exec('pigs p ' . $pin . ' ' . $value);
 }

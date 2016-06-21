@@ -34,8 +34,7 @@ class ModuleRepository
             $thing = Thing::where('key', 'MOTOR01')->first();
             SensorRepository::addNewValue($thing, 0, $server);
         } elseif ($module->key == 'MODULE03') {
-            $led_color = Thing::where('key', 'MOTOR01')->first();
-            $data['led_color'] = $led_color ? $led_color->value_str : 'FFF';
+            $data['led_color'] = Thing::where('key', 'LED01')->first()->latestValue->value_str;
         }
         return $data;
     }
