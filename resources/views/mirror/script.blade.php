@@ -53,7 +53,7 @@
         socket.onmessage = function(msg) {
             var response;
             response = JSON.parse(msg.data);
-            checkJson(response);
+            //checkJson(response);
             return true;
         };
         socket.onclose = function(msg) {
@@ -72,6 +72,8 @@
             payload.action      = 'register';
             payload.key 		  = 'MODULE04';
             socket.send(JSON.stringify(payload));
+            $('#status').hide();
+            $('.ws_show').show();
         }
 
     })

@@ -23,6 +23,7 @@
     <script src="js/mm-weather.js?nocache=<?php echo md5(microtime()) ?>"></script>
     <script src="js/mm-mbta.js?nocache=<?php echo md5(microtime()) ?>"></script>
     <script src="js/mm-mta.js?nocache=<?php echo md5(microtime()) ?>"></script>			<!-- This must be included after mm-mbta.js -->
+    <script src="/js/highcharts.js"></script>
 
 </head>
 <body>
@@ -37,6 +38,7 @@
     <div class="holidays xxsmall dimmed"></div>
     <div class="calendar xxsmall"></div>
     <div class="mbta xxxsmall dimmed"></div>
+    @include('mirror.water')
 </div>
 
 <div class="top right">
@@ -50,6 +52,10 @@
         <div class="weekgraph"></div>
         <div class="summary xxsmall2 dimmed"></div>
         <div class="weatheralerts xxsmall2 dimmed"></div>
+        <div class="light_row ws_show">
+            <div class="light off"></div>
+            <div class="led off"></div>
+        </div>
     </div>
 </div>
 
@@ -79,7 +85,39 @@
 </div>
 
 </div>
+<style>
+    #status{
+        font-size:15px;
+    }
 
+    .light_row{
+        padding-top: 90px;
+        padding-right: 40px;
+    }
+    .ws_show{
+        display: none;
+    }
+    .light_row .light, .light_row .led{
+        background-image: url("img/light_off.png");
+        height: 60px;
+        background-size: 60px 60px;
+        width: 60px;
+        float: right;
+    }
+    .light_row .light.off, .light_row .led.off{
+        background-image: url("img/light_off.png");
+        opacity: 0.1;
+    }
+    .light_row .light.on{
+        background-image: url("img/light_on.png");
+        opacity: 1;
+    }
+    .light_row .led.on{
+        background-image: url("img/light_on_color.png");
+        opacity: 1;
+        background-color: white;
+    }
+</style>
 @include('mirror.script')
 </body>
 </html>
