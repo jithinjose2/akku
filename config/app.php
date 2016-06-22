@@ -216,6 +216,9 @@ return [
         'Value'     => Akku\Models\Value::class,
         'Setting'   => Akku\Models\Setting::class,
 
+        // 3rd party
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
+
     ],
 
 ];

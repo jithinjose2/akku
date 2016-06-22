@@ -89,7 +89,7 @@
 
 
 <div class="col-lg-3 col-md-6">
-    <div class="panel panel-red">
+    <div class="panel panel-primary">
         <div class="panel-heading">
             <div class="row">
                 <div class="col-xs-3">
