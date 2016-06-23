@@ -279,3 +279,8 @@
         $("#water_graph_container").highcharts(graph_template);
     })
 </script>
+<style>
+    #water_graph_container{
+        display: none;
+    }
+</style>

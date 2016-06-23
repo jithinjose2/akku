@@ -53,8 +53,8 @@
         <div class="summary xxsmall2 dimmed"></div>
         <div class="weatheralerts xxsmall2 dimmed"></div>
         <div class="light_row ws_show">
-            <div class="light off"></div>
             <div class="led off"></div>
+            <div class="light off"></div>
         </div>
     </div>
 </div>
@@ -82,6 +82,8 @@
     <div class="lastupdated luMBTA xxxsmall xxdimmed"></div>
     <div class="lastupdated luRSS xxxsmall xxdimmed"></div>
     <div class="lastupdated luHolidays xxxsmall xxdimmed"></div>
+    <div class="lastupdated vc xxxsmall xxdimmed"></div>
+    <div class="lastupdated vc_proc xxxsmall xxdimmed"></div>
 </div>
 
 </div>

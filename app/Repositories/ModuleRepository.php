@@ -16,12 +16,15 @@ class ModuleRepository
     static function getInitialData($module, $server)
     {
         $data = [];
-        if($module->key == 'MODULE05') {
+        if($module->key == 'MODULE05' || $module->key == 'MODULE04') {
             $data['motor_switch_status'] = Thing::where('key', 'MOTOR01')->first()->latestValue->value ? 1 : 0;
             $data['led_switch_status'] = Thing::where('key', 'SWITCHLED01')->first()->latestValue->value ? 1 : 0;
             $data['lcd_switch_status'] = Thing::where('key', 'SWITCHLCD02')->first()->latestValue->value ? 1 : 0;
             $data['light_switch_status'] = Thing::where('key', 'SWITCHLIGHT01')->first()->latestValue->value ? 1 : 0;
             $data['led_color'] = Thing::where('key', 'LED01')->first()->latestValue->value_str;
+            $data['water_level'] = intval(Thing::where('key', 'WATERLEVEL01')->first()->latestValue->value);
+            $data['temperature'] = intval(Thing::where('key', 'TEMP01')->first()->latestValue->value);
+            $data['humidity'] = intval(Thing::where('key', 'HUMID01')->first()->latestValue->value);
         } elseif ($module->key == 'MODULE02') {
             // attach settings
             $data['max_motor_active_time'] = Setting::where('key', 'max_motor_active_time')->first()->value;
