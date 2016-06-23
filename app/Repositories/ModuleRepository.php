@@ -25,6 +25,14 @@ class ModuleRepository
             $data['water_level'] = intval(Thing::where('key', 'WATERLEVEL01')->first()->latestValue->value);
             $data['temperature'] = intval(Thing::where('key', 'TEMP01')->first()->latestValue->value);
             $data['humidity'] = intval(Thing::where('key', 'HUMID01')->first()->latestValue->value);
+
+            $settings = Setting::all();
+            $sets = [];
+            foreach($settings as $setting){
+                $sets[$setting->key] = $setting->value;
+            }
+            $data['settings'] = $sets;
+
         } elseif ($module->key == 'MODULE02') {
             // attach settings
             $data['max_motor_active_time'] = Setting::where('key', 'max_motor_active_time')->first()->value;

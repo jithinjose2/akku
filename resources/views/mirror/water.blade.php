@@ -6,7 +6,7 @@
         <div class="info">
             <div class="water_percent">0 %</div>
             <div class="water_motor"><img src="img/motor_1.gif"/></div>
-            <div class="water_trigger">Trigger {{ $settings['trigger_percent'] }}% - {{ $settings['cutoff_percent'] }}%</div>
+            <div class="water_trigger">Trigger <span id="trigger_percent">0</span>% - <span id="cutoff_percent">0</span>%</div>
             <div class="water_time">Last Updated 00:00</div>
         </div>
     </div>

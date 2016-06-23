@@ -11,7 +11,7 @@
     var percent = 0;
     var _motor_status = 0;
     var _compliment = $('.compliment');
-    var settings = {!! json_encode($settings) !!};
+    var settings = {};
 
     // Websocket section
     //$(document).ready(function () {
@@ -57,6 +57,7 @@
         if (res.action == 'registred') {
             $('#status').hide();
             $('.ws_show').show();
+            settings = res.settings;
             changeLightStatus(_led, res.led_switch_status);
             changeLightStatus(_light, res.light_switch_status);
             _led.css('background-color', '#' + res.led_color);
@@ -64,6 +65,8 @@
             motorStateChange(res.motor_switch_status);
             _temp.html(res.temperature);
             _hum.html(res.humidity);
+            $("#trigger_percent").html(settings.trigger_percent);
+            $("#cutoff_percent").html(settings.cutoff_percent);
         } else if (res.action == 'water_level_update') {
             setWaterLevel(res.value);
         } else if(res.action == 'led_color_update') {

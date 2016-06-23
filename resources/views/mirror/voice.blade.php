@@ -120,7 +120,7 @@
 
             if(object == 'led') {
                 if(action == 'update_color' && value.length>0) {
-                    _compliment.updateWithText("Okay, Chaging LED color to " + value, 2000);
+                    _compliment.updateWithText("Okay, Changing LED color to " + value, 2000);
                     var color = 'FFFFFF';
                     if(value == 'red') color = 'FF0000';
                     if(value == 'green') color = '00FF00';

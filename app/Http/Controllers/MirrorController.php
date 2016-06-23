@@ -19,15 +19,7 @@ class MirrorController  extends Controller
     {
         \Debugbar::disable();
 
-        $water_level_thing  = Thing::where('key', 'WATERLEVEL01')->first();
-
-        $settings = Setting::all();
-        $sets = [];
-        foreach($settings as $setting){
-            $sets[$setting->key] = $setting->value;
-        }
-
-        return view('mirror.index', ['settings' => $sets, 'water_level_thing' => $water_level_thing]);
+        return view('mirror.index');
     }
 
     public function proxy(Request $request)
