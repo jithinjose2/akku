@@ -114,6 +114,7 @@ $loop->addPeriodicTimer(0.25, function() use($client, $last_ir_value, $config){
 // Temperature humidity sensor section
 $loop->addPeriodicTimer(10, function() use($client, $config){
     global $temp;
+    getTempAndHumid();
     $client->send(json_encode(['action' => 'update_data', 'thing_key' => $config['TEMPSENSOR_KEY'], 'value' => $temp]));
 });
 $loop->addPeriodicTimer(11, function() use($client, $config){
