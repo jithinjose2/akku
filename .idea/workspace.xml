@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="33515f90-5dcc-46d1-9499-64e7793e7239" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/gabrielbull/websocket-client" afterPath="$PROJECT_DIR$/mirror/vendor/gabrielbull/websocket-client" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/MirrorController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/MirrorController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Repositories/ModuleRepository.php" afterPath="$PROJECT_DIR$/app/Repositories/ModuleRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/client2.php" afterPath="$PROJECT_DIR$/mirror/client2.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/mirror/script.blade.php" afterPath="$PROJECT_DIR$/resources/views/mirror/script.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/mirror/voice.blade.php" afterPath="$PROJECT_DIR$/resources/views/mirror/voice.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/mirror/water.blade.php" afterPath="$PROJECT_DIR$/resources/views/mirror/water.blade.php" />
     </list>
     <ignored path="code.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,18 +61,28 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/mirror/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-99.96154">
+            <state vertical-scroll-proportion="-46.884617">
               <caret line="113" column="49" selection-start-line="113" selection-start-column="49" selection-end-line="113" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="voice.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="voice.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/mirror/voice.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4430823">
+            <state vertical-scroll-proportion="-4.685185">
               <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="client2.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mirror/client2.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.3461537">
+              <caret line="164" column="1" selection-start-line="164" selection-start-column="1" selection-end-line="164" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -100,23 +107,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="graph.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/graph.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="67.23077">
-              <caret line="8" column="85" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="85" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="script.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/script.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-46.923077">
-              <caret line="169" column="53" selection-start-line="165" selection-start-column="16" selection-end-line="169" selection-end-column="53" />
+            <state vertical-scroll-proportion="-14.192307">
+              <caret line="39" column="28" selection-start-line="36" selection-start-column="12" selection-end-line="39" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -132,11 +127,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="script.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="script.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/mirror/script.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.038462">
-              <caret line="68" column="62" selection-start-line="68" selection-start-column="62" selection-end-line="68" selection-end-column="62" />
+            <state vertical-scroll-proportion="0.6911519">
+              <caret line="39" column="34" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -181,7 +176,6 @@
         <option value="$PROJECT_DIR$/resources/views/home-side.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/graph.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/script.blade.php" />
-        <option value="$PROJECT_DIR$/mirror/client2.php" />
         <option value="$PROJECT_DIR$/resources/views/home-head.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/resources/views/mirror.blade.php" />
@@ -197,8 +191,9 @@
         <option value="$PROJECT_DIR$/app/Repositories/ModuleRepository.php" />
         <option value="$PROJECT_DIR$/resources/views/mirror/water.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/MirrorController.php" />
-        <option value="$PROJECT_DIR$/resources/views/mirror/script.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/mirror/voice.blade.php" />
+        <option value="$PROJECT_DIR$/mirror/client2.php" />
+        <option value="$PROJECT_DIR$/resources/views/mirror/script.blade.php" />
       </list>
     </option>
   </component>
@@ -666,13 +661,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mirror/client2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08319467">
-          <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -877,14 +865,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/mirror/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-99.96154">
-          <caret line="113" column="49" selection-start-line="113" selection-start-column="49" selection-end-line="113" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/home-side.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-15.076923">
@@ -901,26 +881,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/mirror/voice.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.685185">
+          <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mirror/client2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.3461537">
+          <caret line="164" column="1" selection-start-line="164" selection-start-column="1" selection-end-line="164" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/mirror/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-46.884617">
+          <caret line="113" column="49" selection-start-line="113" selection-start-column="49" selection-end-line="113" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/script.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-46.923077">
-          <caret line="169" column="53" selection-start-line="165" selection-start-column="16" selection-end-line="169" selection-end-column="53" />
+        <state vertical-scroll-proportion="-14.192307">
+          <caret line="39" column="28" selection-start-line="36" selection-start-column="12" selection-end-line="39" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/mirror/script.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.038462">
-          <caret line="68" column="62" selection-start-line="68" selection-start-column="62" selection-end-line="68" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/mirror/voice.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4430823">
-          <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.6911519">
+          <caret line="39" column="34" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
           <folding />
         </state>
       </provider>

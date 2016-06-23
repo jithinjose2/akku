@@ -20,7 +20,7 @@ $config = [
 
     'TEMPSENSOR_KEY' => 'TEMP01',
     'HUMIDSESNSOR_KEY' => 'HUMID01',
-    'TEMP_HUMID_SESNOR_PIN' => 28,
+    'TEMP_HUMID_SESNOR_PIN' => 18, //BCM pin
 
     'LED_KEY'       => 'LED01',
     'LED_RED_PIN'   => 17,      // PGPIO pins
@@ -34,9 +34,13 @@ $config = [
     'SWITCH_LIGHT_PIN'  => 22,
     'SWITCH_LCD_PIN'    => 23,
 
+    'DHT11_CMD'     => 'sudo /var/www/dht11/Adafruit_Python_DHT/examples/AdafruitDHT.py 11 '
+
 ];
 
 $led_color = "";
+$temp = 0;
+$humid = 0;
 
 // Set pin modes & initial status
 shell_exec('gpio mode '.$config['IRSENSOR_PIN'].' in');
@@ -108,14 +112,13 @@ $loop->addPeriodicTimer(0.25, function() use($client, $last_ir_value, $config){
 });
 
 // Temperature humidity sensor section
-$loop->addPeriodicTimer(5, function() use($client, $config){
-    // $config['TEMP_HUMID_SESNOR_PIN'];
-    $temperature = rand(5,10);//shell_exec('gpio read 29');
-    $client->send(json_encode(['action' => 'update_data', 'thing_key' => $config['TEMPSENSOR_KEY'], 'value' => $temperature]));
+$loop->addPeriodicTimer(10, function() use($client, $config){
+    global $temp;
+    $client->send(json_encode(['action' => 'update_data', 'thing_key' => $config['TEMPSENSOR_KEY'], 'value' => $temp]));
 });
-$loop->addPeriodicTimer(6, function() use($client, $config){
-    $humidity = rand(5,10);//shell_exec('gpio read 29');
-    $client->send(json_encode(['action' => 'update_data', 'thing_key' => $config['HUMIDSESNSOR_KEY'], 'value' => $humidity]));
+$loop->addPeriodicTimer(11, function() use($client, $config){
+    global $humid;
+    $client->send(json_encode(['action' => 'update_data', 'thing_key' => $config['HUMIDSESNSOR_KEY'], 'value' => $humid]));
 });
 
 // LED color update event
@@ -158,7 +161,17 @@ function action_update_light_status($data)
 }
 
 
-
+function getTempAndHumid()
+{
+    global $config, $temp, $humid;
+    $str = shell_exec($config['DHT11_CMD'] . $config['TEMP_HUMID_SESNOR_PIN']);
+    $parts = explode("=",$str);
+    if(count($parts) == 3)
+    {
+        $temp = intval($parts[1]);
+        $humid = intval($parts[2]);
+    }
+}
 
 
 

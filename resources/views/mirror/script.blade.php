@@ -40,6 +40,9 @@
             setTimeout(function(){
                 $('#status').html('<span class="label label-warning">Reconnecting</span>');
             },5000);
+            setTimeout(function(){
+                location.reload();
+            },10000);
             return true;
         };
 
