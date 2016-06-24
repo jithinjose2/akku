@@ -91,6 +91,10 @@ $client->on("message", function($message) use ($client, $logger){
     }
 });
 
+$client->on("close", function(){
+    die('Connection closed');
+});
+
 
 
 // Registered action
