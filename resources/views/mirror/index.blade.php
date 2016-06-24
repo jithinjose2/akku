@@ -119,7 +119,18 @@
         opacity: 1;
         background-color: white;
     }
+    .backgroundTint{
+        display: none;
+    }
+    #lback{
+        background-color: black;
+        position: fixed;
+        width:100%;
+        height:100%;
+        z-index: 10000;
+    }
 </style>
 @include('mirror.script')
+<div id="lback"></div>
 </body>
 </html>

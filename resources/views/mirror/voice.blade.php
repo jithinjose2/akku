@@ -43,6 +43,15 @@
         if(command.length > 0) {
             $(".vc").html(command);
             // objects
+
+            if(command.indexOf('wake up') >= 0) {
+                processMotion(1);
+            }
+
+            if(command.indexOf('sleep') >= 0) {
+                _active_time = 1;
+            }
+
             if (command.indexOf('light') >= 0 || command.indexOf('bulb') >= 0 || command.indexOf('length') >= 0 || command.indexOf('like') >= 0) {
                 object = 'light';
             }

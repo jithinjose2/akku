@@ -12,6 +12,8 @@
     var _motor_status = 0;
     var _compliment = $('.compliment');
     var settings = {};
+    var _back = $("#lback");
+    var _active_time = 0;
 
     // Websocket section
     //$(document).ready(function () {
@@ -84,6 +86,8 @@
             _temp.html(res.value);
         } else if(res.action == 'humidity_update') {
             _hum.html(res.value);
+        } else if(res.action == 'motion_detected') {
+            processMotion(res.value);
         }
     }
 
@@ -140,6 +144,22 @@
 
         }
     }
+
+    function processMotion(value)
+    {
+        if(value == 1) {
+            _active_time = 30;
+            $("#lback").fadeTo("slow", 0);
+        }
+    }
+
+    setInterval(function(){
+        _active_time--;
+        if(_active_time == 0){
+            _back.fadeTo("slow", 1);
+            $("#lback").fadeTo("slow", 1);
+        }
+    }, 1000);
 
 </script>
 @include('mirror.voice')
