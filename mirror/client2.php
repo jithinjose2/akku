@@ -187,8 +187,14 @@ function getTempAndHumid()
 
 
 // CORE functions
-$client->open();
-$loop->run();
+try {
+    $client->open();
+    $loop->run();
+}catch(Exception $e){
+    print_r($e);
+    sleep(10);
+    die();
+}
 
 
 function hex2RGB($hexStr, $returnAsString = false, $seperator = ',') {
