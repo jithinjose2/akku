@@ -25,10 +25,10 @@ WebSocketsClient webSocket;
 #define METER_KEY "LEDBAR01"
 #define WIFI_NAME "HOMENET"
 #define WIFI_PASS "myhome02"
-#define WEBSOCKET_IP "192.168.1.103"
+#define WIFI_NAME1 "foobar"
+#define WIFI_PASS1 "9629454655"
+#define WEBSOCKET_IP "103.3.63.222"
 #define WEBSOCKET_PORT 8001
-#define ULTRASONIC_TRIGGER_PIN 14
-#define ULTRASONIC_ECHO_PIN    12
 
 #define SWITCH_PIN D8
 
@@ -258,6 +258,7 @@ void setup() {
         delay(1000);
     }
 
+    WiFiMulti.addAP(WIFI_NAME1, WIFI_PASS1);
     WiFiMulti.addAP(WIFI_NAME, WIFI_PASS);
 
     //WiFi.disconnect();

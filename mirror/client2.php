@@ -45,10 +45,6 @@ $humid = 0;
 // Set pin modes & initial status
 shell_exec('gpio mode '.$config['IRSENSOR_PIN'].' in');
 shell_exec('gpio mode '.$config['TEMP_HUMID_SESNOR_PIN'].' in');
-//shell_exec('gpio mode '.$config['LED_RED_PIN'].' pwm');
-//shell_exec('gpio mode '.$config['LED_GREEN_PIN'].' pwm');
-//shell_exec('gpio mode '.$config['LED_BLUE_PIN'].' pwm');
-
 shell_exec('gpio write '.$config['SWITCH_LED_PIN'].' 1');
 shell_exec('gpio write '.$config['SWITCH_LIGHT_PIN'].' 1');
 shell_exec('gpio write '.$config['SWITCH_LCD_PIN'].' 1');
@@ -58,7 +54,7 @@ shell_exec('gpio mode '.$config['SWITCH_LCD_PIN'].' out');
 shell_exec('gpio write '.$config['SWITCH_LED_PIN'].' 1');
 shell_exec('gpio write '.$config['SWITCH_LIGHT_PIN'].' 1');
 shell_exec('gpio write '.$config['SWITCH_LCD_PIN'].' 0');
-
+shell_exec('sudo pigpiod');
 
 $loop = \React\EventLoop\Factory::create();
 $logger = new \Zend\Log\Logger();
@@ -116,12 +112,12 @@ $loop->addPeriodicTimer(0.25, function() use($client, $last_ir_value, $config){
 });
 
 // Temperature humidity sensor section
-$loop->addPeriodicTimer(10, function() use($client, $config){
+$loop->addPeriodicTimer(60, function() use($client, $config){
     global $temp;
     getTempAndHumid();
     $client->send(json_encode(['action' => 'update_data', 'thing_key' => $config['TEMPSENSOR_KEY'], 'value' => $temp]));
 });
-$loop->addPeriodicTimer(11, function() use($client, $config){
+$loop->addPeriodicTimer(61, function() use($client, $config){
     global $humid;
     $client->send(json_encode(['action' => 'update_data', 'thing_key' => $config['HUMIDSESNSOR_KEY'], 'value' => $humid]));
 });
