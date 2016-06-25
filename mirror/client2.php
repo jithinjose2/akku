@@ -11,7 +11,7 @@ require_once("vendor/autoload.php");                // Composer autoloader
 error_reporting(E_ERROR);
 
 $config = [
-    'WS_HOST' => '192.168.1.103',
+    'WS_HOST' => '103.3.63.222',
     'WS_PORT' => 8001,
     'MODULE_KEY' => 'MODULE03',
 
@@ -190,7 +190,7 @@ function getTempAndHumid()
 try {
     $client->open();
     $loop->run();
-}catch(Exception $e){
+}catch(\Exception $e){
     print_r($e);
     sleep(10);
     die();
