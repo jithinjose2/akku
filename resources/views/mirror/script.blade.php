@@ -104,7 +104,7 @@
 
     function setWaterLevel(level){
         console.log("Updating water level to" + level );
-        percent = level - settings.max_level / settings.min_level - settings.max_level;
+        percent = (level - settings.max_level) / (settings.min_level - settings.max_level);
         percent = percent * 100;
         if(percent < 0) {
             percent = 0;
@@ -119,7 +119,7 @@
         var x = (new Date()).getTime(), // current time
                 y = percent;
         series.addPoint([x, y], true, true);
-        $(".liquid").css('height', percent * 100 / 80 );
+        $(".liquid").css('height', percent * 80 / 100);
 
     }
 
@@ -147,19 +147,19 @@
 
     function processMotion(value)
     {
-        if(value == 1) {
+        /*if(value == 1) {
             _active_time = 30;
             $("#lback").fadeTo("slow", 0);
-        }
+        }*/
     }
 
-    setInterval(function(){
+    /*setInterval(function(){
         _active_time--;
         if(_active_time == 0){
             _back.fadeTo("slow", 1);
             $("#lback").fadeTo("slow", 1);
         }
-    }, 1000);
+    }, 1000);*/
 
 </script>
 @include('mirror.voice')

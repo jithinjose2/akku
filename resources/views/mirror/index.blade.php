@@ -128,9 +128,12 @@
         width:100%;
         height:100%;
         z-index: 10000;
+        display: none;
     }
 </style>
 @include('mirror.script')
+<!--
 <div id="lback"></div>
+-->
 </body>
 </html>

@@ -10,6 +10,11 @@ class WebSocketHandle
 {
     
     public $server;
+
+    public function starting()
+    {
+        Module::where('status', 1)->update(['status' => 0]);
+    }
     
     public function onConnect($data)
     {
