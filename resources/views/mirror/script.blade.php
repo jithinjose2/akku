@@ -103,6 +103,7 @@
     }
 
     function setWaterLevel(level){
+        level = 950;
         console.log("Updating water level to" + level );
         percent = (level - settings.max_level) / (settings.min_level - settings.max_level);
         percent = percent * 100;
