@@ -2,6 +2,7 @@
 /mirror/vendor
 /node_modules
 /public/storage
+/.idea
 Homestead.yaml
 Homestead.json
 .env
