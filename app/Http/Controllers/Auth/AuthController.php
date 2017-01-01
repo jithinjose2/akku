@@ -2,7 +2,7 @@
 
 namespace Akku\Http\Controllers\Auth;
 
-use Akku\User;
+use Akku\Models\User;
 use Validator;
 use Akku\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
