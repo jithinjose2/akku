@@ -28,3 +28,7 @@ Route::get('/modules', 'ModuleController@index');
 Route::get('/mirror', 'MirrorController@index');
 Route::get('/proxy', 'MirrorController@proxy');
 Route::get('/calendar', 'MirrorController@calendar');
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
