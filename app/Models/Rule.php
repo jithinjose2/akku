@@ -1,10 +1,10 @@
 <?php
 
-namespace Akku;
+namespace Akku\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Action extends Model
+class Rule extends Model
 {
     //
 }
