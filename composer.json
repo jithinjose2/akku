@@ -1,13 +1,16 @@
 {
     "name": "laravel/laravel",
     "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
     "license": "MIT",
     "type": "project",
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.2.*",
-        "jithinjose2/websocket" : "*"
+        "jithinjose2/websocket": "*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -15,7 +18,9 @@
         "phpunit/phpunit": "~4.0",
         "symfony/css-selector": "2.8.*|3.0.*",
         "symfony/dom-crawler": "2.8.*|3.0.*",
-        "barryvdh/laravel-debugbar" : "*"
+        "barryvdh/laravel-debugbar": "*",
+        "way/generators": "dev-feature/laravel-five-stable",
+        "xethron/migrations-generator": "^2.0"
     },
     "autoload": {
         "classmap": [
@@ -50,16 +55,22 @@
     "config": {
         "preferred-install": "dist"
     },
-    "repositories": [{
-        "type": "package",
-        "package": {
-            "name": "jithinjose2/websocket",
-            "version": "1.1",
-            "source": {
-                "url": "https://github.com/jithinjose2/websocket.git",
-                "type": "git",
-                "reference": "master"
+    "repositories": {
+        "0": {
+            "type": "package",
+            "package": {
+                "name": "jithinjose2/websocket",
+                "version": "1.1",
+                "source": {
+                    "url": "https://github.com/jithinjose2/websocket.git",
+                    "type": "git",
+                    "reference": "master"
+                }
             }
+        },
+        "repo-name": {
+            "type": "vcs",
+            "url": "https://github.com/jamisonvalenta/Laravel-4-Generators.git"
         }
-    }]
+    }
 }
