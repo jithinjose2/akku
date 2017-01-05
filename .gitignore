@@ -2,7 +2,9 @@
 /mirror/vendor
 /node_modules
 /public/storage
-.idea/
+.idea
 Homestead.yaml
 Homestead.json
 .env
+composer.lock
+.idea/
