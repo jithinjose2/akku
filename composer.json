@@ -20,7 +20,8 @@
         "symfony/dom-crawler": "2.8.*|3.0.*",
         "barryvdh/laravel-debugbar": "*",
         "way/generators": "dev-feature/laravel-five-stable",
-        "xethron/migrations-generator": "^2.0"
+        "xethron/migrations-generator": "^2.0",
+        "laravelcollective/html": "~5.0"
     },
     "autoload": {
         "classmap": [
