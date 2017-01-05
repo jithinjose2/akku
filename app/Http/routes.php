@@ -32,3 +32,5 @@ Route::get('/calendar', 'MirrorController@calendar');
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/rules', 'RuleController@index');
