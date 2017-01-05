@@ -11,9 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::get('/test', function () {
     return view('test');
@@ -21,9 +18,13 @@ Route::get('/test', function () {
 
 Route::auth();
 
+Route::get('/', 'HomeController@index');
 Route::get('/home', 'HomeController@index');
+Route::get('/configure', 'HomeController@configure');
 
 Route::get('/modules', 'ModuleController@index');
+Route::post('/validate-module', 'ModuleController@validateModule');
+Route::post('/save-module', 'ModuleController@updateModule');
 
 Route::get('/mirror', 'MirrorController@index');
 Route::get('/proxy', 'MirrorController@proxy');

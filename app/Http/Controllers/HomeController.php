@@ -26,4 +26,15 @@ class HomeController extends Controller
     {
         return view('home');
     }
+    /**
+     * Show the configure dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function configure()
+    {
+        return view('configure');
+    }
+
+
 }
