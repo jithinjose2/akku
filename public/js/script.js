@@ -148,7 +148,7 @@ $(document).ready(function () {
             renderTo: 'humiditychart',
             defaultSeriesType: 'spline',
             events: {
-                load: getHumidityLevel
+                load: setHumidityLevel
             }
         },
         title: {
@@ -193,7 +193,7 @@ $(document).ready(function () {
             renderTo: 'temparaturechart',
             defaultSeriesType: 'spline',
             events: {
-                load: getTemperatureLevel
+                load: setTemperatureLevel
             }
         },
         title: {
@@ -282,7 +282,7 @@ $(document).ready(function () {
     });
 });
 
-function getHumidityLevel($value){
+function setHumidityLevel($value){
     // set up the updating of the chart each second
     if(!humidityChart) return;
     var series = humidityChart.series[0];
@@ -293,7 +293,7 @@ function getHumidityLevel($value){
 }
 
 
-function getTemperatureLevel($value){
+function setTemperatureLevel($value){
     // set up the updating of the chart each second
     if(!tempChart) return;
     var series = tempChart.series[0];
