@@ -15,12 +15,17 @@ class SensorRepository
         $value_d = new Value();
         $value_d->value = $value;
         $value_d->thing()->associate($thing);
+        if($thing->key == "POWERUSAGESENSNOR") {
+            $value = (abs(590 - $value) / 512) * 5 * 230;
+        }
         $value_d->save();
 
         // send value to the listening
         if($thing->key == 'SWITCH01' && $thing->key == 'SWITCH02' &&
             $thing->key == 'SWITCH03' && $thing->key == 'SWITCH04')  {
-            $server->sendData('WEB1', 'switch_status_change', ['value' => $value,'thing_id' => $thing->id ]);
+            $server->sendData('WEB1', 'switch_status_change', [
+                'value' => $value,'thing_id' => $thing->id
+            ]);
         } elseif($thing->key == 'TEMPSENSOR1') {
             $server->sendData('WEB1', 'temp_update', ['value' => $value]);
         } elseif($thing->key == 'HUMID1') {

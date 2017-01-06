@@ -170,12 +170,18 @@
 
 <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
 
+<script src="{{ asset('js/highcharts/highcharts.js') }}"></script>
+<script src="{{ asset('js/highcharts/exporting.js') }}"></script>
 {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
 <script>
     $(document).ready(function () {
         $.ajaxSetup({headers: {'csrftoken': '{{ csrf_token() }}'}});
     })
     $("form#addRule").validate();
+    var $url = "{{ url('/') }}";
+    $humid = <?php echo json_encode($humidValues) ?>;
+    $temp = <?php echo json_encode($tempValues) ?>;
+    $power = <?php echo $powerValues->value; ?>;
 </script>
 <script src="/js/script.js">
 
