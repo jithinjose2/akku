@@ -163,8 +163,10 @@ return [
         JithinJose2\WebSocket\ServiceProvider::class,
         Way\Generators\GeneratorsServiceProvider::class,
         Xethron\MigrationsGenerator\MigrationsGeneratorServiceProvider::class,
-        
-
+        /*
+        * Form HTML
+        */
+        'Collective\Html\HtmlServiceProvider',
     ],
 
     /*
@@ -220,6 +222,10 @@ return [
 
         // 3rd party
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
+
+        //HTML/FORM
+        'Form' => 'Collective\Html\FormFacade',
+        'Html' => 'Collective\Html\HtmlFacade',
 
     ],
 

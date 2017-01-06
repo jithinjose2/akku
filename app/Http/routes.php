@@ -34,4 +34,18 @@ Route::auth();
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/rules', 'RuleController@index');
+Route::get('/rules', [
+    'as' => 'rules.page',
+    'uses' => 'RuleController@index'
+]);
+
+
+Route::match(['get', 'post'], '/rule-creation', [
+    'as' => 'rule.add',
+    'uses' => 'RuleController@addRule'
+]);
+
+Route::match(['post'], '/rule-deletion', [
+    'as' => 'rule.delete',
+    'uses' => 'RuleController@deleteRule'
+]);

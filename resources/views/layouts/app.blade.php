@@ -18,7 +18,7 @@
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
     <link rel="stylesheet" href="http://t4t5.github.io/sweetalert/dist/sweetalert.css">
-
+    <link href="{{ asset('css/extra.css') }}" rel="stylesheet"> 
     <style>
         body {
             font-family: 'Lato';
@@ -102,6 +102,7 @@
             <ul class="nav navbar-nav">
                 <li><a href="{{ url('/home') }}">Home</a></li>
                 <li><a href="{{ url('/rules') }}">Rules</a></li>
+                <li><a href="{{ url('/modules') }}">Module</a></li>
             </ul>
 
             <!-- Right Side Of Navbar -->
@@ -150,12 +151,17 @@
         crossorigin="anonymous"></script>
 <script src="http://vinceg.github.io/twitter-bootstrap-wizard/jquery.bootstrap.wizard.js"></script>
 <script src="http://t4t5.github.io/sweetalert/dist/sweetalert-dev.js"></script>
+
 <script src="https://1000hz.github.io/bootstrap-validator/dist/validator.min.js"></script>
+
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+
 {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
 <script>
     $(document).ready(function () {
         $.ajaxSetup({headers: {'csrftoken': '{{ csrf_token() }}'}});
     })
+    $("form#addRule").validate();
 </script>
 <script src="/js/script.js">
 
