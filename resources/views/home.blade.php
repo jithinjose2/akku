@@ -36,7 +36,6 @@
                 @endforeach
             </div>
         </div>
-        @endif
     </div>
     <div class="SEID">
         <!-- Rectangular switch -->
