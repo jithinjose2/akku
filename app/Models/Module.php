@@ -10,6 +10,10 @@ class Module extends Model
     {
         return $this->belongsTo('Akku\Models\User', 'user_id');
     }
+    public function users()
+    {
+        return $this->belongsToMany('Akku\Models\User');
+    }
 
     public  function things()
     {

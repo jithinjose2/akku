@@ -22,7 +22,7 @@ Route::get('/', 'HomeController@index');
 Route::get('/home', 'HomeController@index');
 Route::get('/configure', 'HomeController@configure');
 
-Route::get('/modules', 'ModuleController@index');
+Route::resource('/module', 'ModuleController');
 Route::post('/validate-module', 'ModuleController@validateModule');
 Route::post('/save-module', 'ModuleController@updateModule');
 

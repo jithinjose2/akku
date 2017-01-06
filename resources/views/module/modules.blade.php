@@ -17,14 +17,8 @@
                                     @endif
                                     {{ $module->name }}
                                     <span class="bg-gray"> #{{ $module->key }}</span>
-                                    <span class="pull-right">
-                                        <a class="btn btn-primary btn-xs"
-                                           href="/module/{{$module->id}}/edit">Configure</a>
-                                    </span>
-                                        <span class="pull-right">
-                                        <a class="btn btn-warning btn-xs"
-                                           href="/module/{{$module->id}}/edit">Deactive</a>
-                                    </span>
+                                    <span class="pull-right"><a class="btn btn-primary btn-xs"
+                                                                href="/module/edit/{{$module->id}}">Configure</a></span>
                                 </div>
                                 @if(count($module->things) >0)
                                     <div class="panel-body">
