@@ -94,9 +94,9 @@ void updateSwitchStatus(int SWITCH_KEY, int SWITCH_STATUS)
     }
   
     if(SWITCH_STATUS == 1) {
-        digitalWrite(SWITCH_PIN, HIGH);
-    } else {
         digitalWrite(SWITCH_PIN, LOW);
+    } else {
+        digitalWrite(SWITCH_PIN, HIGH);
     }
     
     sendSwitchStatus(SWITCH_KEY, SWITCH_STATUS);
@@ -143,9 +143,11 @@ void processResponse(char* response)
         const char* sensor = root1["action"];
         // Set conf
         if(strcmp(sensor, "registred") == 0) {
+            updateSwitchStatus(SWITCH1_KEY, root1["SWITCH01"]);
+            updateSwitchStatus(SWITCH2_KEY, root1["SWITCH02"]);
             socket_status = 1;
         } else if(strcmp(sensor,"update_switch_status") == 0) {
-            updateSwitchStatus(root1["THING_ID"], root1["value"]);
+            updateSwitchStatus(root1["thing_id"], root1["value"]);
         }
         
     }
@@ -217,9 +219,9 @@ void setup() {
     digitalWrite(SWITCH1, HIGH);
     digitalWrite(SWITCH2, HIGH);
     digitalWrite(SWITCH3, HIGH);
-    digitalWrite(SWITCH3, HIGH);
+    digitalWrite(SWITCH4, HIGH);
     digitalWrite(BLED1, LOW);
-    digitalWrite(BLED1, LOW);
+    digitalWrite(BLED2, LOW);
 
 }
 
@@ -228,14 +230,9 @@ void setup() {
 void loop() {
 
     ESP.wdtDisable();
-
-    int distance;
     
     // Call websocket loop
     webSocket.loop();
-
-    int abc= analogRead(POWER1);
-    Serial.println(abc);
 
     if(socket_status == 1) {
       if(loopcount == 1) {

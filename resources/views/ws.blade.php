@@ -37,4 +37,34 @@
         payload.pin 		  = '1234';
         socket.send(JSON.stringify(payload));
     }
+
+    function checkJson(res) {
+        if (res.action == 'registred') {
+            $('#status').html('<span class="label label-sucess">CONNECTED</span>');
+            /*$('.ws_show').show();
+            settings = res.settings;
+            changeLightStatus(_led, res.led_switch_status);
+            changeLightStatus(_light, res.light_switch_status);
+            _led.css('background-color', '#' + res.led_color);
+            setWaterLevel(res.water_level);
+            motorStateChange(res.motor_switch_status);
+            _temp.html(res.temperature);
+            _hum.html(res.humidity);
+            $("#trigger_percent").html(settings.trigger_percent);
+            $("#cutoff_percent").html(settings.cutoff_percent);*/
+        } else if (res.action == 'temp_update') {
+            setTemperatureLevel(res.value);
+        } else if(res.action == 'humid_update') {
+            setHumidityLevel(res.value);
+        }
+    }
+
+    function SwitchChangeByUser(thing_id, value){
+        payload = new Object();
+        payload.action      = 'change_switch_status';
+        payload.thing_id 		  = thing_id;
+        payload.value 		  = value;
+        console.log(payload);
+        socket.send(JSON.stringify(payload));
+    }
 </script>

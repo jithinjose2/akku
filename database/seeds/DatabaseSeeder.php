@@ -69,11 +69,12 @@ class DatabaseSeeder extends Seeder
         return $thing;
     }
 
-    public function createModule($user, $key, $name, $status)
+    public function createModule($user, $key, $pin, $name, $status)
     {
         $module = new Module();
         //$module->user()->associate($user);
         $module->key = $key;
+        $module->pin = $pin;
         $module->name = $name;
         $module->status = $status;
         $module->save();
