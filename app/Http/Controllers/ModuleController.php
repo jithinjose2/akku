@@ -55,7 +55,7 @@ class ModuleController extends Controller
         $module = Module::find($id);
         $moduleUsers = $module->users->pluck('id')->toArray();
         $things = Thing::select('key', 'name', 'id')->where('module_id', $module->id)->where('type', 1)->get();
-        $users = User::get();
+        $users = User::whereNotIn('id', [Auth::user()->id])->get();
         // dd($module);
         return view('module.edit')->withModule($module)
             ->withThings($things)
@@ -105,8 +105,10 @@ class ModuleController extends Controller
     {
         $this->validate($request, ['module_key' => 'required', 'module_pin' => 'required']);
 
-        if ($data = Module::where('key', $request->get('module_key'))->where('pin',
-            $request->get('module_pin'))->first()
+        if ($data = Module::where('key', $request->get('module_key'))
+            ->where('pin', $request->get('module_pin'))
+            ->whereNull('user_id')
+            ->first()
         ) {
             $things = Thing::select('key', 'name')->where('module_id', $data->id)->where('type', 1)->get();
 //            $thingsArray[] = ['key' => 'module_name', 'name' => $data->name];
@@ -114,7 +116,7 @@ class ModuleController extends Controller
 
             return response()->json(['things' => $things, 'module_name' => $data->name]);
         } else {
-            return response()->json('not found ', 404);
+            return response()->json(['result' => 'module already configured ! You are miss behaving '], 404);
         }
 
     }

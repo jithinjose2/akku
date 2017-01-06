@@ -2,7 +2,414 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33515f90-5dcc-46d1-9499-64e7793e7239" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicon.ico" afterPath="$PROJECT_DIR$/public/favicon.ico" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font-awesome/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/public/font-awesome/fonts/FontAwesome.otf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font-awesome/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/public/font-awesome/fonts/fontawesome-webfont.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font-awesome/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/public/font-awesome/fonts/fontawesome-webfont.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font-awesome/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/public/font-awesome/fonts/fontawesome-webfont.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font/HelveticaNeue-Light.eot" afterPath="$PROJECT_DIR$/public/font/HelveticaNeue-Light.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font/HelveticaNeue-Light.ttf" afterPath="$PROJECT_DIR$/public/font/HelveticaNeue-Light.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font/HelveticaNeue-Light.woff" afterPath="$PROJECT_DIR$/public/font/HelveticaNeue-Light.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font/HelveticaNeue-Medium.eot" afterPath="$PROJECT_DIR$/public/font/HelveticaNeue-Medium.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font/HelveticaNeue-Medium.ttf" afterPath="$PROJECT_DIR$/public/font/HelveticaNeue-Medium.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font/HelveticaNeue-Medium.woff" afterPath="$PROJECT_DIR$/public/font/HelveticaNeue-Medium.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font/HelveticaNeue-UltraLight.eot" afterPath="$PROJECT_DIR$/public/font/HelveticaNeue-UltraLight.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font/HelveticaNeue-UltraLight.ttf" afterPath="$PROJECT_DIR$/public/font/HelveticaNeue-UltraLight.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font/HelveticaNeue-UltraLight.woff" afterPath="$PROJECT_DIR$/public/font/HelveticaNeue-UltraLight.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font/weathericons-regular-webfont.eot" afterPath="$PROJECT_DIR$/public/font/weathericons-regular-webfont.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font/weathericons-regular-webfont.ttf" afterPath="$PROJECT_DIR$/public/font/weathericons-regular-webfont.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font/weathericons-regular-webfont.woff" afterPath="$PROJECT_DIR$/public/font/weathericons-regular-webfont.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font/weathericons-regular-webfont.woff2" afterPath="$PROJECT_DIR$/public/font/weathericons-regular-webfont.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/roboto/Roboto-Bold.eot" afterPath="$PROJECT_DIR$/public/fonts/roboto/Roboto-Bold.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/roboto/Roboto-Bold.ttf" afterPath="$PROJECT_DIR$/public/fonts/roboto/Roboto-Bold.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/roboto/Roboto-Bold.woff" afterPath="$PROJECT_DIR$/public/fonts/roboto/Roboto-Bold.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/roboto/Roboto-Bold.woff2" afterPath="$PROJECT_DIR$/public/fonts/roboto/Roboto-Bold.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/roboto/Roboto-Light.eot" afterPath="$PROJECT_DIR$/public/fonts/roboto/Roboto-Light.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/roboto/Roboto-Light.ttf" afterPath="$PROJECT_DIR$/public/fonts/roboto/Roboto-Light.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/roboto/Roboto-Light.woff" afterPath="$PROJECT_DIR$/public/fonts/roboto/Roboto-Light.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/roboto/Roboto-Light.woff2" afterPath="$PROJECT_DIR$/public/fonts/roboto/Roboto-Light.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/roboto/Roboto-Medium.eot" afterPath="$PROJECT_DIR$/public/fonts/roboto/Roboto-Medium.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/roboto/Roboto-Medium.ttf" afterPath="$PROJECT_DIR$/public/fonts/roboto/Roboto-Medium.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/roboto/Roboto-Medium.woff" afterPath="$PROJECT_DIR$/public/fonts/roboto/Roboto-Medium.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/roboto/Roboto-Medium.woff2" afterPath="$PROJECT_DIR$/public/fonts/roboto/Roboto-Medium.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/roboto/Roboto-Regular.eot" afterPath="$PROJECT_DIR$/public/fonts/roboto/Roboto-Regular.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/roboto/Roboto-Regular.ttf" afterPath="$PROJECT_DIR$/public/fonts/roboto/Roboto-Regular.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/roboto/Roboto-Regular.woff" afterPath="$PROJECT_DIR$/public/fonts/roboto/Roboto-Regular.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/roboto/Roboto-Regular.woff2" afterPath="$PROJECT_DIR$/public/fonts/roboto/Roboto-Regular.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/roboto/Roboto-Thin.eot" afterPath="$PROJECT_DIR$/public/fonts/roboto/Roboto-Thin.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/roboto/Roboto-Thin.ttf" afterPath="$PROJECT_DIR$/public/fonts/roboto/Roboto-Thin.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/roboto/Roboto-Thin.woff" afterPath="$PROJECT_DIR$/public/fonts/roboto/Roboto-Thin.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/roboto/Roboto-Thin.woff2" afterPath="$PROJECT_DIR$/public/fonts/roboto/Roboto-Thin.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/ajax-loader.gif" afterPath="$PROJECT_DIR$/public/img/ajax-loader.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/bootstrap-colorpicker/alpha-horizontal.png" afterPath="$PROJECT_DIR$/public/img/bootstrap-colorpicker/alpha-horizontal.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/bootstrap-colorpicker/alpha.png" afterPath="$PROJECT_DIR$/public/img/bootstrap-colorpicker/alpha.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/bootstrap-colorpicker/hue-horizontal.png" afterPath="$PROJECT_DIR$/public/img/bootstrap-colorpicker/hue-horizontal.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/bootstrap-colorpicker/hue.png" afterPath="$PROJECT_DIR$/public/img/bootstrap-colorpicker/hue.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/bootstrap-colorpicker/saturation.png" afterPath="$PROJECT_DIR$/public/img/bootstrap-colorpicker/saturation.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/light_off.png" afterPath="$PROJECT_DIR$/public/img/light_off.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/light_on.png" afterPath="$PROJECT_DIR$/public/img/light_on.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/light_on.xcf" afterPath="$PROJECT_DIR$/public/img/light_on.xcf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/light_on_1.xcf" afterPath="$PROJECT_DIR$/public/img/light_on_1.xcf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/light_on_11.xcf" afterPath="$PROJECT_DIR$/public/img/light_on_11.xcf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/light_on_color.png" afterPath="$PROJECT_DIR$/public/img/light_on_color.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/motor_1.gif" afterPath="$PROJECT_DIR$/public/img/motor_1.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/motor_2.gif" afterPath="$PROJECT_DIR$/public/img/motor_2.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/motor_3.gif" afterPath="$PROJECT_DIR$/public/img/motor_3.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/motor_4.gif" afterPath="$PROJECT_DIR$/public/img/motor_4.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/motor_5.gif" afterPath="$PROJECT_DIR$/public/img/motor_5.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/mbtaicons/ic_key_accessibility.png" afterPath="$PROJECT_DIR$/public/mbtaicons/ic_key_accessibility.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/mbtaicons/ic_key_canceltrip.png" afterPath="$PROJECT_DIR$/public/mbtaicons/ic_key_canceltrip.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/mbtaicons/ic_key_closure.png" afterPath="$PROJECT_DIR$/public/mbtaicons/ic_key_closure.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/mbtaicons/ic_key_delay.png" afterPath="$PROJECT_DIR$/public/mbtaicons/ic_key_delay.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/mbtaicons/ic_key_detour.png" afterPath="$PROJECT_DIR$/public/mbtaicons/ic_key_detour.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/mbtaicons/ic_key_extraservice.png" afterPath="$PROJECT_DIR$/public/mbtaicons/ic_key_extraservice.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/mbtaicons/ic_key_noservice.png" afterPath="$PROJECT_DIR$/public/mbtaicons/ic_key_noservice.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/mbtaicons/ic_key_other.png" afterPath="$PROJECT_DIR$/public/mbtaicons/ic_key_other.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/mbtaicons/ic_key_schedchange.png" afterPath="$PROJECT_DIR$/public/mbtaicons/ic_key_schedchange.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/mbtaicons/ic_key_shuttlebus.png" afterPath="$PROJECT_DIR$/public/mbtaicons/ic_key_shuttlebus.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/mbtaicons/ic_key_snowroute.png" afterPath="$PROJECT_DIR$/public/mbtaicons/ic_key_snowroute.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/mbtaicons/ic_red_accessibility.png" afterPath="$PROJECT_DIR$/public/mbtaicons/ic_red_accessibility.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/mbtaicons/ic_red_canceltrip.png" afterPath="$PROJECT_DIR$/public/mbtaicons/ic_red_canceltrip.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/mbtaicons/ic_red_closure.png" afterPath="$PROJECT_DIR$/public/mbtaicons/ic_red_closure.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/mbtaicons/ic_red_delay.png" afterPath="$PROJECT_DIR$/public/mbtaicons/ic_red_delay.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/mbtaicons/ic_red_detour.png" afterPath="$PROJECT_DIR$/public/mbtaicons/ic_red_detour.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/mbtaicons/ic_red_extraservice.png" afterPath="$PROJECT_DIR$/public/mbtaicons/ic_red_extraservice.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/mbtaicons/ic_red_noservice.png" afterPath="$PROJECT_DIR$/public/mbtaicons/ic_red_noservice.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/mbtaicons/ic_red_other.png" afterPath="$PROJECT_DIR$/public/mbtaicons/ic_red_other.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/mbtaicons/ic_red_schedchange.png" afterPath="$PROJECT_DIR$/public/mbtaicons/ic_red_schedchange.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/mbtaicons/ic_red_shuttlebus.png" afterPath="$PROJECT_DIR$/public/mbtaicons/ic_red_shuttlebus.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/mbtaicons/ic_red_snowroute.png" afterPath="$PROJECT_DIR$/public/mbtaicons/ic_red_snowroute.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.env.example" afterPath="$PROJECT_DIR$/.env.example" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitattributes" afterPath="$PROJECT_DIR$/.gitattributes" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/blade.xml" afterPath="$PROJECT_DIR$/.idea/blade.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/code.iml" afterPath="$PROJECT_DIR$/.idea/code.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+<<<<<<< HEAD
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LICENSE" afterPath="$PROJECT_DIR$/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Console/Commands/Inspire.php" afterPath="$PROJECT_DIR$/app/Console/Commands/Inspire.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Console/Kernel.php" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Events/Event.php" afterPath="$PROJECT_DIR$/app/Events/Event.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Handles/WebSocketHandle.php" afterPath="$PROJECT_DIR$/app/Handles/WebSocketHandle.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/PasswordController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/PasswordController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/MirrorController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/MirrorController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ModuleController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ModuleController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/RuleController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/RuleController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Kernel.php" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Middleware/EncryptCookies.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/EncryptCookies.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Requests/Request.php" afterPath="$PROJECT_DIR$/app/Http/Requests/Request.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Jobs/Job.php" afterPath="$PROJECT_DIR$/app/Jobs/Job.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Listeners/.gitkeep" afterPath="$PROJECT_DIR$/app/Listeners/.gitkeep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Action.php" afterPath="$PROJECT_DIR$/app/Models/Action.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Module.php" afterPath="$PROJECT_DIR$/app/Models/Module.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Rule.php" afterPath="$PROJECT_DIR$/app/Models/Rule.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Setting.php" afterPath="$PROJECT_DIR$/app/Models/Setting.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/System.php" afterPath="$PROJECT_DIR$/app/Models/System.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/SystemSettings.php" afterPath="$PROJECT_DIR$/app/Models/SystemSettings.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Thing.php" afterPath="$PROJECT_DIR$/app/Models/Thing.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Trigger.php" afterPath="$PROJECT_DIR$/app/Models/Trigger.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/User.php" afterPath="$PROJECT_DIR$/app/Models/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Value.php" afterPath="$PROJECT_DIR$/app/Models/Value.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Policies/.gitkeep" afterPath="$PROJECT_DIR$/app/Policies/.gitkeep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Providers/EventListener.php" afterPath="$PROJECT_DIR$/app/Providers/EventListener.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Repositories/ModuleRepository.php" afterPath="$PROJECT_DIR$/app/Repositories/ModuleRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Repositories/RuleRepository.php" afterPath="$PROJECT_DIR$/app/Repositories/RuleRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Repositories/SensorRepository.php" afterPath="$PROJECT_DIR$/app/Repositories/SensorRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/audrino/relay_module/relay_module.ino" afterPath="$PROJECT_DIR$/audrino/relay_module/relay_module.ino" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/audrino/sensor_module/sensor_module.ino" afterPath="$PROJECT_DIR$/audrino/sensor_module/sensor_module.ino" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/app.php" afterPath="$PROJECT_DIR$/config/app.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/auth.php" afterPath="$PROJECT_DIR$/config/auth.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/broadcasting.php" afterPath="$PROJECT_DIR$/config/broadcasting.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/cache.php" afterPath="$PROJECT_DIR$/config/cache.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/compile.php" afterPath="$PROJECT_DIR$/config/compile.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.php" afterPath="$PROJECT_DIR$/config/database.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/debugbar.php" afterPath="$PROJECT_DIR$/config/debugbar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/filesystems.php" afterPath="$PROJECT_DIR$/config/filesystems.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/mail.php" afterPath="$PROJECT_DIR$/config/mail.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/queue.php" afterPath="$PROJECT_DIR$/config/queue.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/services.php" afterPath="$PROJECT_DIR$/config/services.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/session.php" afterPath="$PROJECT_DIR$/config/session.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/view.php" afterPath="$PROJECT_DIR$/config/view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/websocket.php" afterPath="$PROJECT_DIR$/config/websocket.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/.gitignore" afterPath="$PROJECT_DIR$/database/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/factories/ModelFactory.php" afterPath="$PROJECT_DIR$/database/factories/ModelFactory.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/.gitkeep" afterPath="$PROJECT_DIR$/database/migrations/.gitkeep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2017_01_01_075102_create_modules_table.php" afterPath="$PROJECT_DIR$/database/migrations/2017_01_01_075102_create_modules_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2017_01_01_075102_create_settings_table.php" afterPath="$PROJECT_DIR$/database/migrations/2017_01_01_075102_create_settings_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2017_01_01_075102_create_things_table.php" afterPath="$PROJECT_DIR$/database/migrations/2017_01_01_075102_create_things_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2017_01_01_075102_create_values_table.php" afterPath="$PROJECT_DIR$/database/migrations/2017_01_01_075102_create_values_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2017_01_01_105948_create_triggers_table.php" afterPath="$PROJECT_DIR$/database/migrations/2017_01_01_105948_create_triggers_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2017_01_01_105956_create_actions_table.php" afterPath="$PROJECT_DIR$/database/migrations/2017_01_01_105956_create_actions_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2017_01_01_110335_create_rules_table.php" afterPath="$PROJECT_DIR$/database/migrations/2017_01_01_110335_create_rules_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/.gitkeep" afterPath="$PROJECT_DIR$/database/seeds/.gitkeep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/user.php" afterPath="$PROJECT_DIR$/database/seeds/user.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/.gitignore" afterPath="$PROJECT_DIR$/mirror/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/client2.php" afterPath="$PROJECT_DIR$/mirror/client2.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/composer.json" afterPath="$PROJECT_DIR$/mirror/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/composer.lock" afterPath="$PROJECT_DIR$/mirror/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/autoload.php" afterPath="$PROJECT_DIR$/mirror/vendor/autoload.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/composer/ClassLoader.php" afterPath="$PROJECT_DIR$/mirror/vendor/composer/ClassLoader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/composer/LICENSE" afterPath="$PROJECT_DIR$/mirror/vendor/composer/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/mirror/vendor/composer/autoload_classmap.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/composer/autoload_namespaces.php" afterPath="$PROJECT_DIR$/mirror/vendor/composer/autoload_namespaces.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/composer/autoload_psr4.php" afterPath="$PROJECT_DIR$/mirror/vendor/composer/autoload_psr4.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/composer/autoload_real.php" afterPath="$PROJECT_DIR$/mirror/vendor/composer/autoload_real.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/mirror/vendor/composer/installed.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/evenement/evenement/.gitignore" afterPath="$PROJECT_DIR$/mirror/vendor/evenement/evenement/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/evenement/evenement/.travis.yml" afterPath="$PROJECT_DIR$/mirror/vendor/evenement/evenement/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/evenement/evenement/CHANGELOG.md" afterPath="$PROJECT_DIR$/mirror/vendor/evenement/evenement/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/evenement/evenement/LICENSE" afterPath="$PROJECT_DIR$/mirror/vendor/evenement/evenement/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/evenement/evenement/README.md" afterPath="$PROJECT_DIR$/mirror/vendor/evenement/evenement/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/evenement/evenement/composer.json" afterPath="$PROJECT_DIR$/mirror/vendor/evenement/evenement/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/evenement/evenement/phpunit.xml.dist" afterPath="$PROJECT_DIR$/mirror/vendor/evenement/evenement/phpunit.xml.dist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/evenement/evenement/src/Evenement/EventEmitter.php" afterPath="$PROJECT_DIR$/mirror/vendor/evenement/evenement/src/Evenement/EventEmitter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/evenement/evenement/src/Evenement/EventEmitterInterface.php" afterPath="$PROJECT_DIR$/mirror/vendor/evenement/evenement/src/Evenement/EventEmitterInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/evenement/evenement/src/Evenement/EventEmitterTrait.php" afterPath="$PROJECT_DIR$/mirror/vendor/evenement/evenement/src/Evenement/EventEmitterTrait.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/evenement/evenement/tests/Evenement/Tests/EventEmitterTest.php" afterPath="$PROJECT_DIR$/mirror/vendor/evenement/evenement/tests/Evenement/Tests/EventEmitterTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/evenement/evenement/tests/Evenement/Tests/Listener.php" afterPath="$PROJECT_DIR$/mirror/vendor/evenement/evenement/tests/Evenement/Tests/Listener.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/evenement/evenement/tests/bootstrap.php" afterPath="$PROJECT_DIR$/mirror/vendor/evenement/evenement/tests/bootstrap.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/event-loop/.gitignore" afterPath="$PROJECT_DIR$/mirror/vendor/react/event-loop/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/event-loop/.travis.yml" afterPath="$PROJECT_DIR$/mirror/vendor/react/event-loop/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/event-loop/CHANGELOG.md" afterPath="$PROJECT_DIR$/mirror/vendor/react/event-loop/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/event-loop/LICENSE" afterPath="$PROJECT_DIR$/mirror/vendor/react/event-loop/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/event-loop/README.md" afterPath="$PROJECT_DIR$/mirror/vendor/react/event-loop/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/event-loop/composer.json" afterPath="$PROJECT_DIR$/mirror/vendor/react/event-loop/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/event-loop/phpunit.xml.dist" afterPath="$PROJECT_DIR$/mirror/vendor/react/event-loop/phpunit.xml.dist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/event-loop/src/ExtEventLoop.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/event-loop/src/ExtEventLoop.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/event-loop/src/Factory.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/event-loop/src/Factory.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/event-loop/src/LibEvLoop.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/event-loop/src/LibEvLoop.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/event-loop/src/LibEventLoop.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/event-loop/src/LibEventLoop.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/event-loop/src/LoopInterface.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/event-loop/src/LoopInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/event-loop/src/StreamSelectLoop.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/event-loop/src/StreamSelectLoop.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/event-loop/src/Tick/FutureTickQueue.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/event-loop/src/Tick/FutureTickQueue.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/event-loop/src/Tick/NextTickQueue.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/event-loop/src/Tick/NextTickQueue.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/event-loop/src/Timer/Timer.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/event-loop/src/Timer/Timer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/event-loop/src/Timer/TimerInterface.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/event-loop/src/Timer/TimerInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/event-loop/src/Timer/Timers.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/event-loop/src/Timer/Timers.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/event-loop/tests/AbstractLoopTest.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/event-loop/tests/AbstractLoopTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/event-loop/tests/CallableStub.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/event-loop/tests/CallableStub.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/event-loop/tests/ExtEventLoopTest.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/event-loop/tests/ExtEventLoopTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/event-loop/tests/LibEvLoopTest.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/event-loop/tests/LibEvLoopTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/event-loop/tests/LibEventLoopTest.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/event-loop/tests/LibEventLoopTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/event-loop/tests/StreamSelectLoopTest.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/event-loop/tests/StreamSelectLoopTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/event-loop/tests/TestCase.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/event-loop/tests/TestCase.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/event-loop/tests/Timer/AbstractTimerTest.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/event-loop/tests/Timer/AbstractTimerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/event-loop/tests/Timer/ExtEventTimerTest.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/event-loop/tests/Timer/ExtEventTimerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/event-loop/tests/Timer/LibEvTimerTest.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/event-loop/tests/Timer/LibEvTimerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/event-loop/tests/Timer/LibEventTimerTest.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/event-loop/tests/Timer/LibEventTimerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/event-loop/tests/Timer/StreamSelectTimerTest.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/event-loop/tests/Timer/StreamSelectTimerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/event-loop/tests/bootstrap.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/event-loop/tests/bootstrap.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/socket/.gitignore" afterPath="$PROJECT_DIR$/mirror/vendor/react/socket/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/socket/.travis.yml" afterPath="$PROJECT_DIR$/mirror/vendor/react/socket/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/socket/CHANGELOG.md" afterPath="$PROJECT_DIR$/mirror/vendor/react/socket/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/socket/LICENSE" afterPath="$PROJECT_DIR$/mirror/vendor/react/socket/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/socket/README.md" afterPath="$PROJECT_DIR$/mirror/vendor/react/socket/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/socket/composer.json" afterPath="$PROJECT_DIR$/mirror/vendor/react/socket/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/socket/phpunit.xml.dist" afterPath="$PROJECT_DIR$/mirror/vendor/react/socket/phpunit.xml.dist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/socket/src/Connection.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/socket/src/Connection.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/socket/src/ConnectionException.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/socket/src/ConnectionException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/socket/src/ConnectionInterface.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/socket/src/ConnectionInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/socket/src/Server.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/socket/src/Server.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/socket/src/ServerInterface.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/socket/src/ServerInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/socket/tests/ConnectionTest.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/socket/tests/ConnectionTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/socket/tests/ServerTest.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/socket/tests/ServerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/socket/tests/Stub/CallableStub.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/socket/tests/Stub/CallableStub.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/socket/tests/Stub/ConnectionStub.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/socket/tests/Stub/ConnectionStub.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/socket/tests/Stub/ServerStub.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/socket/tests/Stub/ServerStub.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/socket/tests/TestCase.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/socket/tests/TestCase.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/stream/.gitignore" afterPath="$PROJECT_DIR$/mirror/vendor/react/stream/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/stream/.travis.yml" afterPath="$PROJECT_DIR$/mirror/vendor/react/stream/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/stream/CHANGELOG.md" afterPath="$PROJECT_DIR$/mirror/vendor/react/stream/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/stream/LICENSE" afterPath="$PROJECT_DIR$/mirror/vendor/react/stream/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/stream/README.md" afterPath="$PROJECT_DIR$/mirror/vendor/react/stream/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/stream/composer.json" afterPath="$PROJECT_DIR$/mirror/vendor/react/stream/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/stream/phpunit.xml.dist" afterPath="$PROJECT_DIR$/mirror/vendor/react/stream/phpunit.xml.dist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/stream/src/Buffer.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/stream/src/Buffer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/stream/src/BufferedSink.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/stream/src/BufferedSink.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/stream/src/CompositeStream.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/stream/src/CompositeStream.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/stream/src/DuplexStreamInterface.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/stream/src/DuplexStreamInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/stream/src/ReadableStream.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/stream/src/ReadableStream.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/stream/src/ReadableStreamInterface.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/stream/src/ReadableStreamInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/stream/src/Stream.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/stream/src/Stream.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/stream/src/ThroughStream.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/stream/src/ThroughStream.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/stream/src/Util.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/stream/src/Util.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/stream/src/WritableStream.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/stream/src/WritableStream.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/stream/src/WritableStreamInterface.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/stream/src/WritableStreamInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/stream/tests/BufferTest.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/stream/tests/BufferTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/stream/tests/BufferedSinkTest.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/stream/tests/BufferedSinkTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/stream/tests/CallableStub.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/stream/tests/CallableStub.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/stream/tests/CompositeStreamTest.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/stream/tests/CompositeStreamTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/stream/tests/ReadableStreamTest.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/stream/tests/ReadableStreamTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/stream/tests/StreamIntegrationTest.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/stream/tests/StreamIntegrationTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/stream/tests/StreamTest.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/stream/tests/StreamTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/stream/tests/Stub/ReadableStreamStub.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/stream/tests/Stub/ReadableStreamStub.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/stream/tests/TestCase.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/stream/tests/TestCase.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/stream/tests/ThroughStreamTest.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/stream/tests/ThroughStreamTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/stream/tests/UtilTest.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/stream/tests/UtilTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/stream/tests/WritableStreamTest.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/stream/tests/WritableStreamTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mirror/vendor/react/stream/tests/bootstrap.php" afterPath="$PROJECT_DIR$/mirror/vendor/react/stream/tests/bootstrap.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phpunit.xml" afterPath="$PROJECT_DIR$/phpunit.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/.htaccess" afterPath="$PROJECT_DIR$/public/.htaccess" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/LICENSE" afterPath="$PROJECT_DIR$/public/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/README.md" afterPath="$PROJECT_DIR$/public/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/blank-page.html" afterPath="$PROJECT_DIR$/public/blank-page.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/bootstrap-elements.html" afterPath="$PROJECT_DIR$/public/bootstrap-elements.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/bootstrap-grid.html" afterPath="$PROJECT_DIR$/public/bootstrap-grid.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/charts.html" afterPath="$PROJECT_DIR$/public/charts.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/bootstrap-colorpicker.css" afterPath="$PROJECT_DIR$/public/css/bootstrap-colorpicker.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/bootstrap-colorpicker.min.css" afterPath="$PROJECT_DIR$/public/css/bootstrap-colorpicker.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/bootstrap-rtl.css" afterPath="$PROJECT_DIR$/public/css/bootstrap-rtl.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/bootstrap-rtl.min.css" afterPath="$PROJECT_DIR$/public/css/bootstrap-rtl.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/bootstrap-switch.css" afterPath="$PROJECT_DIR$/public/css/bootstrap-switch.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/bootstrap.css" afterPath="$PROJECT_DIR$/public/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/public/css/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/main.css" afterPath="$PROJECT_DIR$/public/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/materialize.css" afterPath="$PROJECT_DIR$/public/css/materialize.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/materialize.min.css" afterPath="$PROJECT_DIR$/public/css/materialize.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/mbta-icons.css" afterPath="$PROJECT_DIR$/public/css/mbta-icons.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/plugins/morris.css" afterPath="$PROJECT_DIR$/public/css/plugins/morris.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/sb-admin-rtl.css" afterPath="$PROJECT_DIR$/public/css/sb-admin-rtl.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/sb-admin.css" afterPath="$PROJECT_DIR$/public/css/sb-admin.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/weather-icons.css" afterPath="$PROJECT_DIR$/public/css/weather-icons.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font-awesome/css/font-awesome.css" afterPath="$PROJECT_DIR$/public/font-awesome/css/font-awesome.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font-awesome/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/public/font-awesome/css/font-awesome.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font-awesome/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/public/font-awesome/fonts/fontawesome-webfont.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font-awesome/less/bordered-pulled.less" afterPath="$PROJECT_DIR$/public/font-awesome/less/bordered-pulled.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font-awesome/less/core.less" afterPath="$PROJECT_DIR$/public/font-awesome/less/core.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font-awesome/less/fixed-width.less" afterPath="$PROJECT_DIR$/public/font-awesome/less/fixed-width.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font-awesome/less/font-awesome.less" afterPath="$PROJECT_DIR$/public/font-awesome/less/font-awesome.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font-awesome/less/icons.less" afterPath="$PROJECT_DIR$/public/font-awesome/less/icons.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font-awesome/less/larger.less" afterPath="$PROJECT_DIR$/public/font-awesome/less/larger.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font-awesome/less/list.less" afterPath="$PROJECT_DIR$/public/font-awesome/less/list.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font-awesome/less/mixins.less" afterPath="$PROJECT_DIR$/public/font-awesome/less/mixins.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font-awesome/less/path.less" afterPath="$PROJECT_DIR$/public/font-awesome/less/path.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font-awesome/less/rotated-flipped.less" afterPath="$PROJECT_DIR$/public/font-awesome/less/rotated-flipped.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font-awesome/less/spinning.less" afterPath="$PROJECT_DIR$/public/font-awesome/less/spinning.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font-awesome/less/stacked.less" afterPath="$PROJECT_DIR$/public/font-awesome/less/stacked.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font-awesome/less/variables.less" afterPath="$PROJECT_DIR$/public/font-awesome/less/variables.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font-awesome/scss/_bordered-pulled.scss" afterPath="$PROJECT_DIR$/public/font-awesome/scss/_bordered-pulled.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font-awesome/scss/_core.scss" afterPath="$PROJECT_DIR$/public/font-awesome/scss/_core.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font-awesome/scss/_fixed-width.scss" afterPath="$PROJECT_DIR$/public/font-awesome/scss/_fixed-width.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font-awesome/scss/_icons.scss" afterPath="$PROJECT_DIR$/public/font-awesome/scss/_icons.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font-awesome/scss/_larger.scss" afterPath="$PROJECT_DIR$/public/font-awesome/scss/_larger.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font-awesome/scss/_list.scss" afterPath="$PROJECT_DIR$/public/font-awesome/scss/_list.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font-awesome/scss/_mixins.scss" afterPath="$PROJECT_DIR$/public/font-awesome/scss/_mixins.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font-awesome/scss/_path.scss" afterPath="$PROJECT_DIR$/public/font-awesome/scss/_path.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font-awesome/scss/_rotated-flipped.scss" afterPath="$PROJECT_DIR$/public/font-awesome/scss/_rotated-flipped.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font-awesome/scss/_spinning.scss" afterPath="$PROJECT_DIR$/public/font-awesome/scss/_spinning.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font-awesome/scss/_stacked.scss" afterPath="$PROJECT_DIR$/public/font-awesome/scss/_stacked.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font-awesome/scss/_variables.scss" afterPath="$PROJECT_DIR$/public/font-awesome/scss/_variables.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font-awesome/scss/font-awesome.scss" afterPath="$PROJECT_DIR$/public/font-awesome/scss/font-awesome.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font/HelveticaNeue-Light.svg" afterPath="$PROJECT_DIR$/public/font/HelveticaNeue-Light.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font/HelveticaNeue-Medium.svg" afterPath="$PROJECT_DIR$/public/font/HelveticaNeue-Medium.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font/HelveticaNeue-UltraLight.svg" afterPath="$PROJECT_DIR$/public/font/HelveticaNeue-UltraLight.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font/weathericons-regular-webfont.svg" afterPath="$PROJECT_DIR$/public/font/weathericons-regular-webfont.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/forms.html" afterPath="$PROJECT_DIR$/public/forms.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index-rtl.html" afterPath="$PROJECT_DIR$/public/index-rtl.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.php" afterPath="$PROJECT_DIR$/public/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index1.html" afterPath="$PROJECT_DIR$/public/index1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/Licenses/LICENSE-d3" afterPath="$PROJECT_DIR$/public/js/Licenses/LICENSE-d3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/bootstrap-colorpicker.js" afterPath="$PROJECT_DIR$/public/js/bootstrap-colorpicker.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/bootstrap-colorpicker.min.js" afterPath="$PROJECT_DIR$/public/js/bootstrap-colorpicker.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/bootstrap-switch.js" afterPath="$PROJECT_DIR$/public/js/bootstrap-switch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/bootstrap.js" afterPath="$PROJECT_DIR$/public/js/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/public/js/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/config.js" afterPath="$PROJECT_DIR$/public/js/config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/d3.js" afterPath="$PROJECT_DIR$/public/js/d3.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/d3.min.js" afterPath="$PROJECT_DIR$/public/js/d3.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/highcharts.js" afterPath="$PROJECT_DIR$/public/js/highcharts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/ical_parser.js" afterPath="$PROJECT_DIR$/public/js/ical_parser.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/jquery.js" afterPath="$PROJECT_DIR$/public/js/jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/main.js" afterPath="$PROJECT_DIR$/public/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/materialize.js" afterPath="$PROJECT_DIR$/public/js/materialize.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/materialize.min.js" afterPath="$PROJECT_DIR$/public/js/materialize.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/mm-mbta.js" afterPath="$PROJECT_DIR$/public/js/mm-mbta.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/mm-mta.js" afterPath="$PROJECT_DIR$/public/js/mm-mta.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/mm-weather.js" afterPath="$PROJECT_DIR$/public/js/mm-weather.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/moment-with-locales.js" afterPath="$PROJECT_DIR$/public/js/moment-with-locales.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/plugins/flot/excanvas.min.js" afterPath="$PROJECT_DIR$/public/js/plugins/flot/excanvas.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/plugins/flot/flot-data.js" afterPath="$PROJECT_DIR$/public/js/plugins/flot/flot-data.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/plugins/flot/jquery.flot.js" afterPath="$PROJECT_DIR$/public/js/plugins/flot/jquery.flot.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/plugins/flot/jquery.flot.pie.js" afterPath="$PROJECT_DIR$/public/js/plugins/flot/jquery.flot.pie.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/plugins/flot/jquery.flot.resize.js" afterPath="$PROJECT_DIR$/public/js/plugins/flot/jquery.flot.resize.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/plugins/flot/jquery.flot.tooltip.min.js" afterPath="$PROJECT_DIR$/public/js/plugins/flot/jquery.flot.tooltip.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/plugins/morris/morris-data.js" afterPath="$PROJECT_DIR$/public/js/plugins/morris/morris-data.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/plugins/morris/morris.js" afterPath="$PROJECT_DIR$/public/js/plugins/morris/morris.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/plugins/morris/morris.min.js" afterPath="$PROJECT_DIR$/public/js/plugins/morris/morris.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/plugins/morris/raphael.min.js" afterPath="$PROJECT_DIR$/public/js/plugins/morris/raphael.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/rrule.js" afterPath="$PROJECT_DIR$/public/js/rrule.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/script.js" afterPath="$PROJECT_DIR$/public/js/script.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/socket.io.min.js" afterPath="$PROJECT_DIR$/public/js/socket.io.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/robots.txt" afterPath="$PROJECT_DIR$/public/robots.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/tables.html" afterPath="$PROJECT_DIR$/public/tables.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/web.config" afterPath="$PROJECT_DIR$/public/web.config" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/sass/app.scss" afterPath="$PROJECT_DIR$/resources/assets/sass/app.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/lang/en/auth.php" afterPath="$PROJECT_DIR$/resources/lang/en/auth.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/lang/en/pagination.php" afterPath="$PROJECT_DIR$/resources/lang/en/pagination.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/lang/en/passwords.php" afterPath="$PROJECT_DIR$/resources/lang/en/passwords.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/lang/en/validation.php" afterPath="$PROJECT_DIR$/resources/lang/en/validation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/auth/emails/password.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/emails/password.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/configure.blade.php" afterPath="$PROJECT_DIR$/resources/views/configure.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/errors/503.blade.php" afterPath="$PROJECT_DIR$/resources/views/errors/503.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/footer.blade.php" afterPath="$PROJECT_DIR$/resources/views/footer.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/graph.blade.php" afterPath="$PROJECT_DIR$/resources/views/graph.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/header.blade.php" afterPath="$PROJECT_DIR$/resources/views/header.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/home-head.blade.php" afterPath="$PROJECT_DIR$/resources/views/home-head.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/home-side.blade.php" afterPath="$PROJECT_DIR$/resources/views/home-side.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/home.blade.php" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/mirror/chart.blade.php" afterPath="$PROJECT_DIR$/resources/views/mirror/chart.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/mirror/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/mirror/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/mirror/script.blade.php" afterPath="$PROJECT_DIR$/resources/views/mirror/script.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/mirror/voice.blade.php" afterPath="$PROJECT_DIR$/resources/views/mirror/voice.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/mirror/water.blade.php" afterPath="$PROJECT_DIR$/resources/views/mirror/water.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/modules.blade.php" afterPath="$PROJECT_DIR$/resources/views/modules.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/nav.blade.php" afterPath="$PROJECT_DIR$/resources/views/nav.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/rules/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/rules/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/script.blade.php" afterPath="$PROJECT_DIR$/resources/views/script.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/test.blade.php" afterPath="$PROJECT_DIR$/resources/views/test.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/vendor/.gitkeep" afterPath="$PROJECT_DIR$/resources/views/vendor/.gitkeep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.pem" afterPath="$PROJECT_DIR$/server.pem" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.php" afterPath="$PROJECT_DIR$/server.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/ExampleTest.php" afterPath="$PROJECT_DIR$/tests/ExampleTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/TestCase.php" afterPath="$PROJECT_DIR$/tests/TestCase.php" />
+=======
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ModuleController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ModuleController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Module.php" afterPath="$PROJECT_DIR$/app/Models/Module.php" />
@@ -10,6 +417,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/configure.blade.php" afterPath="$PROJECT_DIR$/resources/views/configure.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/modules.blade.php" afterPath="$PROJECT_DIR$/resources/views/modules.blade.php" />
+>>>>>>> dc15b7c83eacf84f765874b73990b0258767a212
     </list>
     <ignored path="code.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,6 +438,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
+      <file leaf-file-name="relay_module.ino" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/audrino/relay_module/relay_module.ino">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DatabaseSeeder.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="720">
+              <caret line="30" column="66" selection-start-line="30" selection-start-column="66" selection-end-line="30" selection-end-column="66" />
+              <folding />
+=======
       <file leaf-file-name="ModuleController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ModuleController.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -38,6 +464,7 @@
               <folding>
                 <element signature="e#41#64#0#PHP" expanded="true" />
               </folding>
+>>>>>>> dc15b7c83eacf84f765874b73990b0258767a212
             </state>
           </provider>
         </entry>
@@ -45,31 +472,85 @@
       <file leaf-file-name="edit.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/module/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="240">
+              <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SensorRepository.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Repositories/SensorRepository.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="268">
+              <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WebSocketHandle.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Handles/WebSocketHandle.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+              <folding>
+                <element signature="e#32#50#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".env" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+              <folding />
+=======
             <state relative-caret-position="234">
               <caret line="70" column="78" selection-start-line="70" selection-start-column="78" selection-end-line="70" selection-end-column="78" />
               <folding>
                 <element signature="e#307#1128#0#HTML" expanded="false" />
                 <element signature="e#1149#2763#0#HTML" expanded="false" />
               </folding>
+>>>>>>> dc15b7c83eacf84f765874b73990b0258767a212
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+      <file leaf-file-name="websocket.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/websocket.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+              <folding>
+                <element signature="e#7#51#0#PHP" expanded="true" />
+              </folding>
+=======
       <file leaf-file-name="modules.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/modules.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="260">
               <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
               <folding />
+>>>>>>> dc15b7c83eacf84f765874b73990b0258767a212
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Module.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Models/Module.php">
+      <file leaf-file-name="Thing.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/Thing.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="312">
+              <caret line="18" column="32" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="32" />
+=======
             <state relative-caret-position="208">
               <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+>>>>>>> dc15b7c83eacf84f765874b73990b0258767a212
               <folding />
             </state>
           </provider>
@@ -83,6 +564,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/mirror/vendor/autoload.php" />
+        <option value="$PROJECT_DIR$/mirror/vendor/.gitignore" />
+        <option value="$PROJECT_DIR$/mirror/vendor/gabrielbull/websocket-client/src/WebSocketClient/WebSocketClient.php" />
+        <option value="$PROJECT_DIR$/mirror/client.php" />
+        <option value="$PROJECT_DIR$/mirror/composer.json" />
+=======
+>>>>>>> dc15b7c83eacf84f765874b73990b0258767a212
         <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/header.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
@@ -98,14 +587,11 @@
         <option value="$PROJECT_DIR$/public/js/main.js" />
         <option value="$PROJECT_DIR$/vendor/jithinjose2/websocket/src/Server.php" />
         <option value="$PROJECT_DIR$/resources/views/mirror/chart.blade.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/ModuleRepository.php" />
         <option value="$PROJECT_DIR$/resources/views/mirror/water.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/MirrorController.php" />
         <option value="$PROJECT_DIR$/resources/views/mirror/voice.blade.php" />
-        <option value="$PROJECT_DIR$/config/websocket.php" />
         <option value="$PROJECT_DIR$/vendor/jithinjose2/websocket/src/Connection.php" />
         <option value="$PROJECT_DIR$/mirror/client2.php" />
-        <option value="$PROJECT_DIR$/app/Handles/WebSocketHandle.php" />
         <option value="$PROJECT_DIR$/vendor/jithinjose2/websocket/src/WebSocket.php" />
         <option value="$PROJECT_DIR$/resources/views/mirror/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/mirror/script.blade.php" />
@@ -113,7 +599,6 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/config/app.php" />
-        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2017_01_01_105956_create_actions_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2017_01_01_105948_create_triggers_table.php" />
@@ -123,8 +608,16 @@
         <option value="$PROJECT_DIR$/app/Models/Rule.php" />
         <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/RuleController.php" />
-        <option value="$PROJECT_DIR$/resources/views/rules/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Repositories/RuleRepository.php" />
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/resources/views/rules/index.blade.php" />
+        <option value="$PROJECT_DIR$/audrino/relay_module/relay_module.ino" />
+        <option value="$PROJECT_DIR$/app/Repositories/ModuleRepository.php" />
+        <option value="$PROJECT_DIR$/app/Repositories/SensorRepository.php" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/config/websocket.php" />
+        <option value="$PROJECT_DIR$/app/Handles/WebSocketHandle.php" />
+=======
         <option value="$PROJECT_DIR$/resources/views/configure.blade.php" />
         <option value="$PROJECT_DIR$/public/js/script.js" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
@@ -134,6 +627,7 @@
         <option value="$PROJECT_DIR$/resources/views/module/edit.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ModuleController.php" />
         <option value="$PROJECT_DIR$/resources/views/modules.blade.php" />
+>>>>>>> dc15b7c83eacf84f765874b73990b0258767a212
       </list>
     </option>
   </component>
@@ -214,6 +708,9 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< HEAD
+              <option name="myItemId" value="vendor" />
+=======
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -287,6 +784,7 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="seeds" />
+>>>>>>> dc15b7c83eacf84f765874b73990b0258767a212
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -297,6 +795,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="akku" />
+<<<<<<< HEAD
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jithinjose2" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="websocket" />
+=======
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -373,6 +885,7 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Http" />
+>>>>>>> dc15b7c83eacf84f765874b73990b0258767a212
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -502,12 +1015,27 @@
       <workItem from="1483414256499" duration="386000" />
       <workItem from="1483494755193" duration="135000" />
       <workItem from="1483507299655" duration="831000" />
+<<<<<<< HEAD
+      <workItem from="1483626205934" duration="2498000" />
+      <workItem from="1483702695871" duration="8479000" />
+=======
       <workItem from="1483626205934" duration="630000" />
       <workItem from="1483680846157" duration="11360000" />
+>>>>>>> dc15b7c83eacf84f765874b73990b0258767a212
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="29676000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="65" y="24" width="1301" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28366533" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+=======
     <option name="totallyTimeSpent" value="35357000" />
   </component>
   <component name="ToolWindowManager">
@@ -516,6 +1044,7 @@
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10271903" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> dc15b7c83eacf84f765874b73990b0258767a212
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -552,7 +1081,11 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/ModuleController.php</url>
+<<<<<<< HEAD
+          <line>5</line>
+=======
           <line>3</line>
+>>>>>>> dc15b7c83eacf84f765874b73990b0258767a212
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
@@ -561,10 +1094,55 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MirrorController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home-side.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mirror/vendor/devristo/phpws/src/Devristo/Phpws/Client/WebSocket.php" />
+    <entry file="file://$PROJECT_DIR$/vendor/jithinjose2/websocket/src/Connection.php" />
+    <entry file="file://$PROJECT_DIR$/vendor/jithinjose2/websocket/src/WebSocket.php" />
+    <entry file="file://$PROJECT_DIR$/resources/views/mirror/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3264">
+          <caret line="136" column="3" selection-start-line="136" selection-start-column="3" selection-end-line="136" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mirror/client2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1224">
+          <caret line="56" column="27" selection-start-line="56" selection-start-column="27" selection-end-line="56" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env.example">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" column="17" selection-start-line="0" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+=======
     <entry file="file://$PROJECT_DIR$/app/Handles/WebSocketHandle.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+>>>>>>> dc15b7c83eacf84f765874b73990b0258767a212
         </state>
       </provider>
     </entry>
@@ -624,24 +1202,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="164" column="78" selection-start-line="164" selection-start-column="78" selection-end-line="164" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -729,58 +1293,113 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/rules/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Repositories/RuleRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/ModuleRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/SensorRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="12" column="56" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="56" />
+<<<<<<< HEAD
+        <state relative-caret-position="1512">
+          <caret line="69" column="34" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
+          <folding>
+            <marker date="1483702175366" expanded="true" signature="2023:2029" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="11" />
+          <caret line="25" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="11" />
+          <folding />
+=======
+        <state relative-caret-position="528">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+>>>>>>> dc15b7c83eacf84f765874b73990b0258767a212
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/RuleController.php">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="1080">
+          <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
+          <folding />
+=======
+        <state relative-caret-position="183">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+>>>>>>> dc15b7c83eacf84f765874b73990b0258767a212
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Rule.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+<<<<<<< HEAD
+          <caret line="13" column="6" selection-start-line="8" selection-start-column="4" selection-end-line="13" selection-end-column="6" />
+          <folding />
+=======
+          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+>>>>>>> dc15b7c83eacf84f765874b73990b0258767a212
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Module.php">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="312">
+          <caret line="13" column="27" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="27" />
+          <folding />
+=======
+        <state relative-caret-position="288">
+          <caret line="12" column="56" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="56" />
+>>>>>>> dc15b7c83eacf84f765874b73990b0258767a212
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/rules/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/audrino/relay_module/relay_module.ino">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="30" column="66" selection-start-line="30" selection-start-column="66" selection-end-line="30" selection-end-column="66" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Thing.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="312">
+          <caret line="18" column="32" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/RuleController.php">
+    <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+        <state relative-caret-position="480">
+          <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/Repositories/SensorRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+=======
     <entry file="file://$PROJECT_DIR$/app/Models/Rule.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -793,18 +1412,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
           <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+>>>>>>> dc15b7c83eacf84f765874b73990b0258767a212
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/Repositories/ModuleRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+=======
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> dc15b7c83eacf84f765874b73990b0258767a212
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+=======
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -946,7 +1579,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
+>>>>>>> dc15b7c83eacf84f765874b73990b0258767a212
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/websocket.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+          <folding>
+            <element signature="e#7#51#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Handles/WebSocketHandle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+          <folding>
+            <element signature="e#32#50#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

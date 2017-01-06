@@ -12,4 +12,14 @@ class Rule extends Model
         'user_id',
         'name'
     ];
+
+    public  function trigger()
+    {
+        return $this->hasOne('Akku\Models\Trigger', 'rule_id');
+    }
+
+    public  function action()
+    {
+        return $this->hasOne('Akku\Models\Action', 'rule_id');
+    }
 }

@@ -11,138 +11,114 @@
 #include <WebSocketsClient.h>
 #include <Hash.h>
 #include <ArduinoJson.h>
+#include "DHT.h"
 
 
-//////////////////////////////////// CONFIG SECTION////////////////////////////////////////////////
+//////////////////////////////////// CONFIG SECTION ////////////////////////////////////////////////
 
 ESP8266WiFiMulti WiFiMulti;
 WebSocketsClient webSocket;
 
 
 // Required constants
-#define MODULE_KEY "MODULE02"
-#define SWITCH_KEY "MOTOR01"
-#define METER_KEY "LEDBAR01"
-#define WIFI_NAME "HOMENET"
-#define WIFI_PASS "myhome02"
-#define WIFI_NAME1 "foobar"
-#define WIFI_PASS1 "9629454655"
-#define WEBSOCKET_IP "103.3.63.222"
+#define MODULE_KEY "MODULE01"
+#define MODULE_PIN "1234"
+#define SWITCH1_KEY 1
+#define SWITCH2_KEY 2
+#define SWITCH3_KEY 3
+#define SWITCH4_KEY 4
+#define WIFI_NAME "jithinband"
+#define WIFI_PASS "jithinband"
+#define WEBSOCKET_IP "10.42.0.1"
 #define WEBSOCKET_PORT 8001
 
-#define SWITCH_PIN D8
-
-#define BLED1 D0
-#define BLED2 D1
-#define BLED3 D2
-#define BLED4 D3
-#define BLED5 D4
-#define BLED6 D5
-#define BLED7 D6
-#define BLED8 D7
-
+#define SWITCH1 D0
+#define SWITCH2 D1
+#define SWITCH3 D2
+#define SWITCH4 D3
+#define BLED1 D4
+#define BLED2 D5
+#define TEMP1 D7
+#define POWER1 A0
 
 int percent = 0, max_motor_active_time = 120, max_level = 200, min_level = 1400, trigger_percent=10, cutoff_percent = 90, motor_active = 0, motor_time_left = 0;
-
-
+float temp = 21.0;
+float humid = 22.0;
+int power = 570;
 
 
 // Required buffer values
-int socket_status = 0, loop_count = 0;
+int socket_status = 0, loopcount=0;
 char buffer[256];
 StaticJsonBuffer<2000> jsonBuffer;
 JsonObject& root = jsonBuffer.createObject();
+
+DHT dht(TEMP1, DHT11);
 
 
 
 //////////////////////////////////// LEDBAR SECTION////////////////////////////////////////////////
 
-void sendMotorStatus(int status)
+void sendSwitchStatus(int THINGID, int status)
 {
     root["action"] = "update_data";
-    root["thing_key"] = SWITCH_KEY;
+    root["thing_id"] = THINGID;
     root["value"] = status;
     root.printTo(buffer, sizeof(buffer));
     Serial.printf(buffer);
     webSocket.sendTXT(buffer);
 }
 
-void motorActivate()
+void sendSensnorValue(int THINGID, int value)
 {
-    sendMotorStatus(1);
-    digitalWrite(SWITCH_PIN, HIGH);
-    motor_active = 1;
-    motor_time_left = (100 - percent) * max_motor_active_time / 100;
+  root["action"] = "update_data";
+  root["thing_key"] = THINGID;
+  root["value"] = value;
+  root.printTo(buffer, sizeof(buffer));
+  Serial.printf(buffer);
+  webSocket.sendTXT(buffer);
 }
 
-void motorDeActivate()
+void updateSwitchStatus(int SWITCH_KEY, int SWITCH_STATUS)
 {
-    sendMotorStatus(0);
-    digitalWrite(SWITCH_PIN, LOW);
-    motor_active = 0;
-    motor_time_left = 0;
-}
-
-
-
-void setValue(int distance)
-{
-    percent = (distance - max_level) * 100 / (min_level - max_level);
-
-    digitalWrite(BLED1, LOW);
-    digitalWrite(BLED2, LOW);
-    digitalWrite(BLED3, LOW);
-    digitalWrite(BLED4, LOW);
-    digitalWrite(BLED5, LOW);
-    digitalWrite(BLED6, LOW);
-    digitalWrite(BLED7, LOW);
-    digitalWrite(BLED8, LOW);
-
-    if(percent > 10){
-        digitalWrite(BLED1, HIGH);
+    int SWITCH_PIN = SWITCH1;
+    
+    if(SWITCH_KEY == 1){
+         SWITCH_PIN = SWITCH1;
+    } else if(SWITCH_KEY == 2){
+         SWITCH_PIN = SWITCH2;
+    } else if(SWITCH_KEY == 3){
+         SWITCH_PIN = SWITCH3;
+    } else if(SWITCH_KEY == 4){
+         SWITCH_PIN = SWITCH4;
     }
-
-    if(percent > 20){
-        digitalWrite(BLED2, HIGH);
-    }
-
-    if(percent > 35){
-        digitalWrite(BLED3, HIGH);
-    }
-
-    if(percent > 45){
-        digitalWrite(BLED4, HIGH);
-    }
-
-    if(percent > 55){
-        digitalWrite(BLED5, HIGH);
-    }
-
-    if(percent > 67){
-        digitalWrite(BLED6, HIGH);
-    }
-
-    if(percent > 80){
-        digitalWrite(BLED7, HIGH);
-    }
-
-    if(percent > 90){
-        digitalWrite(BLED8, HIGH);
+  
+    if(SWITCH_STATUS == 1) {
+        digitalWrite(SWITCH_PIN, HIGH);
+    } else {
+        digitalWrite(SWITCH_PIN, LOW);
     }
     
-    Serial.printf("Process: %d- %d - %d - %d \n", percent, distance, trigger_percent, motor_active);
-    
-    // If level is within trigger level execute motor
-    if(percent < trigger_percent && motor_active == 0) {
-        motorActivate();
-    }
-    if(percent > cutoff_percent && motor_active == 1) {
-        motorDeActivate();
-    }
-    
+    sendSwitchStatus(SWITCH_KEY, SWITCH_STATUS);
 }
 
 
+void updateTemprature()
+{
+  float h = dht.readHumidity();
+  // Read temperature as Celsius (the default)
+  float t = dht.readTemperature();
+  // Read temperature as Fahrenheit (isFahrenheit = true)
+  float f = dht.readTemperature(true);
+
+  if (isnan(h) || isnan(t) || isnan(f)) {
+    Serial.println("Failed to read from DHT sensor!");        
+  }
+  else{
+    temp = dht.computeHeatIndex(t, h, false); 
+    humid = h;
+  }  
+}
 
 
 //////////////////////////////////// COMM SECTION////////////////////////////////////////////////
@@ -152,24 +128,12 @@ void registerModule()
 {
   root["action"] = "register";
   root["key"] = MODULE_KEY;
+  root["pin"] = MODULE_PIN;
   root.printTo(buffer, sizeof(buffer));
   Serial.printf(buffer);
   webSocket.sendTXT(buffer);
 }
 
-
-
-/*
-void sendDistance(int value)
-{
-  root["action"] = "update_data";
-  root["key"] = MODULE_KEY;
-  root["thing_key"] = SENSOR_KEY;
-  root["value"] = value;
-  root.printTo(buffer, sizeof(buffer));
-  Serial.printf(buffer);
-  webSocket.sendTXT(buffer);
-}*/
 
 void processResponse(char* response) 
 {
@@ -177,23 +141,11 @@ void processResponse(char* response)
     JsonObject& root1 = jsonBuffer.parseObject(response);
     if (root1.success()) {
         const char* sensor = root1["action"];
-
-        // Set configuration
-        if(strcmp(sensor,"registred") == 0) {
-            max_motor_active_time = root1["max_motor_active_time"];
-            max_level = root1["max_level"];
-            min_level = root1["min_level"];
-            trigger_percent = root1["trigger_percent"];
-            cutoff_percent = root1["cutoff_percent"];
+        // Set conf
+        if(strcmp(sensor, "registred") == 0) {
             socket_status = 1;
-        } else if(strcmp(sensor,"water_level_update") == 0) {
-            setValue(root1["value"]);
         } else if(strcmp(sensor,"update_switch_status") == 0) {
-            if(root1["value"] == 1) {
-                motorActivate();
-            } else {
-                motorDeActivate();
-            }
+            updateSwitchStatus(root1["THING_ID"], root1["value"]);
         }
         
     }
@@ -233,18 +185,15 @@ void webSocketEvent(WStype_t type, uint8_t * payload, size_t lenght) {
 void setup() {
 
     // Configure PINS
+    pinMode(SWITCH1, OUTPUT);
+    pinMode(SWITCH2, OUTPUT);
+    pinMode(SWITCH3, OUTPUT);
+    pinMode(SWITCH4, OUTPUT);
     pinMode(BLED1, OUTPUT);
     pinMode(BLED2, OUTPUT);
-    pinMode(BLED3, OUTPUT);
-    pinMode(BLED4, OUTPUT);
-    pinMode(BLED5, OUTPUT);
-    pinMode(BLED6, OUTPUT);
-    pinMode(BLED7, OUTPUT);
-    pinMode(BLED8, OUTPUT);
-    pinMode(BLED8, OUTPUT);
-    pinMode(SWITCH_PIN, OUTPUT);
 
-    
+    pinMode(TEMP1, INPUT);
+    pinMode(POWER1, INPUT);
   
     Serial.begin(115200);
     Serial.setDebugOutput(true);
@@ -252,14 +201,9 @@ void setup() {
     Serial.println();
     Serial.println();
 
-    for(uint8_t t = 4; t > 0; t--) {
-        Serial.printf("[SETUP] BOOT WAIT %d...\n", t);
-        Serial.flush();
-        delay(1000);
-    }
-
-    WiFiMulti.addAP(WIFI_NAME1, WIFI_PASS1);
     WiFiMulti.addAP(WIFI_NAME, WIFI_PASS);
+
+    dht.begin();
 
     //WiFi.disconnect();
     while(WiFiMulti.run() != WL_CONNECTED) {
@@ -270,15 +214,12 @@ void setup() {
     webSocket.onEvent(webSocketEvent);
 
     // Set initial status
+    digitalWrite(SWITCH1, HIGH);
+    digitalWrite(SWITCH2, HIGH);
+    digitalWrite(SWITCH3, HIGH);
+    digitalWrite(SWITCH3, HIGH);
     digitalWrite(BLED1, LOW);
-    digitalWrite(BLED2, LOW);
-    digitalWrite(BLED3, LOW);
-    digitalWrite(BLED4, LOW);
-    digitalWrite(BLED5, LOW);
-    digitalWrite(BLED6, LOW);
-    digitalWrite(BLED7, LOW);
-    digitalWrite(BLED8, LOW); 
-    digitalWrite(SWITCH_PIN, LOW);
+    digitalWrite(BLED1, LOW);
 
 }
 
@@ -292,18 +233,26 @@ void loop() {
     
     // Call websocket loop
     webSocket.loop();
-    
+
+    int abc= analogRead(POWER1);
+    Serial.println(abc);
+
     if(socket_status == 1) {
-        setValue(800);
+      if(loopcount == 1) {
+        updateTemprature();
+      } else if(loopcount == 2) {
+        sendSensnorValue(5,temp);
+      } else if(loopcount == 3) {
+        sendSensnorValue(6,humid);
+      } else if(loopcount == 4) {
+        int power= analogRead(POWER1);
+        sendSensnorValue(7,power);
+        loopcount = 0;
+      }
+      loopcount++;
     }
 
-    if(motor_active == 1) {
-        motor_time_left -= 1;
-        if(motor_time_left < 1) {
-            motorDeActivate();
-        }
-    }
-
-    delay(1000);
+    delay(3000);
+    
     
 }

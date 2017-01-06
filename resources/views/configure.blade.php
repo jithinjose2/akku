@@ -7,7 +7,7 @@
             <div class="col-md-10 col-md-offset-1">
                 <div class="panel panel-success">
 
-                    <div class="panel-heading">Device configuration missing</div>
+                    <div class="panel-heading">Device configuration</div>
 
                     <div class="panel-body">
 
@@ -15,12 +15,12 @@
                             <div class="stepwizard-row setup-panel">
                                 <div class="stepwizard-step">
                                     <a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
-                                    <p>Step 1</p>
+                                    <p>Device configure</p>
                                 </div>
                                 <div class="stepwizard-step">
                                     <a href="#step-2" type="button" class="btn btn-default btn-circle"
                                        disabled="disabled">2</a>
-                                    <p>Step 2</p>
+                                    <p>Things configure</p>
                                 </div>
                                 <div class="stepwizard-step">
                                     <a href="#step-3" type="button" class="btn btn-default btn-circle"
@@ -89,9 +89,12 @@
                             <div class="row setup-content" id="step-3">
                                 <div class="col-xs-12">
                                     <div class="col-md-12">
-                                        <h3> All done </h3>
-                                        <button class="btn btn-success btn-lg pull-right finish-btn" type="submit">Finish!
-                                        </button>
+                                        <h3 class="text-center"> All done . Just hit FINISH </h3>
+                                        <p class="text-center">
+                                            <button class="btn btn-success btn-lg finish-btn" type="submit">
+                                                Finish!
+                                            </button>
+                                        </p>
                                     </div>
                                 </div>
                             </div>

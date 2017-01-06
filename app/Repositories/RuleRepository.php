@@ -16,18 +16,6 @@ use Illuminate\Support\Facades\Auth;
 
 class RuleRepository
 {
-    function addNewValue($thing, $value, $server)
-    {
-        $triggers = Trigger::where('thing_id', $thing->id);
-
-        foreach ($triggers as $trigger) {
-            // check if $value matches condition according to trigger,
-            // If yes, based on action turn switch on/off
-
-        }
-    }
-
-
     function createRule($ruleData, $userId){
     	$ruleInfo['user_id'] = $userId;
     	$ruleInfo['name'] = $ruleData['rule_name'];

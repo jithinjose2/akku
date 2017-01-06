@@ -13,42 +13,20 @@ class SensorRepository
     static function addNewValue($thing, $value, $server)
     {
         $value_d = new Value();
-        if($thing->key == 'LED01') {
-            $value_d->value_str = $value;
-        } else {
-            $value_d->value = $value;
-        }
+        $value_d->value = $value;
         $value_d->thing()->associate($thing);
         $value_d->save();
 
-        // send value to the listening websockets
-        if($thing->key == 'WATERLEVEL01')  {
-            $server->sendData('MODULE02', 'water_level_update', ['value' => $value]);
-            $server->sendData('MODULE04', 'water_level_update', ['value' => $value]);
-            $server->sendData('MODULE05', 'water_level_update', ['value' => $value]);
-        } elseif($thing->key == 'IRMOTION01') {
-            $server->sendData('MODULE04', 'motion_detected', ['value' => $value]);
-        } elseif($thing->key == 'MOTOR01') {
-            $server->sendData('MODULE04', 'motor_switch_status', ['value' => $value]);
-            $server->sendData('MODULE05', 'motor_switch_status', ['value' => $value]);
-        } elseif($thing->key == 'TEMP01') {
-            $server->sendData('MODULE04', 'temperature_update', ['value' => $value]);
-            $server->sendData('MODULE05', 'temperature_update', ['value' => $value]);
-        } elseif($thing->key == 'HUMID01') {
-            $server->sendData('MODULE04', 'humidity_update', ['value' => $value]);
-            $server->sendData('MODULE05', 'humidity_update', ['value' => $value]);
-        } elseif($thing->key == 'LED01') {
-            $server->sendData('MODULE04', 'led_color_update', ['value' => $value]);
-            $server->sendData('MODULE05', 'led_color_update', ['value' => $value]);
-        } elseif($thing->key == 'SWITCHLED01') {
-            $server->sendData('MODULE04', 'switch_led_update', ['value' => $value]);
-            $server->sendData('MODULE05', 'switch_led_update', ['value' => $value]);
-        } elseif($thing->key == 'SWITCHLCD02') {
-            $server->sendData('MODULE04', 'switch_lcd_update', ['value' => $value]);
-            $server->sendData('MODULE05', 'switch_lcd_update', ['value' => $value]);
-        } elseif($thing->key == 'SWITCHLIGHT01') {
-            $server->sendData('MODULE04', 'switch_light_update', ['value' => $value]);
-            $server->sendData('MODULE05', 'switch_light_update', ['value' => $value]);
+        // send value to the listening
+        if($thing->key == 'SWITCH01' && $thing->key == 'SWITCH02' &&
+            $thing->key == 'SWITCH03' && $thing->key == 'SWITCH04')  {
+            $server->sendData('WEB1', 'switch_status_change', ['value' => $value,'thing_id' => $thing->id ]);
+        } elseif($thing->key == 'TEMPSENSOR1') {
+            $server->sendData('WEB1', 'temp_update', ['value' => $value]);
+        } elseif($thing->key == 'HUMID1') {
+            $server->sendData('WEB1', 'humid_update', ['value' => $value]);
+        } elseif($thing->key == 'POWERUSAGESENSNOR') {
+            $server->sendData('WEB1', 'power_update', ['value' => $value]);
         }
 
     }
@@ -56,21 +34,34 @@ class SensorRepository
     static function changeSwitchStatus($switch, $value, $server)
     {
         // Change switch status request received, just frwd it to the Relay module
-        if($switch->key == 'MOTOR01') {
-            $server->sendData('MODULE02', 'update_switch_status', ['value' => $value, 'msg' => 'Manual override']);
-        } elseif($switch->key == 'SWITCHLED01') {
-            $server->sendData('MODULE03', 'update_led_status', ['value' => $value, 'msg' => 'Manual override']);
-        } elseif($switch->key == 'SWITCHLCD02') {
-            $server->sendData('MODULE03', 'update_lcd_status', ['value' => $value, 'msg' => 'Manual override']);
-        } elseif($switch->key == 'SWITCHLIGHT01') {
-            $server->sendData('MODULE03', 'update_light_status', ['value' => $value, 'msg' => 'Manual override']);
-        }
+        $server->sendData('MODULE01', 'update_switch_status', [
+            'value' => $value,
+            'thing_id' => $switch->id,
+            'msg' => 'Manual override'
+        ]);
     }
 
-    static function changeLedColor($led, $value, $server)
+    function checkTriggerStatus($thing, $value, $server)
     {
-        // Led color change request received frwd it to mirror module.
-        $server->sendData('MODULE03', 'update_led_color', ['value' => $value, 'msg' => 'Change color request']);
+        $triggers = Trigger::where('thing_id', $thing->id);
+        foreach ($triggers as $trigger) {
+            $realTrigger = false;
+            if($trigger->comparison_type = "equals_to" && $value == $trigger->value) {
+                $realTrigger = true;
+            } elseif ($trigger->comparison_type = "<" && $value > $trigger->value) {
+                $realTrigger = true;
+            } elseif ($trigger->comparison_type = ">" && $value > $trigger->value) {
+                $realTrigger = true;
+            }
+
+            if($realTrigger) {
+                $action = $trigger->rule->action;
+                if($action->thing->lastValue != $action->value) {
+                    $this->changeSwitchStatus($action->thing, $value, $server);
+                }
+            }
+        }
+
     }
 
 }
