@@ -18,8 +18,8 @@ class WebSocketHandle
     
     public function onConnect($data)
     {
-        if(!empty($data['key'])) {
-            $module = Module::where('key', $data['key'])->first();
+        if(!empty($data['key']) && !empty($data['pin'])) {
+            $module = Module::where('key', $data['key'])->where('pin', $data['pin'])->first();
             if($module) {
                 $module->status = 1;
                 $module->save();
@@ -53,8 +53,8 @@ class WebSocketHandle
     // Action handlers
     public  function action_update_data($id, $data)
     {
-        if(!empty($data['thing_key'])) {
-            $thing = Thing::where('key', $data['thing_key'])->first();
+        if(!empty($data['thing_id'])) {
+            $thing = Thing::find($data['thing_id']);
             if($thing) {
                 SensorRepository::addNewValue($thing, $data['value'], $this->server);
             }
@@ -63,25 +63,15 @@ class WebSocketHandle
 
     public function action_change_switch_status($id, $data)
     {
-        if(!empty($data['switch_key']))
+        if(!empty($data['thing_id']))
         {
-            $switch = Thing::where('key', $data['switch_key'])->first();
+            $switch = Thing::find($data['thing_id']);
             if($switch) {
                 SensorRepository::changeSwitchStatus($switch, $data['value'], $this->server);
             }
         }
     }
 
-    public function action_change_led_color($id, $data)
-    {
-        if(!empty($data['led_key']))
-        {
-            $led = Thing::where('key', $data['led_key'])->first();
-            if($led) {
-                SensorRepository::changeLedColor($led, $data['value'], $this->server);
-            }
-        }
-    }
 
     
 }

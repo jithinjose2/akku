@@ -6,7 +6,7 @@
 
 return [
 
-    'host'  => '103.3.63.222',
+    'host'  => '10.42.0.1',
     'port'  => 8001,
     'handler' => Akku\Handles\WebSocketHandle::class
 ];

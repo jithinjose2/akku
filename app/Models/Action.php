@@ -13,4 +13,14 @@ class Action extends Model
         'thing_id',
         'value'
     ];
+
+    public function rule()
+    {
+        return $this->belongsTo('Akku\Models\Rule', 'rule_id');
+    }
+
+    public function thing()
+    {
+        return $this->belongsTo('Akku\Models\Rule', 'thing_id');
+    }
 }
