@@ -102,7 +102,7 @@
             <ul class="nav navbar-nav">
                 <li><a href="{{ url('/home') }}">Home</a></li>
                 <li><a href="{{ url('/rules') }}">Rules</a></li>
-                <li><a href="{{ url('/modules') }}">Module</a></li>
+                <li><a href="{{ url('/module') }}">Module</a></li>
             </ul>
 
             <!-- Right Side Of Navbar -->
