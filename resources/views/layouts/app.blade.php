@@ -143,6 +143,7 @@
             @endforeach
         </div>
     </div>
+    <div class="clearfix"></div>
 @endif
 @if(Session::has('message'))
     <div class="col-md-10 col-md-offset-1">
@@ -151,6 +152,7 @@
             <p>{{ Session::get('message') }}</p>
         </div>
     </div>
+    <div class="clearfix"></div>
 @endif
 @yield('content')
 

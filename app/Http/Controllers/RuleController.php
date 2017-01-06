@@ -48,6 +48,8 @@ class RuleController extends Controller
         	if ($status) {
         		DB::commit();
         	}
+            \Session::flash('message', 'Rule Added');
+            \Session::flash('alert-class', 'alert-success');
         	return redirect()->to(route('rules.page'));
     	} 
     	return redirect()->to(route('rules.page'));
@@ -72,6 +74,8 @@ class RuleController extends Controller
         	if ($status) {
         		DB::commit();
         	}
+            \Session::flash('message', 'Rule Removed');
+            \Session::flash('alert-class', 'alert-success');
         	return redirect()->to(route('rules.page'));
     	} 
     	return redirect()->to(route('rules.page'));

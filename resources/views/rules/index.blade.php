@@ -90,26 +90,29 @@
     @if(count($rules))
         <div class="container">
             <div class="row">
-                <div class="alert alert-warning">
-                    <strong>Rules List</strong>
+                <div>
+                    <h3>Rules List</h3>
+                    <hr>
                 </div>
                 <table id="status-table" class="table table-striped table-inverse table-bordered"
                        style="font-size: 1.4rem;">
                     <thead class="thead-inverse">
                     <tr>
-                        <th width="100px">Rule ID</th>
-                        <th width="300px">Rule Name</th>
-                        <th width="100px">Status</th>
+                        <th width="10%">Rule ID</th>
+                        <th width="30%">Rule Name</th>
+                        <th>What gonna happen ??</th>
+                        <th width="10%"></th>
                     </tr>
                     </thead>
                     <tbody>
+                    <?php
+                    $counter = 1;
+                    ?>
                     @foreach($rules as $rule)
-                        <?php
-                        $counter = 1;
-                        ?>
                         <tr>
                             <td scope="row">{{ $counter++ }}</td>
                             <td>{{ $rule->name }}</td>
+                            <td>{!!   $rule->triggermessage !!}</td>
                             <td>
                                 <form method="post" action="<?php echo url("rule-deletion"); ?>">
                                     <input type="hidden" name="rule_id" value="{{ $rule->id }}"/>
