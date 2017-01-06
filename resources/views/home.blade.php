@@ -2,6 +2,12 @@
 
 @section('content')
     <div class="container">
+        <script>
+            $humid = <?php echo json_encode($humidValues) ?>;
+            $temp = <?php echo json_encode($tempValues) ?>;
+            $power = <?php echo $powerValues->value; ?>;
+        </script>
+
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 @if(Auth::user()->modules->isEmpty())

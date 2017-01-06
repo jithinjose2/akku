@@ -179,9 +179,9 @@
     })
     $("form#addRule").validate();
     var $url = "{{ url('/') }}";
-    $humid = <?php echo json_encode($humidValues) ?>;
-    $temp = <?php echo json_encode($tempValues) ?>;
-    $power = <?php echo $powerValues->value; ?>;
+
+
+
 </script>
 <script src="/js/script.js">
 
