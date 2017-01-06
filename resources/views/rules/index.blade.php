@@ -2,97 +2,89 @@
 
 @section('content')
     <div class="container">
-        <div class="row">
-            <div class="alert alert-warning">
-                <strong>Create New Rule</strong>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Create New Rule</h3>
             </div>
-        </div>
+            <form method="post" id="addRule" class="form-horizontal" action="<?php echo url("rule-creation"); ?>">
 
-        <form method="post" id="addRule" class="form-horizontal" action="<?php echo url("rule-creation"); ?>">
-            <div class="form-group">
-                <div class="col-lg-2">
-                    <div class="alert alert-info fade in">
-                        <strong>Rule Name</strong>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <div class="col-lg-2">
+                            <strong>Rule Name</strong>
+                        </div>
+                        <label class="col-lg-1 control-label"></label>
+                        <div class="col-lg-8">
+                            <input type="text" class="form-control" name="rule_name" placeholder="Rule Name" required/>
+                        </div>
                     </div>
-                </div>
-                <label class="col-lg-1 control-label"></label>
-                <div class="col-lg-2">
-                    <input type="text" class="form-control" name="rule_name" placeholder="Rule Name" required/>
-                </div>
-            </div>
+                    <hr>
+                    <div class="form-group">
+                        <div class="col-lg-2">
+                            <strong>Set Trigger</strong>
+                        </div>
+                        <label class="col-lg-1 control-label">When</label>
+                        <div class="col-lg-3">
+                            <select class="form-control" name="action_thing" required>
+                                <option value="">-- Select --</option>
+                                @foreach($modules as $module)
+                                    @foreach($module->things as $thing)
+                                        @if($thing->type==2)
+                                            <option value="{{ $thing->id }}"
+                                            >{{ $thing->name }}</option>
+                                        @endif
+                                    @endforeach
+                                @endforeach
+                            </select>
+                        </div>
+                        <label class="col-lg-1 control-label">Value</label>
+                        <div class="col-lg-2">
+                            <select class="form-control" name="action_match" required>
+                                <option value="=">Is equals to (=)</option>
+                                <option value="<">Is less than (<)</option>
+                                <option value=">">Is greater than (>)</option>
+                            </select>
+                        </div>
 
-            <div class="form-group">
-                <div class="col-lg-2">
-                    <div class="alert alert-info fade in">
-                        <strong>Set Trigger</strong>
+                        <div class="col-lg-2">
+                            <input type="text" class="form-control" name="trigger_value" placeholder="value" required/>
+                        </div>
                     </div>
-                </div>
-                <label class="col-lg-1 control-label">When</label>
-                <div class="col-lg-2">
-                    <select class="form-control" name="action_thing" required>
-                        <option value="">-- Select --</option>
-                        @foreach($modules as $module)
-                            @foreach($module->things as $thing)
-                                @if($thing->type==2)
-                                    <option value="{{ $thing->id }}"
-                                    >{{ $thing->name }}</option>
-                                @endif
-                            @endforeach
-                        @endforeach
-                    </select>
-                </div>
-                <label class="col-lg-1 control-label">value</label>
-                <div class="col-lg-2">
-                    <select class="form-control" name="action_match" required>
-                        <option value="=">Is equals to</option>
-                        <option value="<">Is less than</option>
-                        <option value=">">Is greater than</option>
-                    </select>
-                </div>
-
-                <div class="col-lg-2">
-                    <input type="text" class="form-control" name="trigger_value" placeholder="value" required/>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <div class="col-lg-2">
-                    <div class="alert alert-info fade in">
-                        <strong>Associate Action</strong>
+                    <hr>
+                    <div class="form-group">
+                        <div class="col-lg-2">
+                            <strong>Associate Action</strong>
+                        </div>
+                        <label class="col-lg-1 control-label">Act</label>
+                        <div class="col-lg-3">
+                            <select class="form-control" name="turn_action" required>
+                                <option value="1">turn on</option>
+                                <option value="0">turn off</option>
+                            </select>
+                        </div>
+                        <label class="col-lg-1 control-label">Switch</label>
+                        <div class="col-lg-4">
+                            <select class="form-control" name="switch_selection" required>
+                                <option value="">-- Select --</option>
+                                @foreach($modules as $module)
+                                    @foreach($module->things as $thing)
+                                        @if($thing->type==1)
+                                            <option value="{{ $thing->id }}">{{ $thing->name }}</option>
+                                        @endif
+                                    @endforeach
+                                @endforeach
+                            </select>
+                        </div>
                     </div>
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}"/>
                 </div>
-                <label class="col-lg-1 control-label">Act</label>
-                <div class="col-lg-2">
-                    <select class="form-control" name="turn_action" required>
-                        <option value="1">turn on</option>
-                        <option value="0">turn off</option>
-                    </select>
-                </div>
-                <label class="col-lg-1 control-label">switch</label>
-                <div class="col-lg-2">
-                    <select class="form-control" name="switch_selection" required>
-                        <option value="">-- Select --</option>
-                        @foreach($modules as $module)
-                            @foreach($module->things as $thing)
-                                @if($thing->type==1)
-                                    <option
-                                            value="{{ $thing->id }}"
-                                    >{{ $thing->name }}</option>
-                                @endif
-                            @endforeach
-                        @endforeach
-                    </select>
-                </div>
-            </div>
-            <input type="hidden" name="_token" value="{{ csrf_token() }}"/>
-            <div class="divider"></div>
-            <div class="form-group col-lg-offset-1">
-                <div class="col-lg-12">
+                <div class="panel-footer">
                     <button type="submit" class="btn btn-primary pull-right" name="rule" value="add-rule">Add New Rule
                     </button>
+                    <div class="clearfix"></div>
                 </div>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
 
     @if(count($rules))
