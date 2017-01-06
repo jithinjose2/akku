@@ -156,7 +156,8 @@ $(document).ready(function () {
         },
         xAxis: {
             type: 'datetime',
-            tickPixelInterval: 150
+            tickPixelInterval: 150,
+            maxZoom: 20 * 1000
         },
         yAxis: {
             title: {
@@ -286,8 +287,9 @@ function getHumidityLevel($value){
     if(!humidityChart) return;
     var series = humidityChart.series[0];
     var x = (new Date()).getTime(), // current time
-        y = $value;
-    humidityChart.series[0].addPoint([x, y], true, true);
+        y = $value,
+        shift = series.data.length > 20;
+    series.addPoint([x, y], true, shift);
 }
 
 
@@ -296,6 +298,7 @@ function getTemperatureLevel($value){
     if(!tempChart) return;
     var series = tempChart.series[0];
     var x = (new Date()).getTime(), // current time
-        y = $value;
-    tempChart.series[0].addPoint([x, y], true, true);
+        y = $value,
+        shift = series.data.length > 20;
+    series.addPoint([x, y], true, shift);
 }
