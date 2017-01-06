@@ -39,6 +39,7 @@
     }
 
     function checkJson(res) {
+        console.log(res);
         if (res.action == 'registred') {
             $('#status').html('<span class="label label-sucess">CONNECTED</span>');
             /*$('.ws_show').show();
@@ -56,6 +57,8 @@
             setTemperatureLevel(res.value);
         } else if(res.action == 'humid_update') {
             setHumidityLevel(res.value);
+        } else if (res.action == 'switch_status_change') {
+            turnSwitch(res.thing_id, res.value);
         }
     }
 

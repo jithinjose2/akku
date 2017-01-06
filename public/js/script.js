@@ -135,13 +135,14 @@ function turnSwitch($thingID, $status) {
     } else {
         $thingSwitch.prop("checked", false);
     }
+    $thingSwitch.parent().addClass("enabled");
 }
 
 /*HighChart JS for power*/
 var tempChart, powerChart, humidityChart; // global
 
 $(document).ready(function () {
-
+    console.log($power);
     var isHome = $("#powerutilchart").length > 0 ? true : false;
     if(isHome) {
         humidityChart = new Highcharts.Chart({
@@ -270,7 +271,7 @@ $(document).ready(function () {
                 innerSize: '50%',
                 data: [
                     ['Power Consumption', $power],
-                    ['Available Range', (100 - $power)],
+                    ['Available Range', ((230*5) - $power)],
                     {
                         name: 'Proprietary or Undetectable',
                         y: 0.2,
@@ -290,7 +291,7 @@ function setHumidityLevel($value){
     var series = humidityChart.series[0];
     var x = (new Date()).getTime(), // current time
         y = $value,
-        shift = series.data.length > 20;
+        shift = series.data.length > 10;
     series.addPoint([x, y], true, shift);
 }
 
@@ -301,6 +302,6 @@ function setTemperatureLevel($value){
     var series = tempChart.series[0];
     var x = (new Date()).getTime(), // current time
         y = $value,
-        shift = series.data.length > 20;
+        shift = series.data.length > 10;
     series.addPoint([x, y], true, shift);
 }
