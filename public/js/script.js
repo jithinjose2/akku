@@ -82,6 +82,20 @@ $(document).ready(function () {
             nextStepWizard.removeAttr('disabled').trigger('click');
     });
 
+    $(".switch.enabled input").click(function(e){        
+        if($(this).parent().hasClass("enabled")) {
+            $thingID = $(this).attr("data-id");
+            if($(this).is(':checked')){
+                SwitchChangeByUser($thingID, 1);
+            } else {
+                SwitchChangeByUser($thingID, 0);
+            }
+            $(this).parent().removeClass("enabled");
+        } else {
+            e.preventDefault();
+        }
+    });
+
     $('div.setup-panel div a.btn-primary').trigger('click');
     $('.finish-btn').click(function () {
         swal({
@@ -95,5 +109,20 @@ $(document).ready(function () {
             function () {
                 window.location = "/";
             });
-    })
+    });
 });
+
+function turnSwitch($thingID, $status){
+    $thingSwitch = $(".switch").find("input[data-id='" + $thingID + "']");
+    console.log($thingSwitch);
+    if($status == 1){
+        if(!$thingSwitch.is(':checked')) {
+            $thingSwitch.prop( "checked", true );
+        }
+    } else {
+        $thingSwitch.prop( "checked", false );
+    }
+}
+
+function SwitchChangeByUser($thingID, $status){
+}
