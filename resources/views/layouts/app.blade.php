@@ -18,7 +18,7 @@
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
     <link rel="stylesheet" href="http://t4t5.github.io/sweetalert/dist/sweetalert.css">
-
+    <link href="{{ asset('css/extra.css') }}" rel="stylesheet"> 
     <style>
         body {
             font-family: 'Lato';
