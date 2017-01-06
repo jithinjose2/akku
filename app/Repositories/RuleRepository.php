@@ -11,6 +11,7 @@ namespace Akku\Repositories;
 use Akku\Models\Rule;
 use Akku\Models\Trigger;
 use Akku\Models\Action;
+use Akku\Models\Value;
 use Illuminate\Support\Facades\Auth;
 
 class RuleRepository
@@ -77,5 +78,17 @@ class RuleRepository
     	Trigger::where('rule_id', $ruleID)->delete();
     	Action::where('rule_id', $ruleID)->delete();
     	Rule::where('id', $ruleID)->delete();
+    }
+
+    function getHumidValues($humidId){
+    	return Value::where('thing_id', $humidId)->orderBy('id','ASC')->get()->lists("value")->toArray();
+    }
+
+    function getTempValues($tempID){
+    	return Value::where('thing_id', $tempID)->orderBy('id','ASC')->get()->lists("value")->toArray();
+    }
+
+    function getPowerValues($powerID){
+    	return Value::where('thing_id', $powerID)->orderBy('id','DESC')->first();
     }
 }
