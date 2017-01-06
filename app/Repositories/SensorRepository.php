@@ -41,4 +41,27 @@ class SensorRepository
         ]);
     }
 
+    function checkTriggerStatus($thing, $value, $server)
+    {
+        $triggers = Trigger::where('thing_id', $thing->id);
+        foreach ($triggers as $trigger) {
+            $realTrigger = false;
+            if($trigger->comparison_type = "equals_to" && $value == $trigger->value) {
+                $realTrigger = true;
+            } elseif ($trigger->comparison_type = "<" && $value > $trigger->value) {
+                $realTrigger = true;
+            } elseif ($trigger->comparison_type = ">" && $value > $trigger->value) {
+                $realTrigger = true;
+            }
+
+            if($realTrigger) {
+                $action = $trigger->rule->action;
+                if($action->thing->lastValue != $action->value) {
+                    $this->changeSwitchStatus($action->thing, $value, $server);
+                }
+            }
+        }
+
+    }
+
 }

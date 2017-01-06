@@ -14,4 +14,9 @@ class Trigger extends Model
         'comparison_type',
         'value'
     ];
+
+    public function rule()
+    {
+        return $this->belongsTo('Akku\Models\Rule', 'rule_id');
+    }
 }
