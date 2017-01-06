@@ -22,7 +22,7 @@ Route::get('/', 'HomeController@index');
 Route::get('/home', 'HomeController@index');
 Route::get('/configure', 'HomeController@configure');
 
-Route::get('/modules', 'ModuleController@index');
+Route::resource('/module', 'ModuleController');
 Route::post('/validate-module', 'ModuleController@validateModule');
 Route::post('/save-module', 'ModuleController@updateModule');
 
@@ -44,3 +44,10 @@ Route::match(['get', 'post'], '/rule-creation', [
     'as' => 'rule.add',
     'uses' => 'RuleController@addRule'
 ]);
+
+Route::match(['post'], '/rule-deletion', [
+    'as' => 'rule.delete',
+    'uses' => 'RuleController@deleteRule'
+]);
+
+Route::controller('api', 'ApiController');

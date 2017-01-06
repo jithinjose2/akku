@@ -12,7 +12,9 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name',
+        'email',
+        'password',
     ];
 
     /**
@@ -21,11 +23,17 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password',
+        'remember_token',
     ];
 
-    public  function modules()
+    public function modules()
     {
         return $this->hasMany('Akku\Models\Module', 'user_id');
+    }
+
+    public function assignedModules()
+    {
+        return $this->belongsToMany('Akku\Models\Module')->withPivot('module_id', 'user_id');
     }
 }
