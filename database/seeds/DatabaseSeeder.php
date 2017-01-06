@@ -26,7 +26,7 @@ class DatabaseSeeder extends Seeder
         $user->save();
 
         // Create Sensor Module
-        $module = $this->createModule($user, 'MODULE01', 'Bedroom Module', 0);
+        $module = $this->createModule($user, 'MODULE01', '1234', 'Bedroom Module', 0);
 
         $this->createThing($module, 'SWITCH01', 1, 'Switch 1', 0);
         $this->createThing($module, 'SWITCH02', 1, 'Switch 2', 0);
@@ -35,6 +35,8 @@ class DatabaseSeeder extends Seeder
         $this->createThing($module, 'TEMPSENSOR1', 2, 'Temperature Sensor', 0);
         $this->createThing($module, 'HUMID1', 2, 'Humidity Sensor', 0);
         $this->createThing($module, 'POWERUSAGESENSNOR', 2, 'Power sensor', 0);
+
+        $this->createModule($user, 'WEB1', '1234', 'Web', 0);
     }
 
     public function createSetting($key, $value)

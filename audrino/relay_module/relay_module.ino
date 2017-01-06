@@ -72,7 +72,7 @@ void sendSwitchStatus(int THINGID, int status)
 void sendSensnorValue(int THINGID, int value)
 {
   root["action"] = "update_data";
-  root["thing_key"] = THINGID;
+  root["thing_id"] = THINGID;
   root["value"] = value;
   root.printTo(buffer, sizeof(buffer));
   Serial.printf(buffer);
