@@ -29,22 +29,22 @@
                                 @foreach($things as $thing)
                                     <div class="col-md-12">
                                         <div class="form-group col-md-6">
-                                            <label for="{{$thing->key}}">{{$thing->name}}</label>
+                                            <label for="{{$thing->key}}">{{$thing->key}}</label>
                                             <input type="text" name="{{$thing->key}}" class="form-control"
                                                    id="{{$thing->key}}"
                                                    value="{{$thing->name}}"
-                                                   placeholder="module name">     
+                                                   placeholder="module name">
 
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label class="switch enabled" style="margin-top: 24px">
-                                            <input type="checkbox" name="INT{{$thing->key}}"
-                                                   id="{{$thing->key}}"
-                                                   value="{{$thing->name}}"
-                                                   placeholder="module name"
-                                                   data-id="{{$thing->id}}">
-                                            <div class="slider round"></div>
-                                            </label>       
+                                                <input type="checkbox" name="INT{{$thing->key}}"
+                                                       id="{{$thing->key}}"
+                                                       value="{{$thing->name}}"
+                                                       placeholder="module name"
+                                                       data-id="{{$thing->id}}">
+                                                <div class="slider round"></div>
+                                            </label>
                                         </div>
                                     </div>
 
@@ -69,8 +69,8 @@
                         <div class="panel-body">
                             @foreach($users as $user)
                                 <div class="form-group">
-                                    <label class="col-md-6" for="users">{{$user->name}}</label>
-                                    <div class="col-md-6">
+                                    <label class="col-md-10" for="users">{{$user->name}} ({{$user->email}})</label>
+                                    <div class="col-md-2">
                                         <input type="checkbox"
                                                @if(in_array($user->id,$moduleusers))
                                                checked
@@ -79,6 +79,7 @@
                                                id="users"
                                                value="{{$user->id}}">
                                     </div>
+
                                     <div class="clearfix"></div>
 
                                 </div>

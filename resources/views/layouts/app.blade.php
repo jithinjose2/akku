@@ -18,7 +18,9 @@
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
     <link rel="stylesheet" href="http://t4t5.github.io/sweetalert/dist/sweetalert.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link href="{{ asset('css/extra.css') }}" rel="stylesheet">
+
     <style>
         body {
             font-family: 'Lato';
@@ -101,11 +103,14 @@
             <!-- Left Side Of Navbar -->
             @if(Auth::check())
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Home</a></li>
-                    <li><a href="{{ url('/rules') }}">Rules</a></li>
-                    <li><a href="{{ url('/module') }}">Module</a></li>
+                    <li class="{{ (Request::segment(1)=='' ||  Request::segment(1)=='home') ? 'active' : ''}}"><a
+                                href="{{ url('/home') }}">Home</a></li>
+                    <li class="{{  Request::segment(1)=='rules' ? 'active' : ''}}"><a
+                                href="{{ url('/rules') }}">Rules</a></li>
+                    <li class="{{  Request::segment(1)=='module' ? 'active' : ''}}"><a href="{{ url('/module') }}">Module</a>
+                    </li>
                 </ul>
-            @endif
+        @endif
         <!-- Right Side Of Navbar -->
             <ul class="nav navbar-nav navbar-right">
                 <!-- Authentication Links -->
@@ -128,7 +133,8 @@
 </nav>
 @if ($errors->has())
     <div class="col-md-10 col-md-offset-1">
-        <div class="alert alert-danger">
+        <div class="alert alert-danger  alert-dismissable">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
             @foreach ($errors->all() as $error)
                 {{ $error }}<br>
             @endforeach
@@ -137,7 +143,10 @@
 @endif
 @if(Session::has('message'))
     <div class="col-md-10 col-md-offset-1">
-        <p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('message') }}</p>
+        <div class="alert {{ Session::get('alert-class', 'alert-info') }}  alert-dismissable">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <p>{{ Session::get('message') }}</p>
+        </div>
     </div>
 @endif
 @yield('content')
