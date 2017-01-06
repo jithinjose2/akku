@@ -28,6 +28,54 @@
             margin-right: 6px;
         }
     </style>
+    <style>
+        .stepwizard-step p {
+            margin-top: 10px;
+        }
+
+        .stepwizard-row {
+            display: table-row;
+        }
+
+        .stepwizard {
+            display: table;
+            width: 100%;
+            position: relative;
+        }
+
+        .stepwizard-step button[disabled] {
+            opacity: 1 !important;
+            filter: alpha(opacity=100) !important;
+        }
+
+        .stepwizard-row:before {
+            top: 14px;
+            bottom: 0;
+            position: absolute;
+            content: " ";
+            width: 100%;
+            height: 1px;
+            background-color: #ccc;
+            z-order: 0;
+
+        }
+
+        .stepwizard-step {
+            display: table-cell;
+            text-align: center;
+            position: relative;
+        }
+
+        .btn-circle {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            padding: 6px 0;
+            font-size: 12px;
+            line-height: 1.428571429;
+            border-radius: 15px;
+        }
+    </style>
 </head>
 <body id="app-layout">
 <nav class="navbar navbar-default navbar-static-top">
@@ -78,7 +126,20 @@
         </div>
     </div>
 </nav>
-
+@if ($errors->has())
+    <div class="col-md-10 col-md-offset-1">
+        <div class="alert alert-danger">
+            @foreach ($errors->all() as $error)
+                {{ $error }}<br>
+            @endforeach
+        </div>
+    </div>
+@endif
+@if(Session::has('message'))
+    <div class="col-md-10 col-md-offset-1">
+        <p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('message') }}</p>
+    </div>
+@endif
 @yield('content')
 
 <!-- JavaScripts -->
@@ -91,7 +152,10 @@
 <script src="http://vinceg.github.io/twitter-bootstrap-wizard/jquery.bootstrap.wizard.js"></script>
 <script src="http://t4t5.github.io/sweetalert/dist/sweetalert-dev.js"></script>
 
+<script src="https://1000hz.github.io/bootstrap-validator/dist/validator.min.js"></script>
+
 <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+
 {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
 <script>
     $(document).ready(function () {
