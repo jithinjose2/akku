@@ -64,6 +64,9 @@
 
                 @if(Auth::user()->assignedModules->isEmpty())
                     <p>You havent any access to other modules yet</p>
+                    <br>
+                    <br>
+                    <br>
                 @else
                     @foreach(Auth::user()->assignedModules as $module)
                         <div class="panel panel-default">
