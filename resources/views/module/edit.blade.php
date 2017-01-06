@@ -42,7 +42,10 @@
                                                        id="{{$thing->key}}"
                                                        value="{{$thing->name}}"
                                                        placeholder="module name"
-                                                       data-id="{{$thing->id}}">
+                                                       data-id="{{$thing->id}}"
+                                                         {{
+                                                        ($thing->latestValue->value == 0) ? "" : "checked=checked" }}
+                                                       >
                                                 <div class="slider round"></div>
                                             </label>
                                         </div>
