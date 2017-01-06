@@ -44,3 +44,8 @@ Route::match(['get', 'post'], '/rule-creation', [
     'as' => 'rule.add',
     'uses' => 'RuleController@addRule'
 ]);
+
+Route::match(['post'], '/rule-deletion', [
+    'as' => 'rule.delete',
+    'uses' => 'RuleController@deleteRule'
+]);

@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Registred Modules</div>
+                    <div class="panel-heading">Registered Modules</div>
                     <div class="panel-body">
                         @foreach($modules as $module)
                             <div class="panel panel-default">

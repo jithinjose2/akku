@@ -54,6 +54,7 @@
             <ul class="nav navbar-nav">
                 <li><a href="{{ url('/home') }}">Home</a></li>
                 <li><a href="{{ url('/rules') }}">Rules</a></li>
+                <li><a href="{{ url('/modules') }}">Module</a></li>
             </ul>
 
             <!-- Right Side Of Navbar -->
@@ -89,11 +90,14 @@
         crossorigin="anonymous"></script>
 <script src="http://vinceg.github.io/twitter-bootstrap-wizard/jquery.bootstrap.wizard.js"></script>
 <script src="http://t4t5.github.io/sweetalert/dist/sweetalert-dev.js"></script>
+
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
 {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
 <script>
     $(document).ready(function () {
         $.ajaxSetup({headers: {'csrftoken': '{{ csrf_token() }}'}});
     })
+    $("form#addRule").validate();
 </script>
 <script src="/js/script.js">
 

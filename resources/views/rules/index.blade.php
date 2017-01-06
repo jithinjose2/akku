@@ -8,7 +8,7 @@
         </div>
     </div>
     
-<form id="defaultForm" method="post" class="form-horizontal" action="<?php echo url("rule-creation"); ?>">
+<form method="post" id="addRule" class="form-horizontal" action="<?php echo url("rule-creation"); ?>">
     <div class="form-group">
          <div class="col-lg-2">
             <div class="alert alert-info fade in">
@@ -17,7 +17,7 @@
         </div>  
         <label class="col-lg-1 control-label"></label>
         <div class="col-lg-2">
-             <input type="text" class="form-control" name="rule_name" placeholder="Rule Name" />
+             <input type="text" class="form-control" name="rule_name" placeholder="Rule Name" required/>
         </div>
     </div>
     <div class="form-group"> 
@@ -28,7 +28,7 @@
         </div>                           
         <label class="col-lg-1 control-label">When</label>
         <div class="col-lg-2">
-            <select class="form-control" name="action_thing">
+            <select class="form-control" name="action_thing" required>
                 <option value="">-- Select --</option>
                 @foreach($modules as $module)
                     @foreach($module->things as $thing)
@@ -43,15 +43,15 @@
         </div>
         <label class="col-lg-1 control-label">value</label>
         <div class="col-lg-2">
-            <select class="form-control" name="action_match">
+            <select class="form-control" name="action_match" required>
                 <option value="=">Is equals to</option>
                 <option value="<">Is less than</option>
                 <option value=">">Is greater than</option>
             </select>
         </div>
 
-        <div class="col-lg-1">
-            <input type="text" class="form-control" name="trigger_value" placeholder="value" />
+        <div class="col-lg-2">
+            <input type="text" class="form-control" name="trigger_value" placeholder="value" required/>
         </div>
     </div>
 
@@ -63,14 +63,14 @@
         </div>                           
         <label class="col-lg-1 control-label">Act</label>
         <div class="col-lg-2">
-            <select class="form-control" name="turn_action">
+            <select class="form-control" name="turn_action" required>
                 <option value="1">turn on</option>
                 <option value="0">turn off</option>
             </select>
         </div>
         <label class="col-lg-1 control-label">switch</label>
         <div class="col-lg-2">
-            <select class="form-control" name="switch_selection">
+            <select class="form-control" name="switch_selection" required>
                 <option value="">-- Select --</option>
                 @foreach($modules as $module)
                     @foreach($module->things as $thing)
@@ -111,10 +111,19 @@
                     </thead>
                     <tbody>
                     @foreach($rules as $rule)
+                        <?php
+                        $counter = 1;
+                        ?>
                         <tr>
-                            <td scope="row">{{ $rule->id }}</td>
+                            <td scope="row">{{ $counter++ }}</td>
                             <td>{{ $rule->name }}</td>
-                            <td>Active</td>
+                            <td>
+                            <form method="post" action="<?php echo url("rule-deletion"); ?>">
+                            <input type="hidden" name="rule_id" value="{{ $rule->id }}" />
+                            <input type="hidden" name="_token" value="{{ csrf_token() }}" />
+                            <button type="submit" class="btn btn-primary" name="delete_rule" value="delete-rule">Delete</button>
+                            </form>
+                            </td>
 
                         </tr>               
                     @endforeach                                                       

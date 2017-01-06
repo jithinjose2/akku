@@ -72,4 +72,10 @@ class RuleRepository
         $rulesList = Rule::where('user_id', $userId)->get();
         return $rulesList;
     }
+
+    function deleteRule($ruleID){
+    	Trigger::where('rule_id', $ruleID)->delete();
+    	Action::where('rule_id', $ruleID)->delete();
+    	Rule::where('id', $ruleID)->delete();
+    }
 }
