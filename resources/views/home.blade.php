@@ -24,18 +24,5 @@
             
         @endif
     </div>
-    <div class="SEID">
-<!-- Rectangular switch -->
-<label class="switch enabled">
-  <input type="checkbox" data-id="1">
-  <div class="slider round"></div>
-</label>
-
-<!-- Rounded switch -->
-<label class="switch enabled">
-  <input type="checkbox" data-id="2">
-  <div class="slider round"></div>
-</label>
-            </div>
 @endsection
 

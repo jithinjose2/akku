@@ -54,7 +54,7 @@ class ModuleController extends Controller
     {
         $module = Module::find($id);
         $moduleUsers = $module->users->pluck('id')->toArray();
-        $things = Thing::select('key', 'name')->where('module_id', $module->id)->where('type', 1)->get();
+        $things = Thing::select('key', 'name', 'id')->where('module_id', $module->id)->where('type', 1)->get();
         $users = User::get();
         // dd($module);
         return view('module.edit')->withModule($module)

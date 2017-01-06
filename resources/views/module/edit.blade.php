@@ -33,14 +33,18 @@
                                             <input type="text" name="{{$thing->key}}" class="form-control"
                                                    id="{{$thing->key}}"
                                                    value="{{$thing->name}}"
-                                                   placeholder="module name">
+                                                   placeholder="module name">     
+
                                         </div>
                                         <div class="form-group col-md-6">
-                                            <label for="{{$thing->key}}">{{$thing->name}} status</label>
-                                            <input type="checkbox" name="{{$thing->key}}" class="form-control"
+                                            <label class="switch enabled" style="margin-top: 24px">
+                                            <input type="checkbox" name="INT{{$thing->key}}"
                                                    id="{{$thing->key}}"
                                                    value="{{$thing->name}}"
-                                                   placeholder="module name">
+                                                   placeholder="module name"
+                                                   data-id="{{$thing->id}}">
+                                            <div class="slider round"></div>
+                                            </label>       
                                         </div>
                                     </div>
 
