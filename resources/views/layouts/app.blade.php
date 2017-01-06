@@ -18,7 +18,7 @@
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
     <link rel="stylesheet" href="http://t4t5.github.io/sweetalert/dist/sweetalert.css">
-    <link href="{{ asset('css/extra.css') }}" rel="stylesheet"> 
+    <link href="{{ asset('css/extra.css') }}" rel="stylesheet">
     <style>
         body {
             font-family: 'Lato';
@@ -99,13 +99,14 @@
 
         <div class="collapse navbar-collapse" id="app-navbar-collapse">
             <!-- Left Side Of Navbar -->
-            <ul class="nav navbar-nav">
-                <li><a href="{{ url('/home') }}">Home</a></li>
-                <li><a href="{{ url('/rules') }}">Rules</a></li>
-                <li><a href="{{ url('/module') }}">Module</a></li>
-            </ul>
-
-            <!-- Right Side Of Navbar -->
+            @if(Auth::check())
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url('/home') }}">Home</a></li>
+                    <li><a href="{{ url('/rules') }}">Rules</a></li>
+                    <li><a href="{{ url('/module') }}">Module</a></li>
+                </ul>
+            @endif
+        <!-- Right Side Of Navbar -->
             <ul class="nav navbar-nav navbar-right">
                 <!-- Authentication Links -->
                 @if (Auth::guest())
@@ -116,7 +117,6 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
-
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
                         </ul>
