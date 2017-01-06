@@ -37,5 +37,22 @@
             </div>
         </div>
     </div>
+<div class="row">
+<div class="col-md-4">
+    <div id="humiditychart" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto">
+
+    </div>
+</div>
+<div class="col-md-4">
+    <div id="temparaturechart" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto">
+
+    </div>
+</div>
+<div class="col-md-4">
+    <div id="powerutilchart" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto">
+
+    </div>
+</div>
+</div>
 @endsection
 

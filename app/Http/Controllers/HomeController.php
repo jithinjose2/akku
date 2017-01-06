@@ -4,7 +4,7 @@ namespace Akku\Http\Controllers;
 
 use Akku\Http\Requests;
 use Illuminate\Http\Request;
-
+use Akku\Repositories\RuleRepository;
 class HomeController extends Controller
 {
     /**
@@ -12,8 +12,8 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
+    public function __construct(RuleRepository $ruleRepo){
+        $this->ruleRepo = $ruleRepo;
         $this->middleware('auth');
     }
 
@@ -24,7 +24,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $data['humidValues'] = $this->ruleRepo->getHumidValues(6);
+        $data['tempValues'] = $this->ruleRepo->getTempValues(5);
+        $data['powerValues'] = $this->ruleRepo->getPowerValues(7);
+        return view('home', $data);
     }
     /**
      * Show the configure dashboard.
