@@ -95,7 +95,7 @@
 
             <!-- Branding Image -->
             <a class="navbar-brand" href="{{ url('/') }}">
-                SmartBox
+                <span class="brand-icon">  <i class="fa fa-envira" aria-hidden="true"></i></span> SmartBox
             </a>
         </div>
 
@@ -104,10 +104,12 @@
             @if(Auth::check())
                 <ul class="nav navbar-nav">
                     <li class="{{ (Request::segment(1)=='' ||  Request::segment(1)=='home') ? 'active' : ''}}"><a
-                                href="{{ url('/home') }}">Home</a></li>
+                                href="{{ url('/') }}"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
                     <li class="{{  Request::segment(1)=='rules' ? 'active' : ''}}"><a
-                                href="{{ url('/rules') }}">Rules</a></li>
-                    <li class="{{  Request::segment(1)=='module' ? 'active' : ''}}"><a href="{{ url('/module') }}">Module</a>
+                                href="{{ url('/rules') }}"><i class="fa fa-superpowers" aria-hidden="true"></i>
+                            Rules</a></li>
+                    <li class="{{  Request::segment(1)=='module' ? 'active' : ''}}"><a href="{{ url('/module') }}"><i
+                                    class="fa fa-cubes" aria-hidden="true"></i> Module</a>
                     </li>
                 </ul>
         @endif
@@ -120,7 +122,8 @@
                 @else
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            {{ Auth::user()->name }} <span class="caret"></span>
+                            <i class="fa fa-user-circle-o" aria-hidden="true"></i> {{ Auth::user()->name }} <span
+                                    class="caret"></span>
                         </a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>

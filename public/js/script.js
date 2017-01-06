@@ -82,10 +82,10 @@ $(document).ready(function () {
             nextStepWizard.removeAttr('disabled').trigger('click');
     });
 
-    $(".switch.enabled input").click(function(e){        
-        if($(this).parent().hasClass("enabled")) {
+    $(".switch.enabled input").click(function (e) {
+        if ($(this).parent().hasClass("enabled")) {
             $thingID = $(this).attr("data-id");
-            if($(this).is(':checked')){
+            if ($(this).is(':checked')) {
                 SwitchChangeByUser($thingID, 1);
             } else {
                 SwitchChangeByUser($thingID, 0);
@@ -110,19 +110,31 @@ $(document).ready(function () {
                 window.location = "/";
             });
     });
+
+
+    // handling onchange checkbox on accessible switch
+    $('.switchChange:checkbox').change(function () {
+        var id = $(this).attr('id');
+        if ($(this).is(":checked")) {
+            alert(id)
+            SwitchChangeByUser(id,1);
+        } else {
+            SwitchChangeByUser(id,0)
+        }
+    });
 });
 
-function turnSwitch($thingID, $status){
+function turnSwitch($thingID, $status) {
     $thingSwitch = $(".switch").find("input[data-id='" + $thingID + "']");
     console.log($thingSwitch);
-    if($status == 1){
-        if(!$thingSwitch.is(':checked')) {
-            $thingSwitch.prop( "checked", true );
+    if ($status == 1) {
+        if (!$thingSwitch.is(':checked')) {
+            $thingSwitch.prop("checked", true);
         }
     } else {
-        $thingSwitch.prop( "checked", false );
+        $thingSwitch.prop("checked", false);
     }
 }
 
-function SwitchChangeByUser($thingID, $status){
+function SwitchChangeByUser($thingID, $status) {
 }

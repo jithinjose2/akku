@@ -62,3 +62,11 @@ input:checked + .slider:before {
     background: #ccc;
     margin: 10px 0;
 }
+
+.rmmargin {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.brand-icon{
+    color: #00C853;
+}

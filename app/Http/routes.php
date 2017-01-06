@@ -49,3 +49,5 @@ Route::match(['post'], '/rule-deletion', [
     'as' => 'rule.delete',
     'uses' => 'RuleController@deleteRule'
 ]);
+
+Route::controller('api', 'ApiController');
