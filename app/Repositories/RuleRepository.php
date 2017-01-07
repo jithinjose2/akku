@@ -76,12 +76,12 @@ class RuleRepository
 
     public function getHumidValues($humidId)
     {
-        return Value::where('thing_id', $humidId)->orderBy('id', 'ASC')->get()->lists("value")->toArray();
+        return array_map('floatval',Value::where('thing_id', $humidId)->orderBy('id', 'DESC')->take(10)->get()->lists("value")->toArray());
     }
 
     public function getTempValues($tempID)
     {
-        return Value::where('thing_id', $tempID)->orderBy('id', 'ASC')->get()->lists("value")->toArray();
+        return array_map('floatval',Value::where('thing_id', $tempID)->orderBy('id', 'DESC')->take(10)->get()->lists("value")->toArray());
     }
 
     public function getPowerValues($powerID)

@@ -1,4 +1,6 @@
 $(document).ready(function () {
+
+
     var navListItems = $('div.setup-panel div a'),
         allWells = $('.setup-content'),
         allNextBtn = $('.nextBtn');
@@ -133,45 +135,45 @@ function turnSwitch($thingID, $status) {
     } else {
         $thingSwitch.prop("checked", false);
     }
+    $thingSwitch.parent().addClass("enabled");
 }
-
-function SwitchChangeByUser($thingID, $status) {
-}
-
 
 /*HighChart JS for power*/
 var tempChart, powerChart, humidityChart; // global
 
 $(document).ready(function () {
-    humidityChart = new Highcharts.Chart({
-        chart: {
-            renderTo: 'humiditychart',
-            defaultSeriesType: 'spline',
-            events: {
-                load: setHumidityLevel
-            }
-        },
-        title: {
-            text: 'Live Humidity'
-        },
-        xAxis: {
-            type: 'datetime',
-            tickPixelInterval: 150,
-            maxZoom: 20 * 1000
-        },
-        yAxis: {
-            title: {
-                text: 'Absolute humidity'
+    console.log($power);
+    var isHome = $("#powerutilchart").length > 0 ? true : false;
+    if(isHome) {
+        humidityChart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'humiditychart',
+                defaultSeriesType: 'spline',
+                events: {
+                    load: setHumidityLevel
+                }
             },
-            plotLines: [{
-                value: 0,
-                width: 1,
-                color: '#808080'
-            }]
-        },
-        series: [{
-            name: 'Humidity',
-             data: (function () {
+            title: {
+                text: 'Live Humidity'
+            },
+            xAxis: {
+                type: 'datetime',
+                tickPixelInterval: 150,
+                maxZoom: 20 * 1000
+            },
+            yAxis: {
+                title: {
+                    text: 'Absolute humidity'
+                },
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            },
+            series: [{
+                name: 'Humidity',
+                data: (function () {
                     // generate an array of random data
                     var data = [],
                         time = (new Date()).getTime(),
@@ -185,37 +187,37 @@ $(document).ready(function () {
                     }
                     return data;
                 }())
-        }]
-    });
-
-    tempChart = new Highcharts.Chart({
-        chart: {
-            renderTo: 'temparaturechart',
-            defaultSeriesType: 'spline',
-            events: {
-                load: setTemperatureLevel
-            }
-        },
-        title: {
-            text: 'Live Temperature'
-        },
-        xAxis: {
-            type: 'datetime',
-            tickPixelInterval: 150
-        },
-        yAxis: {
-            title: {
-                text: 'Celsius'
-            },
-            plotLines: [{
-                value: 0,
-                width: 1,
-                color: '#808080'
             }]
-        },
-        series: [{
-            name: 'Temperature',
-             data: (function () {
+        });
+
+        tempChart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'temparaturechart',
+                defaultSeriesType: 'spline',
+                events: {
+                    load: setTemperatureLevel
+                }
+            },
+            title: {
+                text: 'Live Temperature'
+            },
+            xAxis: {
+                type: 'datetime',
+                tickPixelInterval: 150
+            },
+            yAxis: {
+                title: {
+                    text: 'Celsius'
+                },
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            },
+            series: [{
+                name: 'Temperature',
+                data: (function () {
                     // generate an array of random data
                     var data = [],
                         time = (new Date()).getTime(),
@@ -229,57 +231,58 @@ $(document).ready(function () {
                     }
                     return data;
                 }())
-        }]
-    });
+            }]
+        });
 
 
-    powerChart = new Highcharts.chart('powerutilchart', {        
-        chart: {
-            plotBackgroundColor: null,
-            plotBorderWidth: 0,
-            plotShadow: false
-        },
-        title: {
-            text: 'Power<br>Usage',
-            align: 'center',
-            verticalAlign: 'middle',
-            y: 40
-        },
-        tooltip: {
-            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-        },
-        plotOptions: {
-            pie: {
-                dataLabels: {
-                    enabled: true,
-                    distance: -50,
-                    style: {
-                        fontWeight: 'bold',
-                        color: 'white'
-                    }
-                },
-                startAngle: -90,
-                endAngle: 90,
-                center: ['50%', '75%']
-            }
-        },
-        series: [{
-            type: 'pie',
-            name: 'Range',
-            innerSize: '50%',
-            data: [
-                ['Power Consumption',   $power],
-                ['Available Range',  (100 - $power)],
-                {
-                    name: 'Proprietary or Undetectable',
-                    y: 0.2,
+        powerChart = new Highcharts.chart('powerutilchart', {
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: 0,
+                plotShadow: false
+            },
+            title: {
+                text: 'Power<br>Usage',
+                align: 'center',
+                verticalAlign: 'middle',
+                y: 40
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
                     dataLabels: {
-                        enabled: false
-                    }
+                        enabled: true,
+                        distance: -50,
+                        style: {
+                            fontWeight: 'bold',
+                            color: 'white'
+                        }
+                    },
+                    startAngle: -90,
+                    endAngle: 90,
+                    center: ['50%', '75%']
                 }
-            ]
-        }]
-    });
+            },
+            series: [{
+                type: 'pie',
+                name: 'Range',
+                innerSize: '50%',
+                data: [
+                    ['Power Consumption', $power],
+                    ['Available Range', ((230*5) - $power)],
+                    {
+                        name: 'Proprietary or Undetectable',
+                        y: 0.2,
+                        dataLabels: {
+                            enabled: false
+                        }
+                    }
+                ]
+            }]
+        });
+    }
 });
 
 function setHumidityLevel($value){
@@ -288,7 +291,7 @@ function setHumidityLevel($value){
     var series = humidityChart.series[0];
     var x = (new Date()).getTime(), // current time
         y = $value,
-        shift = series.data.length > 20;
+        shift = series.data.length > 10;
     series.addPoint([x, y], true, shift);
 }
 
@@ -299,6 +302,6 @@ function setTemperatureLevel($value){
     var series = tempChart.series[0];
     var x = (new Date()).getTime(), // current time
         y = $value,
-        shift = series.data.length > 20;
+        shift = series.data.length > 10;
     series.addPoint([x, y], true, shift);
 }

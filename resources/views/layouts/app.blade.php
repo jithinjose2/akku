@@ -111,6 +111,9 @@
                     <li class="{{  Request::segment(1)=='module' ? 'active' : ''}}"><a href="{{ url('/module') }}"><i
                                     class="fa fa-cubes" aria-hidden="true"></i> Module</a>
                     </li>
+                    <li>
+                        <div id="status"><span class="label label-info">Waiting</span></div>
+                    </li>
                 </ul>
         @endif
         <!-- Right Side Of Navbar -->
@@ -180,11 +183,11 @@
     $("form#addRule").validate();
     var $url = "{{ url('/') }}";
 
-
+    $humid = <?php echo json_encode(empty($humidValues) ? [] : $humidValues) ?>;
+    $temp = <?php echo json_encode(empty($tempValues) ? [] : $tempValues) ?>;
+    $power = <?php echo empty($powerValues) ? 0 : $powerValues->value ; ?>;
 
 </script>
-<script src="/js/script.js">
-
-</script>
+<script src="/js/script.js"></script>
 </body>
 </html>

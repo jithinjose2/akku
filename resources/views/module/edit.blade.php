@@ -93,4 +93,5 @@
             </form>
         </div>
     </div>
+    @include('ws')
 @endsection
