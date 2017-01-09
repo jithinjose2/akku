@@ -70,3 +70,10 @@ input:checked + .slider:before {
 .brand-icon{
     color: #00C853;
 }
+
+
+#app-layout > .row {
+    margin: 0;
+    max-width: 94%;
+    padding:10px 2px;
+}

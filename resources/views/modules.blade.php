@@ -63,7 +63,7 @@
                 <hr>
 
                 @if(Auth::user()->assignedModules->isEmpty())
-                    <p>You havent any access to other modules yet</p>
+                    <p>You don't have access to other modules</p>
                     <br>
                     <br>
                     <br>
