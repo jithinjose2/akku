@@ -26,7 +26,8 @@ class Rule extends Model
 
     public function getTriggermessageAttribute()
     {
-        $msg = "When value ";
+        $msg = "When value of ";
+        $msg .= $this->trigger->thing->module->name . ' ' .$this->trigger->thing->name .' is ';
         $msg .= '<span class="label label-info">';
         if ($this->trigger->comparison_type === '=') {
             $msg .= ' equal to ';
@@ -39,7 +40,7 @@ class Rule extends Model
         }
         $msg .= '</span>';
 
-        $msg .= $this->trigger->value . ' ';
+        $msg .= $this->trigger->value . ', then ';
 
         $msg .= '<span class="label label-info">' . \Akku\Models\Thing::find($this->action->thing_id)->name . '</span>';
         $msg .= ' will get';

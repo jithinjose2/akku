@@ -142,6 +142,15 @@ function turnSwitch($thingID, $status) {
 var tempChart, powerChart, humidityChart; // global
 
 $(document).ready(function () {
+
+    $("#setTemp").click(function () {
+        payload = new Object();
+        payload.action    = 'update_data';
+        payload.thing_id 	= 5;
+        payload.value 		= 40;
+        socket.send(JSON.stringify(payload));
+    })
+
     console.log($power);
     var isHome = $("#powerutilchart").length > 0 ? true : false;
     if(isHome) {

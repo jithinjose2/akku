@@ -1,6 +1,7 @@
 <?php
 namespace Akku\Repositories;
 
+use Akku\Models\Trigger;
 use Thing, Value;
 /**
  * Created by PhpStorm.
@@ -34,6 +35,8 @@ class SensorRepository
             $server->sendData('WEB1', 'power_update', ['value' => $value]);
         }
 
+        self::checkTriggerStatus($thing, $value, $server);
+
     }
 
     static function changeSwitchStatus($switch, $value, $server)
@@ -46,23 +49,23 @@ class SensorRepository
         ]);
     }
 
-    function checkTriggerStatus($thing, $value, $server)
+    static function checkTriggerStatus($thing, $value, $server)
     {
-        $triggers = Trigger::where('thing_id', $thing->id);
+        $triggers = Trigger::where('thing_id', $thing->id)->get();
         foreach ($triggers as $trigger) {
             $realTrigger = false;
-            if($trigger->comparison_type = "equals_to" && $value == $trigger->value) {
+            if($trigger->comparison_type == "=" && $value == $trigger->value) {
                 $realTrigger = true;
-            } elseif ($trigger->comparison_type = "<" && $value > $trigger->value) {
+            } elseif ($trigger->comparison_type == "<" && $value < $trigger->value) {
                 $realTrigger = true;
-            } elseif ($trigger->comparison_type = ">" && $value > $trigger->value) {
+            } elseif ($trigger->comparison_type == ">" && $value > $trigger->value) {
                 $realTrigger = true;
             }
 
             if($realTrigger) {
                 $action = $trigger->rule->action;
-                if($action->thing->lastValue != $action->value) {
-                    $this->changeSwitchStatus($action->thing, $value, $server);
+                if($action->thing->latestValue->value != $action->value) {
+                    self::changeSwitchStatus($action->thing, $action->value, $server);
                 }
             }
         }

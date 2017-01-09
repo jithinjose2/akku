@@ -112,7 +112,7 @@
                         <tr>
                             <td scope="row">{{ $counter++ }}</td>
                             <td>{{ $rule->name }}</td>
-                            <td>{!!   $rule->triggermessage !!}</td>
+                            <td>{!! $rule->triggermessage !!}</td>
                             <td>
                                 <form method="post" action="<?php echo url("rule-deletion"); ?>">
                                     <input type="hidden" name="rule_id" value="{{ $rule->id }}"/>

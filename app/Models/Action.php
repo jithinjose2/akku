@@ -21,6 +21,6 @@ class Action extends Model
 
     public function thing()
     {
-        return $this->belongsTo('Akku\Models\Rule', 'thing_id');
+        return $this->belongsTo('Akku\Models\Thing', 'thing_id');
     }
 }

@@ -23,7 +23,11 @@
                         </div>
                     </div>
                     <div class="panel panel-default">
-                        <div class="panel-heading">Switches info</div>
+                        <div class="panel-heading">
+                            Switches info
+                            <button type="button" class="btn btn-primmary pull-right" id="setTemp">Set Temp 40</button>
+                            <div class="clearfix"></div>
+                        </div>
                         <div class="panel-body">
                             <fieldset>
                                 @foreach($things as $thing)
@@ -63,8 +67,6 @@
                     </p>
                 </div>
                 <div class="col-md-4">
-
-
                     {{csrf_field()}}
                     {{ method_field('PUT') }}
                     <div class="panel panel-default">

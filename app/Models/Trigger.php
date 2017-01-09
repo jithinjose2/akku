@@ -19,4 +19,9 @@ class Trigger extends Model
     {
         return $this->belongsTo('Akku\Models\Rule', 'rule_id');
     }
+
+    public function thing()
+    {
+        return $this->belongsTo('Akku\Models\Thing', 'thing_id');
+    }
 }

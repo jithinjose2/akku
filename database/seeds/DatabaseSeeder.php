@@ -18,10 +18,16 @@ class DatabaseSeeder extends Seeder
         DB::table('values')->truncate();
         DB::table('settings')->truncate();
 
+        DB::table('rules')->truncate();
+        DB::table('actions')->truncate();
+        DB::table('triggers')->truncate();
+        DB::table('modules')->truncate();
+        DB::table('module_user')->truncate();
+
         // Create user
         $user = new User();
-        $user->name = "Jithin";
-        $user->email = "jithinjose2@gmail.com";
+        $user->name = "PowerGrid";
+        $user->email = "powergrid@gmail.com";
         $user->password = Hash::make("password");
         $user->save();
 
